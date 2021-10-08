@@ -33,7 +33,7 @@ CREATE TABLE faute(
    dateDetection DATE,
    commentaire VARCHAR(50),
    dateReparation DATE,
-   idCategorie VARCHAR(50) NOT NULL
+   idCategorie INT NOT NULL
 )ENGINE=InnoDB;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE produit(
    numeroDeSerie INT,
    numeroDeProduit INT,
    anneeProduction DATE,
-   idModele VARCHAR(50) NOT NULL
+   idModele INT NOT NULL
 )ENGINE=InnoDB;
 
 --
@@ -54,8 +54,8 @@ CREATE TABLE produit(
 
 CREATE TABLE maintenence(
    idMaintenence INT AUTO_INCREMENT PRIMARY KEY, 
-   idFaute VARCHAR(50),
-   idProduit VARCHAR(50)
+   idFaute INT,
+   idProduit INT
 )ENGINE=InnoDB;
 
 
