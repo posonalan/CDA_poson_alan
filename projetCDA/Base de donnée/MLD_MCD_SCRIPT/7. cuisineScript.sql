@@ -7,12 +7,22 @@ Use cuisine;
 --
 
 CREATE TABLE Table1(
-   idTable1 INT AUTO_INCREMENT PRIMARY KEY,
+   idTable1 
    numeroTable INT,
    nombreCouvert INT,
-   type VARCHAR(50),
-   supplement VARCHAR(50)
+   idTypeTable INT NOT NULL
 )ENGINE=InnoDB;
+
+--
+-- Table  'TypeTable'
+--
+
+CREATE TABLE TypeTable(
+   idTypeTable INT AUTO_INCREMENT PRIMARY KEY,
+   typeDeTable VARCHAR(50),
+   supplement DECIMAL(15,2)
+   
+) ENGINE=InnoDB;
 
 --
 -- Table  'Categorie'
@@ -61,7 +71,8 @@ CREATE TABLE Client(
    IdTicket INT NOT NULL
 )ENGINE=InnoDB;
 
-
+ALTER TABLE IdTable1
+ADD CONSTRAINT FK_Table1_TypeTable FOREIGN KEY(idTypeTable) REFERENCES TypeTable(idTypeTable);
 ALTER TABLE Met
    ADD CONSTRAINT FK_Met_Categorie FOREIGN KEY(IdCategorie) REFERENCES Categorie(IdCategorie);
 ALTER TABLE Ticket
@@ -69,3 +80,4 @@ ALTER TABLE Ticket
    ADD CONSTRAINT FK_Ticket_Met FOREIGN KEY(IdMet) REFERENCES Met(IdMet);
 ALTER TABLE Client
    ADD CONSTRAINT FK_Client_Ticket FOREIGN KEY(IdTicket) REFERENCES Ticket(IdTicket);
+   ;

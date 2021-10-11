@@ -114,9 +114,10 @@ CREATE TABLE `table1` (
   `idTable1` int(11) NOT NULL AUTO_INCREMENT,
   `numeroTable` int(11) DEFAULT NULL,
   `nombreCouvert` int(11) DEFAULT NULL,
-  `type` varchar(50) DEFAULT NULL,
-  `supplement` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idTable1`)
+  `idTypeTable` int(11) NOT NULL,
+  PRIMARY KEY (`idTable1`),
+  KEY `FK_Table1_TypeTable` (`idTypeTable`),
+  CONSTRAINT `FK_Table1_TypeTable` FOREIGN KEY (`idTypeTable`) REFERENCES `typetable` (`idTypeTable`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -159,6 +160,30 @@ LOCK TABLES `ticket` WRITE;
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `typetable`
+--
+
+DROP TABLE IF EXISTS `typetable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `typetable` (
+  `idTypeTable` int(11) NOT NULL AUTO_INCREMENT,
+  `typeDeTable` varchar(50) DEFAULT NULL,
+  `supplement` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`idTypeTable`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `typetable`
+--
+
+LOCK TABLES `typetable` WRITE;
+/*!40000 ALTER TABLE `typetable` DISABLE KEYS */;
+/*!40000 ALTER TABLE `typetable` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -169,4 +194,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-11 10:50:07
+-- Dump completed on 2021-10-11 16:34:04
