@@ -144,4 +144,9 @@ select CONCAT(nom, prenom) as concatenation from employe
 
 29. Afficher les 5 premières lettres du nom des employés. 
 
-select SUBSTR(nom,3,2) from employe
+select SUBSTR(nom,1,5) from employe
+
+30. Afficher le nom et le rang de la lettre « r » dans le nom des 
+employés.
+
+select Locate( r,nom,1) from employe 
