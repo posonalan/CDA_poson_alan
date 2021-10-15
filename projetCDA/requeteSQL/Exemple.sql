@@ -233,11 +233,9 @@ SELECT nom, titre, salaireFROM employeWHERE NOT nom = 'Fairent'AND
 nom des employés, en affichant aussi les départements dans lesquels 
 il n''y a personne, classés par numéro de département. 
 
-select D.nodept, D.nom, E.nom from employe as E, dept as D group by D.nodept
-select D.nodept, D.nom, E.nom 
-from employe as E
-Left join dept as D
- on D.nodept=E.nodept group by D.nodept
+SELECT e.nodep, d.nom AS 'nom departement', e.nom As 'nom employe'FROM employe AS e RIGHT JOIN
+ dept AS d ON e.nodep = d.nodept ORDER BY e.nodep
+ '
 
 
 1 calculer le nombre d''employés de chaque titre.
@@ -246,15 +244,57 @@ select E.titre, sum(E.noemp) FROM employe as E group by E.titre
 
 2. Calculer la moyenne des salaires et leur somme, par région.
 
-select D.noregion, sum(E.salaire), AVG(E.salaire) FROM employe as E, dept as D group by D.noregion
+SELECT D.noregion, SUM(E.salaire) as SalaireSomme, AVG(E.salaire) as SalaireMoy 
+FROM employe as E INNER JOIN dept as D GROUP BY D.noregion 
 
 3. Afficher les numéros des départements ayant au moins 3 employés.
+SELECT nodep
+FROM employe
+GROUP BY nodep
+HAVING COUNT(nodep) >= 3
 
-Select E.nodep from dept as D group by 
+4. Calculer le nombre d"'"employés de chaque titre.
 
+SELECT substring(nom,1,1) AS 'initial' FROM employe
+GROUP BY initial HAVING count(initial) > 2
 
+ 5. Rechercher le salaire maximum et le salaire minimum parmi tous les salariés et l''écart entre les deux. 
+SELECT MIN(salaire) as 'salaire min' , MAX(salaire) as 'salaire max' 
+, MAX(salaire)-MIN(salaire) as 'difference' FROM employe
 
+6. Rechercher le nombre de titres diffé'rents
+Select count(distinct titre) from employe
 
-1. Calculer le nombre d"'"employés de chaque titre.
+7. Pour chaque titre, compter le nombre d''employés possédant ce titre. 
+SELECT titre,COUNT(*) FROM employe GROUP BY titre
 
-select nom, titre ,SUM(nom) from employe GROUP BY titre 
+ 8. Pour chaque nom de département, afficher le nom du département et  le nombre d''employés.
+    SELECT d.nom, count(e.noemp) as "Nb employes" 
+    FROM employe as e INNER JOIN dept as d ON d.nodept=e.nodep GROUP BY d.nom;
+    
+
+ 9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants. 
+
+SELECT titre, ROUND(AVG(salaire)) as "MoySalaire" FROM employe
+GROUP BY titre
+HAVING MoySalaire > (SELECT AVG(salaire) FROM employe WHERE titre="représentant")
+
+ 10.Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés.
+SELECT COUNT (salaire) , COUNT (tauxcom) FROM Employe
+
+"
+/**********************************************/ 
+Papyrus : 
+
+1.  Quelles sont les commandes du fournisseur 09120 ?
+
+select numcom from entcom where numfou=09120 
+
+2. Afficher le code des fournisseurs pour lesquels des commandes ont été passées
+
+select numfou from entcom where obscom IS NOT NULL 
+
+3. Afficher le nombre de commandes fournisseurs passées, et le nombre de 
+fournisseur concernés.
+
+select DISTINCT count(  numcom) as NbCom,  count(  DISTINCT numfou ) as NbFou from entcom 
