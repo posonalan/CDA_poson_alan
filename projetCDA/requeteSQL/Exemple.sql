@@ -298,3 +298,5 @@ select numfou from entcom where obscom IS NOT NULL
 fournisseur concernés.
 
 select DISTINCT count(  numcom) as NbCom,  count(  DISTINCT numfou ) as NbFou from entcom 
+
+
