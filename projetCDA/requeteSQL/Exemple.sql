@@ -297,6 +297,38 @@ select numfou from entcom where obscom IS NOT NULL
 3. Afficher le nombre de commandes fournisseurs passées, et le nombre de 
 fournisseur concernés.
 
-select DISTINCT count(  numcom) as NbCom,  count(  DISTINCT numfou ) as NbFou from entcom 
+select DISTINCT count(numcom) as NbCom,  count( DISTINCT numfou) as NbFou from entcom 
 
+4. Editer les produits ayant un stock inférieur ou égal au stock d''alerte et dont la 
+quantité annuelle est inférieur est inférieure à 1000
+(informations à fournir : n° produit, libellé produit, stock, stock actuel d''alerte, 
+quantité annuelle)
 
+select P.codart, P.libart, P.stkphy, P.stkale, P.qteann from produit as P where P.stkphy<=p.stkale and P.qteann<1000 
+
+5. Quels sont les fournisseurs situés dans les départements 75 78 92 77 ?
+L’affichage (département, nom fournisseur) sera effectué par département 
+décroissant, puis par ordre alphabétique
+
+select F.posfou, F.nomfou from fournis as F where substring(F.posfou,1,2)in(75,78,92,77) ORDER BY substring(F.posfou,1,2) DESC
+
+6. Quelles sont les commandes passées au mois de mars et avril ?
+
+select E.numcom from entcom as E where MONTH(E.datcom)=03 or 04 
+
+7. Quelles sont les commandes du jour qui ont des observations particulières ?
+(Affichage numéro de commande, date de commande) 
+
+select E.numcom, E.datcom, E.obscom from entcom as E where E.obscom <> ''
+
+8. Lister le total de chaque commande par total décroissant 
+(Affichage numéro de commande et total)
+
+select L.numcom , SUM(L.numcom) as L.totalCommande from ligcom as E order by L.numcom DESC
+select L.numcom , L.numcom as L.totalCommande from ligcom as E 
+
+9. Lister les commandes dont le total est supérieur à 10 000€ ; on exclura dans le 
+calcul du total les articles commandés en quantité supérieure ou égale à 1000.
+(Affichage numéro de commande et total)
+
+select 
