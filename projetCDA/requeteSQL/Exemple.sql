@@ -418,6 +418,7 @@ jours. La liste est triée par fournisseur puis produit
 select distinct P.libart, F.nomfou from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
+ inner join entom as E on E.numfou=F.numfou
   where P.stkphy<= (P.stkale*1.5) 
-  DATEDIFF()
+  DATEDIFF(E.datcom,L.derliv)>30
   order by P.libart ASC or F.nomfou ASC  
