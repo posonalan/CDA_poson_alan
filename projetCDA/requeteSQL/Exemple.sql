@@ -398,4 +398,26 @@ inner join fournis as F on E.numfou=F.numfou where F.numfou=(
 sur Prix1) que le moins cher des rubans (article dont le premier caractère 
 commence par R). On affichera le libellé de l’article et prix1
 
-select 
+select P.libart, Min(V.prix1) from vente as V inner join produit as P on V.codart=P.codart 
+where P.libart in( 
+      select P.libart from produit as P inner join vente as V on V.codart=P.codart where P.libart like "R%" )
+      
+15.Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est 
+inférieur ou égal à 150 % du stock d''alerte. La liste est triée par produit puis 
+fournisseur 
+
+select distinct P.libart, F.nomfou from fournis as F 
+ inner join vente as V on F.numfou=V.numfou 
+ inner join produit as P on P.codart=V.codart
+  where P.stkphy<= (P.stkale*1.5) order by P.libart ASC or F.nomfou ASC 
+
+16.Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est 
+inférieur ou égal à 150 % du stock d'alerte et un délai de livraison de' plus 30 
+jours. La liste est triée par fournisseur puis produit
+
+select distinct P.libart, F.nomfou from fournis as F 
+ inner join vente as V on F.numfou=V.numfou 
+ inner join produit as P on P.codart=V.codart
+  where P.stkphy<= (P.stkale*1.5) 
+  DATEDIFF()
+  order by P.libart ASC or F.nomfou ASC  
