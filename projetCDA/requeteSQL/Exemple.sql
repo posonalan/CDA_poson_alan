@@ -1,7 +1,17 @@
 
 Question requete sql
 
+/*****/
+test inner join 
 
+select E.datcom, F.nomfou from entcom as E inner join fournis as F on E.numfou=F.numfou
+
+
+
+
+
+
+/*****/
 
 1. Afficher toutes les informations concernant les employés.
 
@@ -324,11 +334,68 @@ select E.numcom, E.datcom, E.obscom from entcom as E where E.obscom <> ''
 8. Lister le total de chaque commande par total décroissant 
 (Affichage numéro de commande et total)
 
-select L.numcom , SUM(L.numcom) as L.totalCommande from ligcom as E order by L.numcom DESC
-select L.numcom , L.numcom as L.totalCommande from ligcom as E 
+select L.numcom, SUM(L.numcom) as totalCommande from ligcom as L group by L.numcom order by L.numcom DESC
 
 9. Lister les commandes dont le total est supérieur à 10 000€ ; on exclura dans le 
 calcul du total les articles commandés en quantité supérieure ou égale à 1000.
 (Affichage numéro de commande et total)
+
+select L.numcom, SUM(L.numcom) as totalCommande from ligcom as L where L.numcom>1000 GROUP BY L.numcom HAVING totalCommande > 10000
+
+10.Lister les commandes par nom fournisseur 
+(Afficher le nom du fournisseur, le numéro de commande et la date)
+
+select Distinct F.nomfou , E.numcom, E.datcom from fournis as F INNER JOIN entcom as E 
+
+11.Sortir les produits des commandes ayant le mot ""urgent'' en observation?
+(Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
+le sous total = quantité commandée * Prix unitaire)
+
+/* a revoir */ 
+select L.numcom, F.nomfou, P.libart,SUM(L.qtecom*L.priuni)
+ from ligcom as L 
+ inner join produit as P on L.codart = p.codart 
+ inner join fournis as F on F.numfou
+ 
+select L.numcom,SUM(L.qtecde*L.priuni)
+ from ligcom as L 
+ inner join entcom as E on E.numcom=L.numcom
+
+ select L.numcom, F.nomfou, P.libart,SUM(L.qtecde*L.priuni)
+ from ligcom as L 
+ inner join produit as P on L.codart=P.codart 
+ inner join fournis as F on F.numfou=E.numfou
+ inner join entcom as E 
+
+select F.nomfou
+ from fournis as F
+ inner join entcom as E on F.numfou=E.numfou
+ 
+
+
+
+12.Coder de 2 manières différentes la requête suivante :
+Lister le nom des fournisseurs susceptibles de livrer au moins un article
+
+select distinct F.nomfou from fournis as F
+ inner join entcom as E on F.numfou=E.numfou
+ inner join ligcom as L on E.numcom=L.numcom
+  where L.qteliv>0 
+
+  select distinct F.nomfou from fournis as F, entcom as E,ligcom as L WHERE E.numcom=L.numcom F.numfou=E.numfou
+ and L.qteliv>0 
+
+13.Coder de 2 manières différentes la requête suivante
+Lister les commandes (Numéro et date) dont le fournisseur est celui de la 
+commande 70210 :
+
+select E.numcom, E.datcom from entcom as E 
+inner join fournis as F on E.numfou=F.numfou where F.numfou=(
+      select F.nomfou from fournis as F
+       inner JOIN entcom as E on E.numfou=F.numfou where E.numcom=70210 )
+
+14.Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés 
+sur Prix1) que le moins cher des rubans (article dont le premier caractère 
+commence par R). On affichera le libellé de l’article et prix1
 
 select 
