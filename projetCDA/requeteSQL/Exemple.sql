@@ -302,7 +302,7 @@ select numcom from entcom where numfou=09120
 
 2. Afficher le code des fournisseurs pour lesquels des commandes ont été passées
 
-select numfou from entcom where obscom IS NOT NULL 
+select distinct numfou from entcom where obscom IS NOT NULL 
 
 3. Afficher le nombre de commandes fournisseurs passées, et le nombre de 
 fournisseur concernés.
@@ -409,7 +409,7 @@ fournisseur
 select distinct P.libart, F.nomfou from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
-  where P.stkphy<= (P.stkale*1.5) order by P.libart ASC or F.nomfou ASC 
+  where P.stkphy<= (P.stkale*1.5) order by P.libart , F.nomfou  
 
 16.Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est 
 inférieur ou égal à 150 % du stock d'alerte et un délai de livraison de' plus 30 
@@ -418,7 +418,60 @@ jours. La liste est triée par fournisseur puis produit
 select distinct P.libart, F.nomfou from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
- inner join entom as E on E.numfou=F.numfou
-  where P.stkphy<= (P.stkale*1.5) 
+ inner join entcom as E on E.numfou=F.numfou
+ inner join ligcom as L on L.numcom=E.numcom
+  where P.stkphy<= (P.stkale*1.5) and
   DATEDIFF(E.datcom,L.derliv)>30
-  order by P.libart ASC or F.nomfou ASC  
+  order by P.libart, F.nomfou  
+
+17.Avec le même type de sélection que ci-dessus, sortir un total des stocks par 
+fournisseur trié par total décroissant
+
+select P.libart, F.nomfou, SUM(P.stkphy) as totalStock from fournis as F 
+ inner join vente as V on F.numfou=V.numfou 
+ inner join produit as P on P.codart=V.codart
+ inner join entcom as E on E.numfou=F.numfou
+ inner join ligcom as L on L.numcom=E.numcom
+ GROUP BY F.nomfou
+ order by totalStock desc
+
+18.En fin d''année, sortir la liste des produits dont la quantité réellement commandée 
+dépasse 90% de la quantité annuelle prévue.
+
+select P.libart, L.qtecde, P.qteann from fournis as F 
+ inner join vente as V   on F.numfou=V.numfou 
+ inner join produit as P on P.codart=V.codart
+ inner join entcom as E  on E.numfou=F.numfou
+ inner join ligcom as L  on L.numcom=E.numcom  
+ where L.qtecde> (P.qteann/90*100)
+
+ 19.Calculer le chiffre d'affaire par fournisseur pour l'année 93 sachant que les prix 
+indiqués sont hors taxes et que le taux de TVA est 20%.
+
+select totalPrix 
+ from       fournis as F 
+ inner join vente   as V on F.numfou=V.numfou 
+ inner join produit as P on P.codart=V.codart
+ inner join entcom  as E on E.numfou=F.numfou
+ inner join ligcom  as L on L.numcom=E.numcom 
+where TotalPrix=(
+      select sum(prixHt*20/100)from vente as V where prixHt= (
+            select SUM(V.prix1)as prixHt from vente ))
+          
+
+
+
+
+/******************************************************************************************/
+
+exo requête SQL 
+
+1.	Afficher les noms de département
+2.	Afficher les numéros et noms de département
+3.	Afficher toutes les propriétés des employés
+4.	Afficher les fonctions des employés
+
+5.	Afficher les fonctions des employés sans double
+6.	Afficher les noms des employés avec leur date d'embauche, ainsi que la date d'embauche augmentée d'une journée
+7.	Afficher les noms des employés suivis d'un espace, suivi de leur fonction
+
