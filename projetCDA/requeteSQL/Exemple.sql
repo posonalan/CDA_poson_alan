@@ -441,54 +441,55 @@ fournisseur trié par total décroissant
 select P.libart, F.nomfou, SUM(P.stkphy) as totalStock from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
- inner join entcom as E on E.numfou=F.numfou
  GROUP BY F.nomfou
  order by totalStock desc
 
 18.En fin d''année, sortir la liste des produits dont la quantité réellement commandée 
 dépasse 90% de la quantité annuelle prévue.
 
-select P.libart, L.qtecde, P.qteann from fournis as F 
- inner join vente as V   on F.numfou=V.numfou 
- inner join produit as P on P.codart=V.codart
- inner join entcom as E  on E.numfou=F.numfou
- inner join ligcom as L  on L.numcom=E.numcom  
- where L.qtecde> (P.qteann/90*100)
+SELECT produit.codart, SUM(qtecde) as "sommeQuantiteCommande", qteann FROM ligcom 
+INNER JOIN produit ON ligcom.codart = produit.codart 
+GROUP BY codart 
+HAVING SUM(qtecde) > qteann*0.90
+
 
  19.Calculer le chiffre d'affaire par fournisseur pour l'année 93 sachant que les prix 
 indiqués sont hors taxes et que le taux de TVA est 20%.
 
-select totalPrix 
- from       fournis as F 
- inner join vente   as V on F.numfou=V.numfou 
- inner join produit as P on P.codart=V.codart
- inner join entcom  as E on E.numfou=F.numfou
- inner join ligcom  as L on L.numcom=E.numcom 
-where TotalPrix=(
-      select sum(prixHt*20/100)from vente as V where prixHt= (
-            select SUM(V.prix1)as prixHt from vente ))
+SELECT nomfou, SUM((l.priuni*l.qteliv)*1.20) AS "chiffreAffaire93"
+FROM entcom AS e
+INNER JOIN fournis AS f ON e.numfou = f.numfou
+INNER JOIN ligcom AS l ON e.numcom = l.numcom
+WHERE YEAR(e.datcom) = '1993'
+GROUP BY e.numfou
           
 IV Les besoins de mise a jour 
 
 1. Application d''une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 
 pour le fournisseur 9180
 
-update 
+update vente set prix1 = prix1 * 1.04, prix2 = prix2 *1.02
+where numfou = 9180
 
-SELECT colonne
+2. Dans la table vente, mettre à jour le prix2 des articles dont le prix2 est null, en 
+affectant a valeur de prix.
 
-FROM table
+UPDATE vente SET prix2 = prix1 WHERE prix2 = 0
 
-INNER JOIN table ON cle=cle
+3. Mettre à jour le champ obscom en positionnant '*****' pour toutes les commandes 
+dont le fournisseur a un indice de satisfaction <5
 
-WHERE condition
+UPDATE entcom 
+SET obscom="*****"
+WHERE numfou IN (SELECT numfou FROM fournis WHERE satisf<5);
 
-GROUP BY colonne
+4. Suppression du produit I110
 
-HAVING condition
 
-ORDER BY colonne ;
 
+5. Suppression des entête de commande qui n''ont aucune ligne
+
+DELETE FROM entcom WHERE numcom not in (SELECT DISTINCT numcom FROM ligcom);
 
 /******************************************************************************************/
 
