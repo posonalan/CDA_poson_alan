@@ -302,19 +302,19 @@ select numcom from entcom where numfou=09120
 
 2. Afficher le code des fournisseurs pour lesquels des commandes ont été passées
 
-select distinct numfou from entcom where obscom IS NOT NULL 
+select distinct numfou from entcom 
 
 3. Afficher le nombre de commandes fournisseurs passées, et le nombre de 
 fournisseur concernés.
 
-select DISTINCT count(numcom) as NbCom,  count( DISTINCT numfou) as NbFou from entcom 
+select  count(*) as NbCom,  count( DISTINCT numfou) as NbFou from entcom 
 
 4. Editer les produits ayant un stock inférieur ou égal au stock d''alerte et dont la 
 quantité annuelle est inférieur est inférieure à 1000
 (informations à fournir : n° produit, libellé produit, stock, stock actuel d''alerte, 
 quantité annuelle)
 
-select P.codart, P.libart, P.stkphy, P.stkale, P.qteann from produit as P where P.stkphy<=p.stkale and P.qteann<1000 
+select * from produit as P where P.stkphy<=p.stkale and P.qteann<1000 
 
 5. Quels sont les fournisseurs situés dans les départements 75 78 92 77 ?
 L’affichage (département, nom fournisseur) sera effectué par département 
@@ -324,66 +324,56 @@ select F.posfou, F.nomfou from fournis as F where substring(F.posfou,1,2)in(75,7
 
 6. Quelles sont les commandes passées au mois de mars et avril ?
 
-select E.numcom from entcom as E where MONTH(E.datcom)=03 or 04 
+select E.numcom from entcom as E where MONTH(E.datcom) in (03,04)
+
+select *
+from entcom
+where DATE_FORMAT(datcom,'%m') in (3,4)
 
 7. Quelles sont les commandes du jour qui ont des observations particulières ?
 (Affichage numéro de commande, date de commande) 
 
-select E.numcom, E.datcom, E.obscom from entcom as E where E.obscom <> ''
+select E.numcom, E.datcom, E.obscom from entcom as E where E.obscom <> '' and datcom=NOW();
+
+SELECT obscom, numcom FROM entcom 
+WHERE obscom != "" AND datcom = CURDATE()
 
 8. Lister le total de chaque commande par total décroissant 
 (Affichage numéro de commande et total)
 
-select L.numcom, SUM(L.numcom) as totalCommande from ligcom as L group by L.numcom order by L.numcom DESC
+select L.numcom, SUM(L.qtecde*L.priuni) as totalCommande from ligcom as L group by L.numcom order by L.numcom DESC
 
 9. Lister les commandes dont le total est supérieur à 10 000€ ; on exclura dans le 
 calcul du total les articles commandés en quantité supérieure ou égale à 1000.
 (Affichage numéro de commande et total)
 
-select L.numcom, SUM(L.numcom) as totalCommande from ligcom as L where L.numcom>1000 GROUP BY L.numcom HAVING totalCommande > 10000
+SELECT SUM(qtecde*priuni) AS "somme", numcom FROM ligcom
+WHERE qtecde < 1000 
+GROUP BY numcom
+HAVING somme > 10000
 
 10.Lister les commandes par nom fournisseur 
 (Afficher le nom du fournisseur, le numéro de commande et la date)
 
-select Distinct F.nomfou , E.numcom, E.datcom from fournis as F INNER JOIN entcom as E 
+select Distinct F.nomfou , E.numcom, E.datcom from fournis as F INNER JOIN entcom as E on F.numfou=E.numfou
 
 11.Sortir les produits des commandes ayant le mot ""urgent'' en observation?
 (Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et 
 le sous total = quantité commandée * Prix unitaire)
 
-/* a revoir */ 
-select L.numcom, F.nomfou, P.libart,SUM(L.qtecom*L.priuni)
- from ligcom as L 
- inner join produit as P on L.codart = p.codart 
- inner join fournis as F on F.numfou
- 
-select L.numcom,SUM(L.qtecde*L.priuni)
- from ligcom as L 
- inner join entcom as E on E.numcom=L.numcom
-
- select L.numcom, F.nomfou, P.libart,SUM(L.qtecde*L.priuni)
- from ligcom as L 
- inner join produit as P on L.codart=P.codart 
- inner join fournis as F on F.numfou=E.numfou
- inner join entcom as E 
-
-select F.nomfou
- from fournis as F
- inner join entcom as E on F.numfou=E.numfou
- 
-
-
+SELECT entcom.numfou, fournis.nomfou, produit.libart, entcom.obscom, (qtecde * priuni) AS"sous total" 
+      FROM entcom 
+            INNER JOIN ligcom ON entcom.numcom = ligcom.numcom 
+            INNER JOIN fournis ON entcom.numfou = fournis.numfou
+            INNER JOIN produit ON ligcom.codart = produit.codart
+                  WHERE entcom.obscom LIKE "%urgent%"
 
 12.Coder de 2 manières différentes la requête suivante :
 Lister le nom des fournisseurs susceptibles de livrer au moins un article
 
-select distinct F.nomfou from fournis as F
- inner join entcom as E on F.numfou=E.numfou
- inner join ligcom as L on E.numcom=L.numcom
-  where L.qteliv>0 
+select distinct nomfou from fournis
+inner join vente on fournis.numfou = vente.numfou;
 
-  select distinct F.nomfou from fournis as F, entcom as E,ligcom as L WHERE E.numcom=L.numcom F.numfou=E.numfou
- and L.qteliv>0 
 
 13.Coder de 2 manières différentes la requête suivante
 Lister les commandes (Numéro et date) dont le fournisseur est celui de la 
@@ -394,34 +384,55 @@ inner join fournis as F on E.numfou=F.numfou where F.numfou=(
       select F.nomfou from fournis as F
        inner JOIN entcom as E on E.numfou=F.numfou where E.numcom=70210 )
 
+       SELECT numcom, datcom, numfou 
+       FROM entcom as E1
+       WHERE  numfou = ( 
+        SELECT numfou 
+        FROM entcom as E2
+         WHERE numcom = 70210) AND E1.numfou != 70210
+
 14.Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés 
 sur Prix1) que le moins cher des rubans (article dont le premier caractère 
 commence par R). On affichera le libellé de l’article et prix1
 
-select P.libart, Min(V.prix1) from vente as V inner join produit as P on V.codart=P.codart 
-where P.libart in( 
-      select P.libart from produit as P inner join vente as V on V.codart=P.codart where P.libart like "R%" )
+select P.libart, Min(V.prix1) 
+      from vente as V 
+            inner join produit as P on V.codart=P.codart 
+                  where P.libart in ( 
+select P.libart 
+      from produit as P 
+             where P.libart like "R%" )
+
+
+/*** bonne facon ***/ 
+SELECT p.libart, v.prix1
+FROM vente AS v
+INNER JOIN produit AS p ON v.codart = p.codart
+GROUP BY v.prix1 
+HAVING v.prix1 < (SELECT MIN(prix1)
+                  FROM vente 
+                  WHERE codart LIKE 'r%')
       
 15.Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est 
 inférieur ou égal à 150 % du stock d''alerte. La liste est triée par produit puis 
 fournisseur 
 
-select distinct P.libart, F.nomfou from fournis as F 
+select  P.libart, F.nomfou from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
-  where P.stkphy<= (P.stkale*1.5) order by P.libart , F.nomfou  
+  where P.stkphy<= P.stkale*1.5 order by P.libart , F.nomfou  
 
 16.Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est 
 inférieur ou égal à 150 % du stock d'alerte et un délai de livraison de' plus 30 
 jours. La liste est triée par fournisseur puis produit
 
-select distinct P.libart, F.nomfou from fournis as F 
+select  P.libart, F.nomfou from fournis as F 
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
  inner join entcom as E on E.numfou=F.numfou
  inner join ligcom as L on L.numcom=E.numcom
-  where P.stkphy<= (P.stkale*1.5) and
-  DATEDIFF(E.datcom,L.derliv)>30
+  where P.stkphy<= P.stkale*1.5 
+  and V.delliv<=30
   order by P.libart, F.nomfou  
 
 17.Avec le même type de sélection que ci-dessus, sortir un total des stocks par 
@@ -431,7 +442,6 @@ select P.libart, F.nomfou, SUM(P.stkphy) as totalStock from fournis as F
  inner join vente as V on F.numfou=V.numfou 
  inner join produit as P on P.codart=V.codart
  inner join entcom as E on E.numfou=F.numfou
- inner join ligcom as L on L.numcom=E.numcom
  GROUP BY F.nomfou
  order by totalStock desc
 
@@ -458,8 +468,26 @@ where TotalPrix=(
       select sum(prixHt*20/100)from vente as V where prixHt= (
             select SUM(V.prix1)as prixHt from vente ))
           
+IV Les besoins de mise a jour 
 
+1. Application d''une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 
+pour le fournisseur 9180
 
+update 
+
+SELECT colonne
+
+FROM table
+
+INNER JOIN table ON cle=cle
+
+WHERE condition
+
+GROUP BY colonne
+
+HAVING condition
+
+ORDER BY colonne ;
 
 
 /******************************************************************************************/
