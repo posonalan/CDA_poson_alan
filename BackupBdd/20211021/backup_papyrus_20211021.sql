@@ -133,9 +133,25 @@ CREATE TABLE `produit` (
 
 LOCK TABLES `produit` WRITE;
 /*!40000 ALTER TABLE `produit` DISABLE KEYS */;
-INSERT INTO `produit` VALUES ('B001','Bande magnétique 1200',20,87,240,'unite'),('B002','Bande magnétique 6250',20,12,410,'unite'),('D035','CD R slim 80 mm',40,42,150,'B010'),('D050','CD R-W 80mm',50,4,0,'B010'),('I100','Papier 1 ex continu',100,557,3500,'B1000'),('I105','Papier 2 ex continu',75,5,2300,'B1000'),('I108','Papier 3 ex continu',200,557,3500,'B500'),('I110','Papier 4 ex continu',10,12,63,'B400'),('P220','Pré-imprimé commande',500,2500,24500,'B500'),('P230','Pré-imprimé facture',500,250,12500,'B500'),('P240','Pré-imprimé bulletin paie',500,3000,6250,'B500'),('P250','Pré-imprimé bon livraison',500,2500,24500,'B500'),('P270','Pré-imprimé bon fabrication',500,2500,24500,'B500'),('R080','ruban Epson 850',10,2,120,'unite'),('R132','ruban impl 1200 lignes',25,200,182,'unite');
+INSERT INTO `produit` VALUES ('B001','Bande magnétique 1200',20,1,240,'unite'),('B002','Bande magnétique 6250',20,0,410,'unite'),('D035','CD R slim 80 mm',40,0,150,'B010'),('D050','CD R-W 80mm',50,0,0,'B010'),('I100','Papier 1 ex continu',100,6,3500,'B1000'),('I105','Papier 2 ex continu',75,0,2300,'B1000'),('I108','Papier 3 ex continu',200,6,3500,'B500'),('I110','Papier 4 ex continu',10,0,63,'B400'),('P220','Pré-imprimé commande',500,25,24500,'B500'),('P230','Pré-imprimé facture',500,3,12500,'B500'),('P240','Pré-imprimé bulletin paie',500,30,6250,'B500'),('P250','Pré-imprimé bon livraison',500,25,24500,'B500'),('P270','Pré-imprimé bon fabrication',500,25,24500,'B500'),('R080','ruban Epson 850',10,0,120,'unite'),('R132','ruban impl 1200 lignes',25,2,182,'unite');
 /*!40000 ALTER TABLE `produit` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary table structure for view `test`
+--
+
+DROP TABLE IF EXISTS `test`;
+/*!50001 DROP VIEW IF EXISTS `test`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `test` AS SELECT 
+ 1 AS `nomfou`,
+ 1 AS `libart`,
+ 1 AS `qtecde`,
+ 1 AS `obscom`,
+ 1 AS `datcom`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Table structure for table `vente`
@@ -168,6 +184,30 @@ LOCK TABLES `vente` WRITE;
 INSERT INTO `vente` VALUES ('B001',8700,15,0,150,50,145,100,140),('B002',8700,15,0,210,50,200,100,185),('D035',120,0,0,40,0,0,0,0),('D035',9120,5,0,40,100,30,0,0),('I100',120,90,0,700,50,600,120,500),('I100',540,70,0,710,60,630,100,600),('I100',9120,60,0,800,70,600,90,500),('I100',9150,90,0,650,90,600,200,590),('I100',9180,30,0,720,50,670,100,490),('I105',120,90,10,705,50,630,120,500),('I105',540,70,0,810,60,645,100,600),('I105',8700,30,0,720,50,670,100,510),('I105',9120,60,0,920,70,800,90,700),('I105',9150,90,0,685,90,600,200,590),('I108',120,90,5,795,30,720,100,680),('I108',9120,60,0,920,70,820,100,780),('I110',9120,60,0,950,70,850,90,790),('I110',9180,90,0,900,70,870,90,835),('P220',120,15,0,3700,100,3500,0,0),('P220',8700,20,50,3500,100,3350,0,0),('P230',120,30,0,5200,100,5000,0,0),('P230',8700,60,0,5000,50,4900,0,0),('P240',120,15,0,2200,100,2000,0,0),('P250',120,30,0,1500,100,1400,500,1200),('P250',9120,30,0,1500,100,1400,500,1200),('R080',9120,10,0,120,100,100,0,0),('R132',9120,5,0,275,0,0,0,0);
 /*!40000 ALTER TABLE `vente` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Current Database: `papyrus`
+--
+
+USE `papyrus`;
+
+--
+-- Final view structure for view `test`
+--
+
+/*!50001 DROP VIEW IF EXISTS `test`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `test` AS select `fournis`.`nomfou` AS `nomfou`,`produit`.`libart` AS `libart`,`ligcom`.`qtecde` AS `qtecde`,`entcom`.`obscom` AS `obscom`,`entcom`.`datcom` AS `datcom` from (((`fournis` join `produit`) join `ligcom`) join `entcom`) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -178,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-21 12:20:11
+-- Dump completed on 2021-10-21 16:34:04

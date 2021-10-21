@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: agencevoyage
+-- Host: localhost    Database: exercice3
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `agencevoyage`
+-- Current Database: `exercice3`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `agencevoyage` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `exercice3` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `agencevoyage`;
+USE `exercice3`;
 
 --
 -- Table structure for table `avoir_note`
@@ -40,7 +40,7 @@ CREATE TABLE `avoir_note` (
   KEY `FK_AvoirNote_Etudiants` (`idEtudiant`),
   CONSTRAINT `FK_AvoirNote_Epreuves` FOREIGN KEY (`idEpreuve`) REFERENCES `epreuves` (`idEpreuve`),
   CONSTRAINT `FK_AvoirNote_Etudiants` FOREIGN KEY (`idEtudiant`) REFERENCES `etudiants` (`idEtudiant`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,56 +49,8 @@ CREATE TABLE `avoir_note` (
 
 LOCK TABLES `avoir_note` WRITE;
 /*!40000 ALTER TABLE `avoir_note` DISABLE KEYS */;
+INSERT INTO `avoir_note` VALUES (1,1,1,15),(2,2,1,8),(3,3,1,7),(4,4,1,11),(5,5,1,15),(6,6,1,16),(7,7,1,1),(8,17,1,6),(9,18,1,11),(10,1,2,12),(11,2,2,12),(12,3,2,3),(13,4,2,15),(14,5,2,9),(15,6,2,11),(16,7,2,13),(17,17,2,19),(18,18,2,6),(19,8,3,8),(20,9,3,14),(21,10,3,14),(22,11,3,11),(23,12,3,6),(24,13,3,3),(25,14,3,20),(26,15,3,12),(27,16,3,11),(28,8,4,7),(29,9,4,11),(30,10,4,12),(31,11,4,3),(32,12,4,20),(33,13,4,12),(34,14,4,10),(35,15,4,8),(36,16,4,10),(37,17,4,8);
 /*!40000 ALTER TABLE `avoir_note` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `catalogue`
---
-
-DROP TABLE IF EXISTS `catalogue`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `catalogue` (
-  `idCatalogue` int(11) NOT NULL AUTO_INCREMENT,
-  `idPrestation` int(11) NOT NULL,
-  PRIMARY KEY (`idCatalogue`),
-  KEY `FK_Catalogue_Prestation` (`idPrestation`),
-  CONSTRAINT `FK_Catalogue_Prestation` FOREIGN KEY (`idPrestation`) REFERENCES `prestation` (`idPrestation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `catalogue`
---
-
-LOCK TABLES `catalogue` WRITE;
-/*!40000 ALTER TABLE `catalogue` DISABLE KEYS */;
-/*!40000 ALTER TABLE `catalogue` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `client`
---
-
-DROP TABLE IF EXISTS `client`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `client` (
-  `idClient` int(11) NOT NULL AUTO_INCREMENT,
-  `nomClient` varchar(50) DEFAULT NULL,
-  `prenomClient` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idClient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `client`
---
-
-LOCK TABLES `client` WRITE;
-/*!40000 ALTER TABLE `client` DISABLE KEYS */;
-/*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -120,7 +72,7 @@ CREATE TABLE `enseignants` (
   `dateNaissanceEnseignant` date DEFAULT NULL,
   `dateEmbaucheEnseignant` date DEFAULT NULL,
   PRIMARY KEY (`idEnseignant`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,6 +81,7 @@ CREATE TABLE `enseignants` (
 
 LOCK TABLES `enseignants` WRITE;
 /*!40000 ALTER TABLE `enseignants` DISABLE KEYS */;
+INSERT INTO `enseignants` VALUES (1,'talon','isabelle','MAITRE DE CONFERENCES','12,rue des lilas','marseille',13000,'29-89-76-30','1965-05-30','1991-10-01'),(2,'pelletier','séverine','CERTIFIE','213,avenue de londres','calais',62100,'21-54-87-61','1975-04-21','2014-09-01'),(3,'roseau','alain','AGREGE','12,allee des mimosas','calais',62100,'21-65-87-43','1960-01-02','1991-10-01'),(4,'preux','erick','CERTIFIE','76,rue charles de gaulle','lyon',69000,'30-87-21-54','1969-11-09','1995-10-01'),(5,'roussel','philippe','MAITRE DE CONFERENCES','43,rue des cogognes','lille',59000,'28-90-86-64','1966-01-21','1990-10-12'),(6,'renaud','leon','MAITRE DE CONFERENCES','34,allee luoia','lille',59000,'28-29-30-31','1968-12-12','1994-10-10'),(7,'delignieres','benedicte','MAITRE DE CONFERENCES','124,allee rouids','lyon',69000,'45-87-91-03','1964-10-13','1991-10-01'),(8,'robillard','marcel','AGREGE','12,route de paris','lille',59000,'28-28-39-39','1965-12-12','1995-10-01'),(9,'savasta','sophie','CERTIFIE','32,rue luois david','calais',62100,'21-78-64-54','1959-10-09','1996-10-01'),(10,'cayron','isabelle','AGREGE','56,rue de majorettes','lille',59000,'28-98-59-01','1965-09-09','1993-10-01'),(11,'pacou','alain','AGREGE','34,rue monsigny','saint omer',62300,'21-94-63-20','1978-12-01','1998-10-01');
 /*!40000 ALTER TABLE `enseignants` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +105,7 @@ CREATE TABLE `epreuves` (
   KEY `FK_epreuves_matieres` (`idMatiereEpreuve`),
   CONSTRAINT `FK_epreuves_enseignants` FOREIGN KEY (`idEnseignantEpreuve`) REFERENCES `enseignants` (`idEnseignant`),
   CONSTRAINT `FK_epreuves_matieres` FOREIGN KEY (`idMatiereEpreuve`) REFERENCES `matieres` (`idMatiere`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,6 +114,7 @@ CREATE TABLE `epreuves` (
 
 LOCK TABLES `epreuves` WRITE;
 /*!40000 ALTER TABLE `epreuves` DISABLE KEYS */;
+INSERT INTO `epreuves` VALUES (1,'interro anglais',9,1,'2014-09-12',1,1),(2,'partiel maths',3,8,'2014-09-13',3,1),(3,'partiel BD',1,2,'2014-09-18',4,2),(4,'partiel UNIX',7,3,'2014-10-01',3,2),(5,'interro BD',1,2,'2014-10-12',1,2),(6,'interro maths',3,8,'2014-10-12',4,1);
 /*!40000 ALTER TABLE `epreuves` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +139,7 @@ CREATE TABLE `etudiants` (
   `sexeEtudiant` char(1) DEFAULT NULL,
   `dateNaissanceEtudiant` date DEFAULT NULL,
   PRIMARY KEY (`idEtudiant`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,36 +148,8 @@ CREATE TABLE `etudiants` (
 
 LOCK TABLES `etudiants` WRITE;
 /*!40000 ALTER TABLE `etudiants` DISABLE KEYS */;
+INSERT INTO `etudiants` VALUES (1,'roblin','lea','12,bd de la liberte','calais',62100,'21345678','2014-09-01',1,'','F','1995-01-14'),(2,'macarthur','leon','121,bd gambetta','calais',62100,'21-30-65-09','2014-09-01',1,'','M','1994-04-12'),(3,'minol','luc','9,rue des prairies','boulogne',62200,'21-30-20-10','2014-09-01',1,'','M','1997-03-12'),(4,'bagnole','sophie','12,rue des capucines','wimereux',62930,'21-89-04-30','2014-09-01',1,'','F','1996-03-21'),(5,'bury','marc','67,allee ronde','marcq',62300,'21-90-87-65','2014-09-01',1,'','M','1993-02-05'),(6,'vendraux','marc','5,rue de marseille','calais',62100,'21-96-00-09','2013-09-01',1,'a redouble sa premiere annee','M','1996-01-21'),(7,'vendermaele','helene','456,rue de paris','boulogne',62200,'21-45-45-60','2014-09-01',1,'','F','1995-03-30'),(8,'besson','loic','3,allee carpentier','dunkerque',59300,'28-90-89-78','2014-09-01',2,'','M','1994-05-21'),(9,'godart','jean-paul','123,rue de lens','marck',59870,'28-09-87-65','2013-09-01',2,'a double sa seconde annee','M','1993-01-12'),(10,'beaux','marie','1,allee des cygnes','dunkerque',59100,'21-30-87-90','2014-09-01',2,NULL,'F','1996-04-12'),(11,'turini','elsa','12,route de paris','boulogne',62200,'21-32-47-97','2014-09-01',2,NULL,'F','1996-07-17'),(12,'torelle','elise','123,vallee du denacre','boulogne',62200,'21-67-86-90','2014-09-01',2,NULL,'F','1997-04-16'),(13,'pharis','pierre','12,avenue foch','calais',62100,'21-21-85-90','2014-09-01',2,NULL,'M','1996-03-18'),(14,'ephyre','luc','12,rue de lyon','calais',62100,'21-35-32-90','2014-09-01',2,NULL,'M','1995-01-21'),(15,'leclercq','jules','12,allee des ravins','boulogne',62200,'21-36-71-92','2014-09-01',2,NULL,'M','1994-05-19'),(16,'dupont','luc','21,avenue monsigny','calais',62200,'21-21-34-99','2014-09-01',2,NULL,'M','1996-11-02'),(17,'marke','loic','312,route de paris','wimereux',62930,'21-87-87-71','2014-09-01',2,NULL,'M','1996-11-12'),(18,'dewa','leon','121,allee des eglantines','dunkerque',59100,'28-30-87-90','2014-09-01',2,NULL,'M','1997-04-03');
 /*!40000 ALTER TABLE `etudiants` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `facture`
---
-
-DROP TABLE IF EXISTS `facture`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `facture` (
-  `idFacture` int(11) NOT NULL AUTO_INCREMENT,
-  `idPrestation` int(11) DEFAULT NULL,
-  `idClient` int(11) DEFAULT NULL,
-  `prixPaye` decimal(15,2) DEFAULT NULL,
-  PRIMARY KEY (`idFacture`),
-  KEY `FK_Facture_Prestation` (`idPrestation`),
-  KEY `FK_Facture_Client` (`idClient`),
-  CONSTRAINT `FK_Facture_Client` FOREIGN KEY (`idClient`) REFERENCES `client` (`idClient`),
-  CONSTRAINT `FK_Facture_Prestation` FOREIGN KEY (`idPrestation`) REFERENCES `prestation` (`idPrestation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `facture`
---
-
-LOCK TABLES `facture` WRITE;
-/*!40000 ALTER TABLE `facture` DISABLE KEYS */;
-/*!40000 ALTER TABLE `facture` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -243,7 +169,7 @@ CREATE TABLE `faire_cours` (
   KEY `FK_FaireCours_Matieres` (`idMatiere`),
   CONSTRAINT `FK_FaireCours_Enseignants` FOREIGN KEY (`idEnseignant`) REFERENCES `enseignants` (`idEnseignant`),
   CONSTRAINT `FK_FaireCours_Matieres` FOREIGN KEY (`idMatiere`) REFERENCES `matieres` (`idMatiere`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -252,30 +178,8 @@ CREATE TABLE `faire_cours` (
 
 LOCK TABLES `faire_cours` WRITE;
 /*!40000 ALTER TABLE `faire_cours` DISABLE KEYS */;
+INSERT INTO `faire_cours` VALUES (1,1,2,2),(2,1,10,2),(3,2,4,1),(4,2,5,1),(5,2,11,1),(6,2,11,2),(7,3,8,2),(8,3,13,1),(9,4,14,1),(10,5,12,1),(11,5,12,2),(12,6,3,2),(13,6,3,1),(14,6,6,2),(15,7,13,1),(16,7,7,2),(17,7,3,2),(18,8,10,1),(19,8,13,1),(20,9,1,1),(21,9,1,2),(22,10,9,1),(23,10,9,2),(24,11,8,1);
 /*!40000 ALTER TABLE `faire_cours` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `logement`
---
-
-DROP TABLE IF EXISTS `logement`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `logement` (
-  `idLogement` int(11) NOT NULL AUTO_INCREMENT,
-  `typeDeLogement` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idLogement`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `logement`
---
-
-LOCK TABLES `logement` WRITE;
-/*!40000 ALTER TABLE `logement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `logement` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -293,7 +197,7 @@ CREATE TABLE `matieres` (
   PRIMARY KEY (`idMatiere`),
   KEY `FK_matieres_modules` (`idModule`),
   CONSTRAINT `FK_matieres_modules` FOREIGN KEY (`idModule`) REFERENCES `modules` (`idModule`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -302,6 +206,7 @@ CREATE TABLE `matieres` (
 
 LOCK TABLES `matieres` WRITE;
 /*!40000 ALTER TABLE `matieres` DISABLE KEYS */;
+INSERT INTO `matieres` VALUES (1,'anglais',4,2),(2,'BD',1,5),(3,'UNIX',1,5),(4,'access',1,1),(5,'bureautique',1,2),(6,'C',1,5),(7,'Prog avancee',1,3),(8,'mathematiques',2,1),(9,'expression',4,2),(10,'ACSI',1,7),(11,'economie',3,2),(12,'gestion',3,2),(13,'algorithmique',1,5),(14,'architecture',1,3);
 /*!40000 ALTER TABLE `matieres` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -317,7 +222,7 @@ CREATE TABLE `modules` (
   `nomModule` varchar(15) NOT NULL,
   `coefficientModule` int(11) DEFAULT NULL,
   PRIMARY KEY (`idModule`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,38 +231,8 @@ CREATE TABLE `modules` (
 
 LOCK TABLES `modules` WRITE;
 /*!40000 ALTER TABLE `modules` DISABLE KEYS */;
+INSERT INTO `modules` VALUES (1,'informatique',15),(2,'mathematiques',5),(3,'EOG',5),(4,'LEC',5);
 /*!40000 ALTER TABLE `modules` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `prestation`
---
-
-DROP TABLE IF EXISTS `prestation`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `prestation` (
-  `idPrestation` int(11) NOT NULL AUTO_INCREMENT,
-  `intitule` varchar(50) DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL,
-  `lieu` varchar(50) DEFAULT NULL,
-  `niveauPrestation` int(11) DEFAULT NULL,
-  `prixPublic` decimal(15,2) DEFAULT NULL,
-  `photo` varchar(50) DEFAULT NULL,
-  `idLogement` int(11) NOT NULL,
-  PRIMARY KEY (`idPrestation`),
-  KEY `FK_Presentation_Logement` (`idLogement`),
-  CONSTRAINT `FK_Presentation_Logement` FOREIGN KEY (`idLogement`) REFERENCES `logement` (`idLogement`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `prestation`
---
-
-LOCK TABLES `prestation` WRITE;
-/*!40000 ALTER TABLE `prestation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `prestation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
