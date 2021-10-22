@@ -130,7 +130,7 @@ multiplie le stock :
 lance la procedure : 
 
  DELIMITER ;
- CALL modifStk()
+ CALL modifStkMulti()
  ;
 
 utilisation d''un parametre de retour

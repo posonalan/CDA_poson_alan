@@ -75,7 +75,7 @@ CREATE TABLE `fournis` (
 
 LOCK TABLES `fournis` WRITE;
 /*!40000 ALTER TABLE `fournis` DISABLE KEYS */;
-INSERT INTO `fournis` VALUES (120,'GROBRIGAN','20 rue du papier','92200','papercity','Georges',8),(540,'ECLIPSE','53 rue laisse flotter les rubans','78250','Bugbugville','Nestor',7),(8700,'MEDICIS','120 rue des plantes','75014','Paris','Lison',0),(9120,'DISCOBOL','11 rue des sports','85100','La Roche sur Yon','Hercule',8),(9150,'DEPANPAP','26 avenue des locomotives','59987','Coroncountry','Pollux',5),(9180,'HURRYTAPE','68 boulevard des octets','4044','Dumpville','Track',0);
+INSERT INTO `fournis` VALUES (120,'alan','20 rue du papier','92200','papercity','Georges',8),(540,'ECLIPSE','53 rue laisse flotter les rubans','78250','Bugbugville','Nestor',7),(8700,'MEDICIS','120 rue des plantes','75014','Paris','Lison',0),(9120,'DISCOBOL','11 rue des sports','85100','La Roche sur Yon','Hercule',8),(9150,'DEPANPAP','26 avenue des locomotives','59987','Coroncountry','Pollux',5),(9180,'HURRYTAPE','68 boulevard des octets','4044','Dumpville','Track',0);
 /*!40000 ALTER TABLE `fournis` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +133,7 @@ CREATE TABLE `produit` (
 
 LOCK TABLES `produit` WRITE;
 /*!40000 ALTER TABLE `produit` DISABLE KEYS */;
-INSERT INTO `produit` VALUES ('B001','Bande magnétique 1200',20,1,240,'unite'),('B002','Bande magnétique 6250',20,0,410,'unite'),('D035','CD R slim 80 mm',40,0,150,'B010'),('D050','CD R-W 80mm',50,0,0,'B010'),('I100','Papier 1 ex continu',100,6,3500,'B1000'),('I105','Papier 2 ex continu',75,0,2300,'B1000'),('I108','Papier 3 ex continu',200,6,3500,'B500'),('I110','Papier 4 ex continu',10,0,63,'B400'),('P220','Pré-imprimé commande',500,25,24500,'B500'),('P230','Pré-imprimé facture',500,3,12500,'B500'),('P240','Pré-imprimé bulletin paie',500,30,6250,'B500'),('P250','Pré-imprimé bon livraison',500,25,24500,'B500'),('P270','Pré-imprimé bon fabrication',500,25,24500,'B500'),('R080','ruban Epson 850',10,0,120,'unite'),('R132','ruban impl 1200 lignes',25,2,182,'unite');
+INSERT INTO `produit` VALUES ('B001','Bande magnétique 1200',20,10,240,'unite'),('B002','Bande magnétique 6250',20,0,410,'unite'),('D035','CD R slim 80 mm',40,0,150,'B010'),('D050','CD R-W 80mm',50,0,0,'B010'),('I100','Papier 1 ex continu',100,6,3500,'B1000'),('I105','Papier 2 ex continu',75,0,2300,'B1000'),('I108','Papier 3 ex continu',200,6,3500,'B500'),('I110','Papier 4 ex continu',10,0,63,'B400'),('P220','Pré-imprimé commande',500,25,24500,'B500'),('P230','Pré-imprimé facture',500,3,12500,'B500'),('P240','Pré-imprimé bulletin paie',500,30,6250,'B500'),('P250','Pré-imprimé bon livraison',500,25,24500,'B500'),('P270','Pré-imprimé bon fabrication',500,25,24500,'B500'),('R080','ruban Epson 850',10,0,120,'unite'),('R132','ruban impl 1200 lignes',25,2,182,'unite');
 /*!40000 ALTER TABLE `produit` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,4 +218,4 @@ USE `papyrus`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-21 16:34:04
+-- Dump completed on 2021-10-21 17:20:55
