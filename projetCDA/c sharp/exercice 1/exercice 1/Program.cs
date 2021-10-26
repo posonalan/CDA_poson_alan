@@ -34,13 +34,13 @@ namespace exercice_1
             //b = Int32.Parse(Bb);
             //Console.WriteLine("votre premiere chiffre est " + a + " et votre dexieme est  " + b + " le total de ces deux chiffres est "+(a+b)+" ! \n");
 
-            //string Cc;
-            //double c;
+            string Cc;
+            double c;
 
-            //Console.WriteLine("Saississez votre taille au format M,Cm : ");
-            //Cc = Console.ReadLine(); 
-            //c = double.Parse(Cc);
-            //Console.WriteLine("vous mesurez " + c + " cm  c'est deja pas mal ! \n");
+            Console.WriteLine("Saississez votre taille au format M,Cm : ");
+            Cc = Console.ReadLine();
+            c = double.Parse(Cc);
+            Console.WriteLine("vous mesurez " + c + " cm  c'est deja pas mal ! \n");
 
             //string Dd;
             //int d;
@@ -82,13 +82,20 @@ namespace exercice_1
             //string alphabet = new string(lettre);
             //Console.WriteLine("voici les 4 premieres lettre de l'alphabet : " + alphabet + " et voici le a " + lettre[0]+ " ainsi que son code unicode : U+0041 .");
 
+            /* Exercice 1-7 */
+            char a = 'B';
+            Console.WriteLine("Le code ascii de " + a + " est : " + (int)a);
+            Console.ReadLine();
+
+
+
             Console.WriteLine("transformer une Minuscule en Majuscule .\n");
 
             string lettre;
 
             Console.WriteLine("Saisissez une lettre : ");
             lettre = Console.ReadLine();
-            Console.WriteLine(" voici la majuscule de votre lettre choisie : " + (lettre.ToUpper())+" . \n"); 
+            Console.WriteLine(" voici la majuscule de votre lettre choisie : " + (lettre.ToUpper() )+" . \n"); 
 
 
 
