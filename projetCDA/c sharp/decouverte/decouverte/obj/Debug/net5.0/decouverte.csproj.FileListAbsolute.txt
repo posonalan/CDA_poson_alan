@@ -5,7 +5,6 @@ U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\bin\Debug\net5.0\decouver
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\bin\Debug\net5.0\decouverte.dll
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\bin\Debug\net5.0\ref\decouverte.dll
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\bin\Debug\net5.0\decouverte.pdb
-U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.csproj.AssemblyReference.cache
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.GeneratedMSBuildEditorConfig.editorconfig
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.AssemblyInfoInputs.cache
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.AssemblyInfo.cs
@@ -14,3 +13,4 @@ U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouver
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\ref\decouverte.dll
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.pdb
 U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.genruntimeconfig.cache
+U:\59011-07-09\projetCDA\c sharp\decouverte\decouverte\obj\Debug\net5.0\decouverte.csproj.AssemblyReference.cache
