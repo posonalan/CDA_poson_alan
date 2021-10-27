@@ -280,7 +280,7 @@ namespace Exercise_3
             Console.Write(" saisissez votre emplacement de d arriver ( ligne ) : \n");
             ligneArriver = Int32.Parse(Console.ReadLine());
 
-
+            /***/
             if ( piece > 4)
             {
 
