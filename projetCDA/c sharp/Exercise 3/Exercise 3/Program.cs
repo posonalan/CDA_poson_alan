@@ -47,32 +47,32 @@ namespace Exercise_3
             //    }
             //}
 
-            // Console.WriteLine("Saisir une note, afficher ”ajourné” si la note est inférieure à 8, " + "”rattrapage” entre 8 et 10, "”admis” dessus de 10.");
+             Console.WriteLine("Saisir une note, afficher ”ajourné” si la note est inférieure à 8, " + "”rattrapage” entre 8 et 10, "”admis” dessus de 10.");
 
-            //string note;
-            //double n;
+            string note;
+            double n;
 
-            //Console.Write("Saisissez votre note : \n");
-            //note = Console.ReadLine();
-            //n = double.Parse(note);
+            Console.Write("Saisissez votre note : \n");
+            note = Console.ReadLine();
+            n = double.Parse(note);
 
-            //if (n < 8)
-            //{
+            if (n < 8)
+            {
 
-            //    Console.WriteLine(" Votre note de " + n + " vous ajourne , triste nouvelle !");
-            //}
-            //else
-            //{
-            //    if (n > 10)
-            //    {
-            //        Console.WriteLine(" Votre note de " + n + " vous permet d'etre admis , Félicitation !");
-            //    }
+                Console.WriteLine(" Votre note de " + n + " vous ajourne , triste nouvelle !");
+            }
+            else
+            {
+                if (n > 10)
+                {
+                    Console.WriteLine(" Votre note de " + n + " vous permet d'etre admis , Félicitation !");
+                }
 
-            //    else
-            //    {
-            //        Console.WriteLine(" Votre note de " + n + " vous propulse directement en rattrappage !");
-            //    }
-            //}
+                else
+                {
+                    Console.WriteLine(" Votre note de " + n + " vous propulse directement en rattrappage !");
+                }
+            }
 
 
             // Une compagnie d’assurance effectue des remboursements sur lesquels est ponctionnée une
@@ -90,7 +90,7 @@ namespace Exercise_3
             //montant = Console.ReadLine();
             //m = double.Parse(montant);
 
-            //if (m <4000)
+            //if (m >4000)
             //{
 
             //    Console.WriteLine(" Voici le coup de la franchise "+(m*10/100)+ ", elle a etait etablie sur le montant de vos reparation , cest a dire " + m + " euro.");
@@ -127,45 +127,48 @@ namespace Exercise_3
 
 
             // Plus petite valeur parmi 3 Afficher sur trois valeurs saisies la plus petite.
+                        int a;
+                        int b;
+                        Console.WriteLine("veuillez saisir la 1re valeur");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("veuillez saisir la 2eme valeur");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        if(a==b)
+                        {
+                            Console.WriteLine("1 seul valeur distinct");
+                        }
+                        else
+                        {
+                            Console.WriteLine("2 valeurs separes");
+                        };
 
-            //string valeurA;
-            //int a;
-            //string valeurB;
-            //int b;
-            //string valeurC;
-            //int c;
 
-            //Console.Write(" saisissez la premiere valeur : \n");
-            //valeurA = Console.ReadLine();
-            //a = Int32.Parse(valeurA);
-            //Console.Write(" saisissez la deuxieme valeur : \n");
-            //valeurB = Console.ReadLine();
-            //b = Int32.Parse(valeurB);
-            //Console.Write(" saisissez la troisieme valeur : \n");
-            //valeurC = Console.ReadLine();
-            //c = Int32.Parse(valeurC);
+            int a;
+            int b;
+            int c;
+            int min;
+            Console.Write("Entrez la première valeur : ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Entrez la deuxième valeur : ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Entrez la troisième valeur : ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if (a <= b)
+            {
+                min = a;
+            }
+            else
+            {
+                min = b;
+            }
+            if (c <= min)
+            {
+                min = c;
+            }
+            Console.Write("La plus petite valeur est : " + min);
 
-            //if ( a<b & a<c)
-            //{
-            //    Console.WriteLine(" la valeur la plus petite entre "+a+","+b+","+c+" est la valeur "+a+".");
-            //}
-            //else
-            //{
-            //    if(b<a & b<c) {
-            //        Console.WriteLine(" la valeur la plus petite entre " + a + "," + b + "," + c + " est la valeur " + b + ".");
-            //    }
-            //    else
-            //    {
-            //        if(c<b & c < a)
-            //        {
-            //            Console.WriteLine(" la valeur la plus petite entre " + a + "," + b + "," + c + " est la valeur " + c + ".");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine(" plusieurs valeurs sont identiques et les plus petites .");
-            //        }
-            //    }
-            //}
+
+
 
             //            Ecrire un programme demandant à l’utilisateur de saisir
             //— deux valeurs a et b, de type int ;
@@ -185,22 +188,35 @@ namespace Exercise_3
             //Console.Write(" saisissez l'operateur de calcule : \n");
 
 
-            //c = char.Parse(Console.ReadLine());
-            //switch (c)
-            //{
-            //    case '-':
-            //        Console.WriteLine(a - b);
-            //        break;
-            //    case '+':
-            //        Console.WriteLine(a + b);
-            //        break;
-            //    case '*':
-            //        Console.WriteLine(a * b);
-            //        break;
-            //    case '/':
-            //        Console.WriteLine(a / b);
-            //        break;
-            //}
+
+
+
+            c = char.Parse(Console.ReadLine());
+            switch (c)
+            {
+                case '-':
+                    Console.WriteLine(a - b);
+                    break;
+                case '+':
+                    Console.WriteLine(a + b);
+                    break;
+                case '*':
+                    Console.WriteLine(a * b);
+                    break;
+                case '/': 
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Division impossible par 0");
+                    }
+                    else
+                    {
+                        Console.WriteLine(a / b);
+                    }
+                    break;
+                    default:
+                    console.WriteLine("Operateur invalide");
+                    break;
+            }
 
 
 
@@ -268,26 +284,44 @@ namespace Exercise_3
             int colonneArriver;
             int ligneArriver;
             int piece;
+            int jouer;
 
-            Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
-            piece = Int32.Parse(Console.ReadLine());
-            Console.Write(" saisissez votre emplacement de depart ( colonne ) : \n");
-            colonneDepart = Int32.Parse(Console.ReadLine());
-            Console.Write(" saisissez votre emplacement de depart ( ligne ) :: \n");
-            ligneDepart = Int32.Parse(Console.ReadLine());
-            Console.Write(" saisissez votre emplacement de d arriver ( colonne ) : \n");
-            colonneArriver = Int32.Parse(Console.ReadLine());
-            Console.Write(" saisissez votre emplacement de d arriver ( ligne ) : \n");
-            ligneArriver = Int32.Parse(Console.ReadLine());
 
-            
-            if ( piece > 4)
+
+
+            Console.Write(" Pret pour une nouvelle partie ? 1 = oui / 2 = non  .  \n");
+            jouer = Int32.Parse(Console.ReadLine());
+
+
+            if (jouer == 1)
             {
 
-                Console.Write(" choisir une piece disponible \n");
-            }
-            else
-            {
+
+                Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
+                piece = Int32.Parse(Console.ReadLine());
+
+
+
+                while (piece > 4)
+                {
+                    Console.Write(" choisir une piece disponible \n");
+                    Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
+                    piece = Int32.Parse(Console.ReadLine());
+                }
+
+
+                Console.Write(" saisissez votre emplacement de depart ( colonne ) : \n");
+                colonneDepart = Int32.Parse(Console.ReadLine());
+                Console.Write(" saisissez votre emplacement de depart ( ligne ) :: \n");
+                ligneDepart = Int32.Parse(Console.ReadLine());
+                Console.Write(" saisissez votre emplacement de d arriver ( colonne ) : \n");
+                colonneArriver = Int32.Parse(Console.ReadLine());
+                Console.Write(" saisissez votre emplacement de d arriver ( ligne ) : \n");
+                ligneArriver = Int32.Parse(Console.ReadLine());
+
+
+
+
 
                 switch (piece)
                 {
@@ -297,22 +331,22 @@ namespace Exercise_3
                           ||
                            (ligneDepart == ligneArriver)
                            )
-                      
+
                             Console.WriteLine(" tu peux te deplacer");
-                        
+
 
                         else
                         {
                             Console.WriteLine(" bouge pas gamin ");
                         }
-                        break; 
-                
-                
-                //(((Math.Abs(colonneDepart - colonneArriver) == 1) &
-                        //    (Math.Abs(ligneDepart - ligneArriver) == 0)) ||
-                        //    ((Math.Abs(colonneDepart - colonneArriver) == 0) &
-                        //    (Math.Abs(ligneDepart - ligneArriver) == 1)))
-                       
+                        break;
+
+
+                    //(((Math.Abs(colonneDepart - colonneArriver) == 1) &
+                    //    (Math.Abs(ligneDepart - ligneArriver) == 0)) ||
+                    //    ((Math.Abs(colonneDepart - colonneArriver) == 0) &
+                    //    (Math.Abs(ligneDepart - ligneArriver) == 1)))
+
 
                     /* ***************************************** */
 
@@ -440,12 +474,7 @@ namespace Exercise_3
                          (Math.Abs(ligneDepart - ligneArriver) == 1)
                          )
 
-                         ||
-
-                         (
-                         (Math.Abs(colonneDepart - colonneArriver) == 1) &
-                         (Math.Abs(ligneDepart - ligneArriver) == 1)
-                         )
+                         
 
                         )
 
@@ -488,13 +517,14 @@ namespace Exercise_3
                         }
                         break;
 
-
                 }
             }
-
+            
         }
     }
+
 }
+    
 
 
 
