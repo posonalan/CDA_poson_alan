@@ -47,32 +47,32 @@ namespace Exercise_3
             //    }
             //}
 
-             Console.WriteLine("Saisir une note, afficher ”ajourné” si la note est inférieure à 8, " + "”rattrapage” entre 8 et 10, "”admis” dessus de 10.");
+            // Console.WriteLine("Saisir une note, afficher ”ajourné” si la note est inférieure à 8, " + "”rattrapage” entre 8 et 10, "”admis” dessus de 10.");
 
-            string note;
-            double n;
+            //string note;
+            //double n;
 
-            Console.Write("Saisissez votre note : \n");
-            note = Console.ReadLine();
-            n = double.Parse(note);
+            //Console.Write("Saisissez votre note : \n");
+            //note = Console.ReadLine();
+            //n = double.Parse(note);
 
-            if (n < 8)
-            {
+            //if (n < 8)
+            //{
 
-                Console.WriteLine(" Votre note de " + n + " vous ajourne , triste nouvelle !");
-            }
-            else
-            {
-                if (n > 10)
-                {
-                    Console.WriteLine(" Votre note de " + n + " vous permet d'etre admis , Félicitation !");
-                }
+            //    Console.WriteLine(" Votre note de " + n + " vous ajourne , triste nouvelle !");
+            //}
+            //else
+            //{
+            //    if (n > 10)
+            //    {
+            //        Console.WriteLine(" Votre note de " + n + " vous permet d'etre admis , Félicitation !");
+            //    }
 
-                else
-                {
-                    Console.WriteLine(" Votre note de " + n + " vous propulse directement en rattrappage !");
-                }
-            }
+            //    else
+            //    {
+            //        Console.WriteLine(" Votre note de " + n + " vous propulse directement en rattrappage !");
+            //    }
+            //}
 
 
             // Une compagnie d’assurance effectue des remboursements sur lesquels est ponctionnée une
@@ -127,45 +127,45 @@ namespace Exercise_3
 
 
             // Plus petite valeur parmi 3 Afficher sur trois valeurs saisies la plus petite.
-                        int a;
-                        int b;
-                        Console.WriteLine("veuillez saisir la 1re valeur");
-                        a = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("veuillez saisir la 2eme valeur");
-                        b = Convert.ToInt32(Console.ReadLine());
-                        if(a==b)
-                        {
-                            Console.WriteLine("1 seul valeur distinct");
-                        }
-                        else
-                        {
-                            Console.WriteLine("2 valeurs separes");
-                        };
+            //            int a;
+            //            int b;
+            //            Console.WriteLine("veuillez saisir la 1re valeur");
+            //            a = Convert.ToInt32(Console.ReadLine());
+            //            Console.WriteLine("veuillez saisir la 2eme valeur");
+            //            b = Convert.ToInt32(Console.ReadLine());
+            //            if(a==b)
+            //            {
+            //                Console.WriteLine("1 seul valeur distinct");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("2 valeurs separes");
+            //            };
 
 
-            int a;
-            int b;
-            int c;
-            int min;
-            Console.Write("Entrez la première valeur : ");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Entrez la deuxième valeur : ");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Entrez la troisième valeur : ");
-            c = Convert.ToInt32(Console.ReadLine());
-            if (a <= b)
-            {
-                min = a;
-            }
-            else
-            {
-                min = b;
-            }
-            if (c <= min)
-            {
-                min = c;
-            }
-            Console.Write("La plus petite valeur est : " + min);
+            //int a;
+            //int b;
+            //int c;
+            //int min;
+            //Console.Write("Entrez la première valeur : ");
+            //a = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Entrez la deuxième valeur : ");
+            //b = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Entrez la troisième valeur : ");
+            //c = Convert.ToInt32(Console.ReadLine());
+            //if (a <= b)
+            //{
+            //    min = a;
+            //}
+            //else
+            //{
+            //    min = b;
+            //}
+            //if (c <= min)
+            //{
+            //    min = c;
+            //}
+            //Console.Write("La plus petite valeur est : " + min);
 
 
 
@@ -191,35 +191,35 @@ namespace Exercise_3
 
 
 
-            c = char.Parse(Console.ReadLine());
-            switch (c)
-            {
-                case '-':
-                    Console.WriteLine(a - b);
-                    break;
-                case '+':
-                    Console.WriteLine(a + b);
-                    break;
-                case '*':
-                    Console.WriteLine(a * b);
-                    break;
-                case '/': 
-                    if (b == 0)
-                    {
-                        Console.WriteLine("Division impossible par 0");
-                    }
-                    else
-                    {
-                        Console.WriteLine(a / b);
-                    }
-                    break;
-                    default:
-                    console.WriteLine("Operateur invalide");
-                    break;
-            }
+            //c = char.Parse(Console.ReadLine());
+            //switch (c)
+            //{
+            //    case '-':
+            //        Console.WriteLine(a - b);
+            //        break;
+            //    case '+':
+            //        Console.WriteLine(a + b);
+            //        break;
+            //    case '*':
+            //        Console.WriteLine(a * b);
+            //        break;
+            //    case '/': 
+            //        if (b == 0)
+            //        {
+            //            Console.WriteLine("Division impossible par 0");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine(a / b);
+            //        }
+            //        break;
+            //        default:
+            //        console.WriteLine("Operateur invalide");
+            //        break;
+            //}
 
 
-
+            /******************************************************** JEU ECHEC *****************************************/
 
             // On indice les cases d’un échiquier avec deux indices i et j variant tous deux de 1 à 8.La case (i,
             //j) est sur la ligne i et la colonne j. Par convention, la case (1, 1) est noire.
@@ -279,252 +279,416 @@ namespace Exercise_3
             //}
 
 
-            int colonneDepart;
-            int ligneDepart;
-            int colonneArriver;
-            int ligneArriver;
-            int piece;
-            int jouer;
+            /************************************************* DEBUT DU JEU D ECHEC ***********************************************************************/
+
+            //int colonneDepart;
+            //int ligneDepart;
+            //int colonneArriver;
+            //int ligneArriver;
+            //int piece;
+            //int jouer;
+            //System.String deplacement = "pouvez vous deplacer";
+            //System.String arret = " ne pouvez pas vous deplacer ! ";
+
+            //Console.Write(" Pret pour une nouvelle partie ? 1 = oui / 2 = non  .  \n");
+            //jouer = Int32.Parse(Console.ReadLine());
 
 
-
-
-            Console.Write(" Pret pour une nouvelle partie ? 1 = oui / 2 = non  .  \n");
-            jouer = Int32.Parse(Console.ReadLine());
-
-
-            if (jouer == 1)
+            //if (jouer == 1)
             {
 
 
-                Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
-                piece = Int32.Parse(Console.ReadLine());
+                //Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
+                //piece = Int32.Parse(Console.ReadLine());
 
 
 
-                while (piece > 4)
+                //while (piece > 4)
+                //{
+                //    Console.Write(" choisir une piece disponible \n");
+                //    Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
+                //    piece = Int32.Parse(Console.ReadLine());
+                //}
+
+
+                //Console.Write(" saisissez votre emplacement de depart ( colonne ) : \n");
+                //colonneDepart = Int32.Parse(Console.ReadLine());
+                //Console.Write(" saisissez votre emplacement de depart ( ligne ) :: \n");
+                //ligneDepart = Int32.Parse(Console.ReadLine());
+                //Console.Write(" saisissez votre emplacement de d arriver ( colonne ) : \n");
+                //colonneArriver = Int32.Parse(Console.ReadLine());
+                //Console.Write(" saisissez votre emplacement de d arriver ( ligne ) : \n");
+                //ligneArriver = Int32.Parse(Console.ReadLine());
+
+
+
+
+
+                //switch (piece)
+                //{
+                //    case 1: /* tour */ /* deux façons de coder un si */ 
+
+                //        Console.WriteLine(" Vous" + (((colonneDepart == colonneArriver) || (ligneDepart == ligneArriver)) ? deplacement : arret));
+
+                //if (
+                //   (colonneDepart == colonneArriver) /*  si la colonne de depart et la meme que la colonne arriver */
+                //  ||
+                //   (ligneDepart == ligneArriver) /* si la ligne de depart est la meme que la ligne d'arriver */
+                //   )
+
+
+
+                //    Console.WriteLine(deplacement);
+
+
+                //else
+                //{
+                //    Console.WriteLine(arret);
+                //}
+                //break;
+
+                /* ***************************************** */
+
+                //case 2: /* fou */
+
+                //    Console.WriteLine(" Vous" + ((
+                //      (Math.Abs(colonneDepart - colonneArriver))
+                //      ==
+                //      (Math.Abs(ligneDepart - ligneArriver))
+                //      ) ? deplacement : arret));
+
+                //    break;
+
+                //if (
+
+                //  (
+                //  (Math.Abs(colonneDepart - colonneArriver))
+                //  ==
+                //  (Math.Abs(ligneDepart - ligneArriver))
+                //  )
+
+                //  )
+                //{
+                //    Console.WriteLine(deplacement);
+                //}
+                //else
+                //{
+                //    Console.WriteLine(arret);
+                //}
+                // break;
+
+                /* ***************************************** */
+
+                //case 3: /* dame */
+
+
+                //    Console.WriteLine(" Vous" + ((
+                //     (
+                //      (Math.Abs(colonneDepart - colonneArriver))
+                //      ==
+                //      (Math.Abs(ligneDepart - ligneArriver))
+                //     )
+                //      ||
+                //     (
+                //      (colonneDepart == colonneArriver)
+                //      ||
+                //      (ligneDepart == ligneArriver)
+                //     )
+                //     ) ? deplacement : arret));
+
+                //    break;
+
+                // if
+
+                //   (
+
+                //   (
+                //   (Math.Abs(colonneDepart - colonneArriver))
+                //   ==
+                //   (Math.Abs(ligneDepart - ligneArriver))
+                //   )
+
+                //   ||
+
+                //(
+                //(colonneDepart == colonneArriver)
+                //||
+                //(ligneDepart == ligneArriver)
+                //)
+
+                //)
+
+                // {
+                //     Console.WriteLine(deplacement);
+                // }
+                // else
+                // {
+                //     Console.WriteLine(arret);
+                // }
+                // break;
+
+                /* ***************************************** */
+
+                //case 4: /* roi */
+
+                //    Console.WriteLine(" Vous" + ((
+                //    (
+                //     (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                //     (Math.Abs(ligneDepart - ligneArriver) == 0)
+                //     )
+                //     ||
+                //     (
+                //     (Math.Abs(colonneDepart - colonneArriver) == 0) &
+                //     (Math.Abs(ligneDepart - ligneArriver) == 1)
+                //     )
+                //     ||
+                //     (
+                //     (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                //     (Math.Abs(ligneDepart - ligneArriver) == 1)
+                //     )
+                //     ) ? deplacement : arret));
+
+                //    break;
+
+
+                //if (
+
+
+                // (
+                // (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                // (Math.Abs(ligneDepart - ligneArriver) == 0)
+                // )
+
+                // ||
+
+                // (
+                // (Math.Abs(colonneDepart - colonneArriver) == 0) &
+                // (Math.Abs(ligneDepart - ligneArriver) == 1)
+                // )
+
+                // ||
+
+                // (
+                // (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                // (Math.Abs(ligneDepart - ligneArriver) == 1)
+                // )
+
+
+
+                //)
+
+                //{
+                //    Console.WriteLine(deplacement);
+                //}
+                //else
+                //{
+                //    Console.WriteLine(arret);
+                //}
+                //break;
+
+                /* ***************************************** */
+
+                //case 0: /* cavalier */
+
+                //    Console.WriteLine(" Vous" + ((
+                //  (
+                //        (Math.Abs(colonneDepart - colonneArriver) == 2) &
+                //        (Math.Abs(ligneDepart - ligneArriver) == 1)
+                //        )
+                //        ||
+                //        (
+                //        (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                //        (Math.Abs(ligneDepart - ligneArriver) == 2)
+                //        )
+                //   ) ? deplacement : arret));
+                //    break;
+
+
+
+                //        if (
+
+                //            (
+                //            (Math.Abs(colonneDepart - colonneArriver) == 2) &
+                //            (Math.Abs(ligneDepart - ligneArriver) == 1)
+                //            )
+
+                //            ||
+
+                //            (
+                //            (Math.Abs(colonneDepart - colonneArriver) == 1) &
+                //            (Math.Abs(ligneDepart - ligneArriver) == 2)
+                //            )
+
+                //           )
+
+
+                //        {
+                //            Console.WriteLine(deplacement);
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine(arret);
+                //        }
+                //        break;
+
+                //    }
+                //}
+
+
+                /**********************************************************************************************************************************/
+                //string Hh;
+                //int heure;
+                //string Mm; 
+                //int minute;
+
+                //Console.Write(" qu'elle heure est il ? ( heure ).  \n");
+                //Hh = Console.ReadLine();
+                //heure = Int32.Parse(Hh);
+                //Console.Write("qu'elle sont les minutes ?(minute). \n");
+                //Mm = Console.ReadLine();
+                //minute = Int32.Parse(Mm);
+                //Console.WriteLine(" il est actuellement " + heure+":" + minute + ".");
+
+
+
+                //string hd;
+                //int heureDebut;
+                //string hf;
+                //int heureFin;
+                //string md;
+                //int minuteDebut;
+                //string mf;
+                //int minuteFin;
+                //int compareHeure;
+                //int compareMinute;
+                ////System.String horaireD = " "+minuteDebut+ ;
+                ////System.String horaireF = "pouvez vous deplacer";
+
+
+
+
+                //Console.Write(" qu'elle est l'heure de depart ? ( heure ).  \n");
+                //hd = Console.ReadLine();
+                //heureDebut = Int32.Parse(hd);
+                //Console.Write("qu'elle sont les minutes du depart ?(minute). \n");
+                //md = Console.ReadLine();
+                //minuteDebut = Int32.Parse(md);
+                //Console.Write(" qu'elle heure arrivez vous ? ( heure ).  \n");
+                //hf = Console.ReadLine();
+                //heureFin = Int32.Parse(hf);
+                //Console.Write("qu'elle sont les minutes que vous arrivez ?(minute). \n");
+                //mf = Console.ReadLine();
+                //minuteFin = Int32.Parse(mf);
+                ////Console.WriteLine(" vous partez a " + heureDebut+":" + minuteDebut + " et vous arriverez pour "+heureFin+":"+minuteFin+" .");
+
+
+                //compareHeure = (heureFin - heureDebut);
+                //compareMinute = Math.Abs(minuteFin - minuteDebut);
+
+                //if (compareMinute > 60)
+                //{
+                //    compareHeure = compareHeure++;
+                //}
+
+                //if ((heureDebut < heureFin) || (heureDebut == heureFin && minuteDebut < minuteFin))
+                ////{
+                ////if (heureDebut == heureFin && minuteDebut < minuteFin)
+                //{
+
+
+                //        Console.WriteLine("vous avez mis " + compareHeure + ":" + compareMinute + " de route");
+                //    }
+
+
+                ////    else
+                ////    {
+                ////        Console.WriteLine("Votre voyage est impossible, si vous partez a " + heureDebut + ":" + minuteDebut + " vous ne pouvez pas arriver a " + heureFin + ":" + minuteFin + ".");
+                ////    }
+                ////}
+
+
+                //else
+                //{
+                //    Console.WriteLine("Votre voyage est impossible, si vous partez a " + heureDebut + "heures" + minuteDebut + " vous ne pouvez pas arriver a " + heureFin + ":" + minuteFin + ".");
+                //}
+
+                //}
+                //}
+
+                /******************************************************************************************************************************************/
+
+                string Jr;
+                int jour;
+                string Ms;
+                int mois;
+                string An;
+                int annee;
+                int jourDemain;
+
+                int compareMois;
+                int compareAnnee;
+
+                Console.Write(" qu'elle jour sommes nous ? ( jour ).  ");
+                Jr = Console.ReadLine();
+                jour = Int32.Parse(Jr);
+                Console.Write("qu'elle mois sommes nous ?(mois). ");
+                Ms = Console.ReadLine();
+                mois = Int32.Parse(Ms);
+                Console.Write(" qu'elle annee sommes nous ? ( annee ). ");
+                An = Console.ReadLine();
+                annee = Int32.Parse(An);
+
+                Console.WriteLine("aujourdhui nous sommes le " + jour + "/" + mois + "/" + annee + ".");
+
+                jourDemain = jour ;
+
+                   if (mois > 12)
+                    {
+                    annee = (annee + 1);
+                    moisDemao = 1;
+                    jourDemain = 1;
+                    
+                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jour + "/" + mois + "/" + annee+" bonne année ! ");
+                } 
+
+                if (jour == 31 || mois == 2 && jour == 28)
+
                 {
-                    Console.Write(" choisir une piece disponible \n");
-                    Console.Write(" choisie ta piece : 0 = Cavalier, 1 = Tour, 2 = Fou, 3 = Dame, 4 = roi .  \n");
-                    piece = Int32.Parse(Console.ReadLine());
+                    mois = (mois + 1);
+                    jour = 1; 
+                    
+
+
+                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jour + "/" + mois + "/" + annee);
+
+
+                }
+                else {
+                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + (jourDemain + 1) + "/" + mois + "/" + annee); 
+
                 }
 
 
-                Console.Write(" saisissez votre emplacement de depart ( colonne ) : \n");
-                colonneDepart = Int32.Parse(Console.ReadLine());
-                Console.Write(" saisissez votre emplacement de depart ( ligne ) :: \n");
-                ligneDepart = Int32.Parse(Console.ReadLine());
-                Console.Write(" saisissez votre emplacement de d arriver ( colonne ) : \n");
-                colonneArriver = Int32.Parse(Console.ReadLine());
-                Console.Write(" saisissez votre emplacement de d arriver ( ligne ) : \n");
-                ligneArriver = Int32.Parse(Console.ReadLine());
+
+
+                 
+                    
+                    
+                  
 
 
 
 
 
-                switch (piece)
-                {
-                    case 1: /* tour */
-                        if (
-                           (colonneDepart == colonneArriver)
-                          ||
-                           (ligneDepart == ligneArriver)
-                           )
-
-                            Console.WriteLine(" tu peux te deplacer");
 
 
-                        else
-                        {
-                            Console.WriteLine(" bouge pas gamin ");
-                        }
-                        break;
-
-
-                    //(((Math.Abs(colonneDepart - colonneArriver) == 1) &
-                    //    (Math.Abs(ligneDepart - ligneArriver) == 0)) ||
-                    //    ((Math.Abs(colonneDepart - colonneArriver) == 0) &
-                    //    (Math.Abs(ligneDepart - ligneArriver) == 1)))
-
-
-                    /* ***************************************** */
-
-                    case 2: /* fou */
-                        if (
-
-                          // (
-                          // (Math.Abs(colonneDepart - colonneArriver) == 1) &
-                          // (Math.Abs(ligneDepart - ligneArriver) == 1)
-                          // )
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 2) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 2)
-                          //)
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 3) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 3)
-                          //)
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 4) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 4)
-                          //)
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 5) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 5)
-                          //)
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 6) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 6)
-                          //)
-
-                          //||
-
-                          //(
-                          //(Math.Abs(colonneDepart - colonneArriver) == 7) &
-                          //(Math.Abs(ligneDepart - ligneArriver) == 7)
-                          //)
-
-
-                          (
-                          (Math.Abs(colonneDepart - colonneArriver))
-                          ==
-                          (Math.Abs(ligneDepart - ligneArriver))
-                          )
-
-                          )
-                        {
-                            Console.WriteLine(" tu peux te deplacer");
-                        }
-                        else
-                        {
-                            Console.WriteLine(" bouge pas gamin ");
-                        }
-                        break;
-
-                    /* ***************************************** */
-
-                    case 3: /* dame */
-                        if
-
-                          (
-
-                          (
-                          (Math.Abs(colonneDepart - colonneArriver))
-                          ==
-                          (Math.Abs(ligneDepart - ligneArriver))
-                          )
-
-                          ||
-
-                       (
-                       (colonneDepart == colonneArriver)
-                       ||
-                       (ligneDepart == ligneArriver)
-                       )
-
-                       )
-
-                        {
-                            Console.WriteLine(" tu peux te deplacer");
-                        }
-                        else
-                        {
-                            Console.WriteLine(" bouge pas gamin ");
-                        }
-                        break;
-
-                    /* ***************************************** */
-
-                    case 4: /* roi */
-                        if (
-
-
-                         (
-                         (Math.Abs(colonneDepart - colonneArriver) == 1) &
-                         (Math.Abs(ligneDepart - ligneArriver) == 0)
-                         )
-
-                         ||
-
-                         (
-                         (Math.Abs(colonneDepart - colonneArriver) == 0) &
-                         (Math.Abs(ligneDepart - ligneArriver) == 1)
-                         )
-
-                         ||
-
-                         (
-                         (Math.Abs(colonneDepart - colonneArriver) == 1) &
-                         (Math.Abs(ligneDepart - ligneArriver) == 1)
-                         )
-
-                         
-
-                        )
-
-                        {
-                            Console.WriteLine(" tu peux te deplacer");
-                        }
-                        else
-                        {
-                            Console.WriteLine(" bouge pas gamin ");
-                        }
-                        break;
-
-                    /* ***************************************** */
-
-                    case 0: /* cavalier */
-
-                        if (
-
-                            (
-                            (Math.Abs(colonneDepart - colonneArriver) == 2) &
-                            (Math.Abs(ligneDepart - ligneArriver) == 1)
-                            )
-
-                            ||
-
-                            (
-                            (Math.Abs(colonneDepart - colonneArriver) == 1) &
-                            (Math.Abs(ligneDepart - ligneArriver) == 2)
-                            )
-
-                           )
-
-
-                        {
-                            Console.WriteLine(" tu peux te deplacer");
-                        }
-                        else
-                        {
-                            Console.WriteLine(" bouge pas gamin ");
-                        }
-                        break;
-
-                }
+               
             }
-            
         }
     }
-
 }
-    
+
+
 
 
 
