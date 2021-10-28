@@ -625,9 +625,10 @@ namespace Exercise_3
                 int annee;
                 int jourDemain;
 
-                int compareMois;
-                int compareAnnee;
-
+                int moisDemain;
+                int anneeDemain;
+                int days;   
+              
                 Console.Write(" qu'elle jour sommes nous ? ( jour ).  ");
                 Jr = Console.ReadLine();
                 jour = Int32.Parse(Jr);
@@ -637,29 +638,33 @@ namespace Exercise_3
                 Console.Write(" qu'elle annee sommes nous ? ( annee ). ");
                 An = Console.ReadLine();
                 annee = Int32.Parse(An);
-
+                days= DateTime.DaysInMonth(annee, mois);
                 Console.WriteLine("aujourdhui nous sommes le " + jour + "/" + mois + "/" + annee + ".");
 
                 jourDemain = jour ;
+                moisDemain = mois ;
+                anneeDemain = annee; 
 
-                   if (mois > 12)
+                   if (mois == 12 && jour == 31 )
                     {
-                    annee = (annee + 1);
-                    moisDemao = 1;
+                    anneeDemain = (annee + 1);
+
+                    moisDemain = 1;
+
                     jourDemain = 1;
                     
-                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jour + "/" + mois + "/" + annee+" bonne année ! ");
+                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain+" bonne année ! ");
                 } 
 
                 if (jour == 31 || mois == 2 && jour == 28)
 
                 {
-                    mois = (mois + 1);
-                    jour = 1; 
+                    moisDemain = (mois + 1);
+                    jourDemain = 1; 
                     
 
 
-                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jour + "/" + mois + "/" + annee);
+                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain);
 
 
                 }
