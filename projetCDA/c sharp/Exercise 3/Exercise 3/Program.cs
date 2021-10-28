@@ -617,81 +617,148 @@ namespace Exercise_3
 
                 /******************************************************************************************************************************************/
 
-                string Jr;
-                int jour;
-                string Ms;
-                int mois;
-                string An;
-                int annee;
-                int jourDemain;
-
-                int moisDemain;
-                int anneeDemain;
-                int days;   
-              
-                Console.Write(" qu'elle jour sommes nous ? ( jour ).  ");
-                Jr = Console.ReadLine();
-                jour = Int32.Parse(Jr);
-                Console.Write("qu'elle mois sommes nous ?(mois). ");
-                Ms = Console.ReadLine();
-                mois = Int32.Parse(Ms);
-                Console.Write(" qu'elle annee sommes nous ? ( annee ). ");
-                An = Console.ReadLine();
-                annee = Int32.Parse(An);
-                days= DateTime.DaysInMonth(annee, mois);
-                Console.WriteLine("aujourdhui nous sommes le " + jour + "/" + mois + "/" + annee + ".");
-
-                jourDemain = jour ;
-                moisDemain = mois ;
-                anneeDemain = annee; 
-
-                   if (mois == 12 && jour == 31 )
-                    {
-                    anneeDemain = (annee + 1);
-
-                    moisDemain = 1;
-
-                    jourDemain = 1;
-                    
-                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain+" bonne année ! ");
-                } 
-
-                if (jour == 31 || mois == 2 && jour == 28)
-
-                {
-                    moisDemain = (mois + 1);
-                    jourDemain = 1; 
-                    
+                //    string Jr;
+                //    int jour;
+                //    string Ms;
+                //    int mois;
+                //    string An;
+                //    int annee;
+                //    int jourDemain;
 
 
-                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain);
+                //    int moisDemain;
+                //    int anneeDemain;
+                //    int days;
 
 
-                }
-                else {
-                    Console.WriteLine(" le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + (jourDemain + 1) + "/" + mois + "/" + annee); 
+                //    Console.Write(" Qu'elle jour sommes nous ? ( jour ).  ");
+                //    Jr = Console.ReadLine();
+                //    jour = Int32.Parse(Jr);
+                //    Console.Write("\n Qu'elle mois sommes nous ?(mois). ");
+                //    Ms = Console.ReadLine();
+                //    mois = Int32.Parse(Ms);
 
-                }
+                //    Console.Write("\n Qu'elle annee sommes nous ? ( annee ). ");
+                //    An = Console.ReadLine();
+                //    annee = Int32.Parse(An);
+                //    days = DateTime.DaysInMonth(annee, mois);
+                //    Console.WriteLine("\n Aujourdhui nous sommes le " + jour + "/" + mois + "/" + annee + ".");
+                //    int anneeB;
+                //    anneeB = annee;
+                //    jourDemain = jour;
+                //    moisDemain = mois;
+                //    anneeDemain = annee;
+
+                //    //if ( anneeB = 1900; anneeB <= 2060; anneeB++)
+                //    //            {
+                //    //                if (DateTime.IsLeapYear(anneeB)) Console.WriteLine(anneeB + " est une année bissextile");
 
 
+                //    if (( annee %4==0 &&  annee %100 != 0 ) || ( annee % 400 == 0 ))
+                //    {
+                //        Console.WriteLine("\n L'année " + annee + " est une année bissextile ! ");
+                //    }
+                //    else
+                //    {
+
+                //        Console.WriteLine("\n L'année " + annee + "C'est pas une annee bissextile ! ");
+                //    }
 
 
-                 
-                    
-                    
-                  
+                //    if (mois == 12 && jour == 31)
+                //    {
+                //        anneeDemain = (annee + 1);
 
+                //        moisDemain = 1;
 
+                //        jourDemain = 1;
 
+                //        Console.WriteLine(" \n Le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain + " bonne année ! ");
+                //    }
+
+                //    if (days % 2 == 0 || mois == 2 && jour == 28)
+
+                //    {
+                //        moisDemain = (mois + 1);
+                //        jourDemain = 1;
 
 
 
+                //        Console.WriteLine("\n Le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + jourDemain + "/" + moisDemain + "/" + anneeDemain + ".");
 
+
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("\n Le lendemain du " + jour + "/" + mois + "/" + annee + " sera le " + (jourDemain + 1) + "/" + mois + "/" + annee + ".");
+
+                //    }
+
+
+                /**************************************************************************************************************************************************/
+
+                /* Demandez à l’utilisateur de saisir les deux bornes a et b d’un intervalle [a, b]. Contrôler les
+                valeurs saisies. */
+
+                //string a;
+                //string b;
+                //a = "";
+                //b = ""; 
                
+                //while ( a != "a")
+                //{
+
+                //    Console.Write(" Ecrivez la premiere lettre de l'alphabet: ");
+                //    a= Console.ReadLine();
+                    
+                //}
+
+                //while (b != "b")
+                //{
+
+                //    Console.Write(" Ecrivez la deuxime lettre de l'alphabet : ");
+                //    b = Console.ReadLine();
+
+                //}
+
+                //Console.WriteLine(" Vous avez bien repondu aux questions ! ");
+
+
+
+                /**********************************************************************************/
+
+                string a;
+                string b;
+                a = "";
+                b = "";
+
+                while (a != "2")
+                {
+
+                    Console.Write(" Trouver mon premier chiffre : ");
+                    a = Console.ReadLine();
+Console.WriteLine(" Et nous essaye encore ! ");
+                }
+
+                while (b != "3")
+                {
+
+                    Console.Write(" Trouver mon deuxieme chiffre : ");
+                    b = Console.ReadLine();
+                    Console.WriteLine(" Et nous essaye encore ! ");
+                }
+
+                Console.WriteLine(" Bien jouer ")
+                
+
+
+
             }
+
         }
     }
 }
+
 
 
 
