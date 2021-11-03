@@ -1,0 +1,16 @@
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.exe
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.deps.json
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\ref\Exercice Tableaux.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\bin\Debug\net5.0\Exercice Tableaux.pdb
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\ref\Exercice Tableaux.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.pdb
+U:\59011-07-09\projetCDA\c sharp\Exercice Tableaux\Exercice Tableaux\obj\Debug\net5.0\Exercice Tableaux.genruntimeconfig.cache
