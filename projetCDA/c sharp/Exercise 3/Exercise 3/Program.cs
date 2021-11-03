@@ -743,12 +743,12 @@ Console.WriteLine(" Et nous essaye encore ! ");
                 while (b != "3")
                 {
 
-                    Console.Write(" Trouver mon deuxieme chiffre : ");
+                    Console.Write(" Trouver mon deuxieme chiffre : \n ");
                     b = Console.ReadLine();
-                    Console.WriteLine(" Et nous essaye encore ! ");
+                    Console.WriteLine(" Et nous essaye encore ! \");
                 }
 
-                Console.WriteLine(" Bien jouer ")
+                Console.WriteLine(" Bien jouer tu a bien trouver mon premier numero : " +a+" et mon deuxieme "+b+", Felicitation");
                 
 
 

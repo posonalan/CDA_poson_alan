@@ -1,0 +1,16 @@
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.exe
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.deps.json
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\ref\Exercice chaines de carracteres.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\bin\Debug\net5.0\Exercice chaines de carracteres.pdb
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\ref\Exercice chaines de carracteres.dll
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.pdb
+U:\59011-07-09\projetCDA\c sharp\Exercice chaines de carracteres\Exercice chaines de carracteres\obj\Debug\net5.0\Exercice chaines de carracteres.genruntimeconfig.cache

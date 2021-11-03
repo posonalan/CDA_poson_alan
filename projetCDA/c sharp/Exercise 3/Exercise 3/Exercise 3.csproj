@@ -6,4 +6,8 @@
     <RootNamespace>Exercise_3</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\59011-07-09\Documents\exercice 3 lors de la panne internet.cs" Link="exercice 3 lors de la panne internet.cs" />
+  </ItemGroup>
+
 </Project>
