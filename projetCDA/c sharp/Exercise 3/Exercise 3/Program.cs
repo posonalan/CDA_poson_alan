@@ -704,13 +704,13 @@ namespace Exercise_3
                 //string b;
                 //a = "";
                 //b = ""; 
-               
+
                 //while ( a != "a")
                 //{
 
                 //    Console.Write(" Ecrivez la premiere lettre de l'alphabet: ");
                 //    a= Console.ReadLine();
-                    
+
                 //}
 
                 //while (b != "b")
@@ -727,30 +727,520 @@ namespace Exercise_3
 
                 /**********************************************************************************/
 
-                string a;
-                string b;
-                a = "";
-                b = "";
+                //string a;
+                //string b;
+                //a = "";
+                //b = "";
 
-                while (a != "2")
+                //while (a != "2")
+                //{
+
+                //    Console.Write(" Trouver mon premier chiffre : ");
+                //    a = Console.ReadLine();
+                //    Console.WriteLine(" Et nous essaye encore ! ");
+                //}
+
+                //while (b != "3")
+                //{
+
+                //    Console.Write(" Trouver mon deuxieme chiffre : \n ");
+                //    b = Console.ReadLine();
+                //    Console.WriteLine(" Et nous essaye encore ! \n");
+                //}
+
+                //Console.WriteLine(" Bien jouer tu a bien trouver mon premier numero : " + a + " et mon deuxieme " + b + ", Felicitation");
+
+                /**********************************************************************************/
+                //string Aa;
+                //int a;
+                //string Bb;
+                //int b;
+                //int coup;
+                //string jou;
+                //int jouer;
+
+                //a = 6;
+                //b = 6;
+                //coup = 0;
+
+
+
+                //Console.Write(" Veux tu jouer : oui = 1 / non = 2 : ");
+                //jou = Console.ReadLine();
+                //jouer = Int32.Parse(jou);
+
+
+                //while (jouer == 1)
+                //{
+                //    var random = new Random();
+                //    int randomnumber = random.Next(5);
+
+
+                //    Console.WriteLine("Trouvez les deux chiffres en moins de coups possible !" +
+                //        " ( chiffre de 0 a 5) \n");
+                //    while (a != randomnumber)
+                //    {
+
+                //        Console.Write(" Trouver mon premier chiffre : ");
+                //        Aa = Console.ReadLine();
+                //        a = Int32.Parse(Aa);
+
+                //        coup = coup + 1;
+                //        if (a != randomnumber)
+                //        {
+
+                //            Console.WriteLine(" Et non essaye encore ! ");
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine("\n Bravo tu a trouver le 1 er chiffre " + randomnumber + " \n");
+                //        }
+                //    }
+
+
+                //    var random2 = new Random();
+                //    int randomnumber2 = random2.Next(5);
+
+
+                //    while (b != randomnumber2)
+                //    {
+                //        Console.Write(" Trouver mon deuxieme chiffre : ");
+                //        Bb = Console.ReadLine();
+                //        b = Int32.Parse(Bb);
+                //        coup = coup + 1;
+                //        if (b != randomnumber2)
+                //        {
+
+                //            Console.WriteLine(" Et non essaye encore ! ");
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine(" Bien jouer , tu as trouver en " + coup + " coup les deux chiffres ! ");
+
+                //        }
+
+                //    }
+
+
+                // Console.Write(" \n Veux tu jouer : oui=1 / non=2 : ");
+                //    jou = Console.ReadLine();
+                //    jouer = Int32.Parse(jou);   
+
+
+                //} Console.WriteLine(" \n C'est pas grave a la prochaine :) "); 
+
+                /**********************************************************************/
+
+                //int val1; /* valeur de depart */ 
+                //int val2; /* valeur arriver */ 
+                //int x; /* valeur a placer */ 
+
+                //Console.Write("Saisissez le premiere borne :");
+                //val1 = int.Parse(Console.ReadLine());
+                //Console.Write("Saisissez la deuxieme borne :");
+                //val2 = int.Parse(Console.ReadLine());
+                //Console.Write("Saisissez votre valeur :");
+                //x = int.Parse(Console.ReadLine());
+
+                //Console.WriteLine((x >= val1 && x <= val2) ?
+                //    "Votre valeur appartient a l'intervalle " + 
+                //    "[" + val1 + "," + val2 + "]" :
+                //    "Votre valeur n'appartient pas a l'intervalle " + 
+                //    "[" + val1 + "," + val2 + 
+                //    "]");
+
+                /**************************************************************************/
+
+                ////string saisie; /* valuer saisie */ 
+                //int val; /* valeur saisie */
+                ////bool flag;
+
+                //Console.WriteLine(" Je vais vous dire si votre valeur est entiere ou non ! "); 
+                //Console.Write("Entrer une valeur : ");
+                ///*  saisie = Console.ReadLine();
+                //  flag = int.TryParse(saisie, out val);
+
+                //  */ 
+                //if (int.TryParse(Console.ReadLine(), out val)) /* try parse retourne un booleen soit oui ou non */ 
+                //    Console.WriteLine("La valeur est " + val);
+                //else
+                //    Console.WriteLine("La valeur n'est pas un entier");
+
+                /*****/
+
+                // string rr;
+                // int e; 
+
+                // Console.WriteLine(" Je vais vous dire si votre valeur est entiere ou non ! ");
+                // Console.Write("Entrer une valeur : ");
+                // rr = Console.ReadLine();
+                //e = Int32.Parse(rr);
+
+
+                // if () { 
+                //     Console.WriteLine(rr + " est bien un entier "); }
+                // else
+                // { Console.WriteLine(rr + " est pas un entier "); }
+
+
+                /**************************************************************************************/
+
+                //string xHautGauche, yHautGauche, xBasDroite, yBasDroite, xPointS, yPointS;
+                //int xGauche, yHaut, xDroite, yBas, xPoint, yPoint; /* declaration des variables */ 
+
+                //Console.Write("Entrez la valeur de xHautGauche : ");
+                //xHautGauche = Console.ReadLine();
+
+                //Console.Write("Entrez la valeur de yHautGauche : "); /* demande des points */ 
+                //yHautGauche = Console.ReadLine();
+
+                //Console.Write("Entrez la valeur de xBasDroite : ");
+                //xBasDroite = Console.ReadLine();
+
+                //Console.Write("Entrez la valeur de yBasDroite : ");
+                //yBasDroite = Console.ReadLine();
+
+                ///* On essai de convertir les valeurs */ 
+                //if (int.TryParse(xHautGauche, out xGauche) && int.TryParse(yHautGauche, out yHaut) && int.TryParse(xBasDroite, out xDroite) && int.TryParse(yBasDroite, out yBas))
+                //{
+                //    if (xDroite > xGauche && yHaut > yBas) // on vérifie que le rectangle est correct
+                //    {
+                //        Console.WriteLine(" Le rectangle est correct.");
+                //        /* On demande les coordonnées du point */
+                //        Console.Write("Entrez la valeur de xPoint : ");
+                //        xPointS = Console.ReadLine();
+
+                //        Console.Write("Entrez la valeur de yPoint : ");
+                //        yPointS = Console.ReadLine();
+
+                //        if (int.TryParse(xPointS, out xPoint) && int.TryParse(yPointS, out yPoint))
+                //        {
+                //            if (xPoint <= xDroite && xPoint >= xGauche && yPoint <= yHaut && yPoint >= yBas)
+                //            {
+                //                Console.WriteLine(" Le point appartient au rectangle.");
+                //            }
+                //            else
+                //            {
+                //                Console.WriteLine(" Le point n'appartient pas au rectangle.");
+                //            }
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine(" La disposition du point est mal definit .");
+                //        }
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine(" Le rectangle est incorrect.");
+                //    }
+                //}
+                //else
+                //{
+                //    Console.WriteLine(" Le rectangle est mal défini.");
+                //}
+
+                /***************************************************************************************/
+
+                //int a = 1, b = 0, n = 5;
+                //while (a <= n)
+                //    b += a++;
+                //Console.WriteLine(a + " , " + b);
+
+                /* le resultat est 6 . 15 tant que a est pas superieur ou egal a n on fait b = b+(a+1) des qu'ont arrive a a>= n on affiche a et b */
+
+                /*******************************************************************************/
+
+                //int a = 0, b = 0, c = 0, d = 3, m = 3, n = 4;
+                //for (a = 0; a < m; a++)
+                //{
+                //    d = 0;
+                //    for (b = 0; b < n; b++)
+                //        d += b;
+                //    c += d;
+                //}
+                //Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+
+                /* resultat est 3 . 4 . 18 . 6   tant que a est pas plus haut que m on fait d = 0 et tant que b est pas plus haut 
+                 * que n on fait b = b +d puis c = c + d , des que a sup a m on affiche les resultats */
+
+                /**********************************************************/
+
+
+                //int a, b, c, d;
+                //a = 1; b = 2;
+                //c = a / b; /* c = 1/2 c'est a dire 0 */
+                //d = (a == b) ? 3 : 4; /* si a egal b on fait soit 3 soit 4 */
+                //Console.WriteLine(c + " , " + d + " . "); /* on ecrit c et d */
+                //a = ++b;  /* b++ = b+1 apres , ++b = b + 1 direct */
+                //b %= 3; /* b/3 = le reste = modulo */
+                //Console.WriteLine(a + " , " + b + " . "); /* ecrit a et b */
+                //b = 1;
+                //for (a = 0; a <= 10; a++)/* tant que a est inferieur ou egal a 10 */
+                //    c = ++b; /* c == b+1 */
+                //Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");
+
+                ///* resultat 0 . 4 / 3 . 0 / 11 . 12 . 12 . 04        */
+
+
+                /*******************************************************/
+
+                //int Nn;
+                ////int n;
+
+                //Console.WriteLine("saisir une valeur numerique positive : ");
+                ////Nn = Console.ReadLine();
+                ////n = Int32.Parse(Nn);
+                //Nn = int.Parse(Console.ReadLine());
+                //while (Nn > 0)
+                //{
+                //    Nn--;
+                //    Console.WriteLine("voici les differentes entier apres " + Nn + ". ");
+                //}
+
+
+                /*******************************************************/
+
+                ///* factoriel */
+
+                //int Nn;
+                //int Bb;
+                ////int toto; 
+
+                //Console.WriteLine("saisir une valeur : ");
+                //Nn = int.Parse(Console.ReadLine());
+                //Console.WriteLine("combien de factoriel souhaitez vous avoir  : ");
+                //Bb = int.Parse(Console.ReadLine());
+
+                ////toto = Nn * Bb; 
+                //while (Nn < 100)
+                //{
+                //    Nn = Nn * Nn;
+                //    Console.WriteLine("les factoriels votre valeur demander : " + Nn + ". ");
+                //}
+
+                /*******************************************************/
+
+                //int Nn;
+                //int valeur;
+                //int Nb;
+
+                //valeur = 1;
+
+                //Console.Write("saisir une valeur : ");
+                //Nn = int.Parse(Console.ReadLine());
+                //Nb = Nn;
+                //while (Nn < Nb * 10)
+                //{
+
+                //    Nn = Nb * valeur;
+                //    valeur++;
+
+                //    Console.WriteLine("voici le resultat de " + Nb + " x " + (valeur - 1) + " = " + Nn);
+
+                //}
+
+                /*******************************************************/
+
+                //Console.WriteLine(" Multiplication Tables");
+                ////int[,] tab;
+                //int i;
+                //int j;
+                ////tab = new int[2, 10]
+                ////{
+                ////{ 1,2,3,4,5,6,7,8,9,10 },{1,2,3,4,5,6,7,8,9,10}
+                ////};
+
+
+                //for ( i = 1; i <= 10; i++)
+                //{
+                //    Console.WriteLine("");
+                //    for ( j = 1; j <= 10;j++)
+                //    {
+
+                //        Console.Write(" {0} * {1} = {2} ", i, j, i * j);
+
+                //    }Console.WriteLine("\n");
+                //}
+                //Console.ReadLine();
+
+                /*****************************************/
+
+
+                //Console.WriteLine(" Puissance \n ");
+
+                //string Nn;
+                //int nn;
+                //string Bb;
+                //int bb;
+
+                //Console.Write("saisir une premiere valeur : ");
+                //Nn = Console.ReadLine();
+                //nn = Int32.Parse(Nn);
+                //Console.Write("saisir une deuxieme valeur : ");
+                //Bb = Console.ReadLine();
+                //bb = Int32.Parse(Bb);
+
+                //while ( nn<0)
+                //{
+                //    Console.WriteLine(" Saisissez un chiffre non negatif ");
+                //    Console.Write("saisir une premiere valeur : ");
+                //    Nn = Console.ReadLine();
+                //    nn = Int32.Parse(Nn);
+                //}
+                //Console.WriteLine("voici la valeur de "+bb+" x "+nn+" = "+(bb*nn)+" . "); 
+
+
+                /**************************************************************************/
+
+                //int n;
+                //Console.Write("Saisissez une valeur:");
+                //n = int.Parse(Console.ReadLine());
+                //for (int j = 0; j < n; j++)
+                //{
+                //    Console.WriteLine();
+
+                //    for (int i = 0; i < n; i++)
+                //    {
+                //        Console.Write("X ");
+                //    }
+                //}
+
+                /******************************************************************************/
+
+
+                //string vB;
+                //int valeurB;
+                //string operateur;
+
+
+
+                //    Console.WriteLine(" saisissez votre deuxieme valeur : ");
+                //    vA = Console.ReadLine();
+                //    valeurA = Int32.Parse(vA);
+
+                //    Console.WriteLine(" saisissez votre operateur : ");
+                //    operateur = Console.ReadLine();
+                //}
+
+
+
+                static int demanderEntierPositif()
                 {
+                    int valeurA;
+                    bool ok;
+                    do
+                    {
+                        Console.WriteLine("saisissez votre entier positif :");
+                        ok = int.TryParse(Console.ReadLine(), out valeurA);
 
-                    Console.Write(" Trouver mon premier chiffre : ");
-                    a = Console.ReadLine();
-Console.WriteLine(" Et nous essaye encore ! ");
+                    }
+                    while (valeurA <= 0 || !ok);
+                    return valeurA;
                 }
 
-                while (b != "3")
+                static double demanderDouble()
                 {
+                    double valeurA;
+                    bool ok;
 
-                    Console.Write(" Trouver mon deuxieme chiffre : \n ");
-                    b = Console.ReadLine();
-                    Console.WriteLine(" Et nous essaye encore ! \");
+                    Console.WriteLine("saisissez votre chiffre a virgule :");
+                    ok = double.TryParse(Console.ReadLine(), out valeurA);
+
+                    return valeurA;
                 }
 
-                Console.WriteLine(" Bien jouer tu a bien trouver mon premier numero : " +a+" et mon deuxieme "+b+", Felicitation");
-                
+                static double demanderDoubleNonNull()
+                {
+                    double valeurA;
+                    bool ok;
+                    do
+                    {
+                        Console.WriteLine("saisissez votre chiffre a virgule non null :");
+                        ok = double.TryParse(Console.ReadLine(), out valeurA);
+                    }
+                    while (valeurA <= 0 || !ok);
+                    return valeurA;
+                }
 
+                static char demanderOperateur()
+                {
+                    char operateur;
+                    bool ok;
+                    do
+                    {
+                        Console.WriteLine("quelle operateur de calcule souhaitez vous ? ");
+                        ok = char.TryParse(Console.ReadLine(), out operateur);
+
+                        if (!ok || (operateur != '+'
+                            && operateur != '/'
+                            && operateur != '*'
+                            && operateur != '-'
+                            && operateur != '$'
+                            && operateur != '!'
+                            && operateur != '%'
+                            && operateur != 'v'
+                            && operateur != 'V'
+                            ))
+
+                            Console.WriteLine("Votre saisie est incorrect , recommencer ! ");
+                    }
+                    while (!ok || (operateur != '+'
+                            && operateur != '/'
+                            && operateur != '*'
+                            && operateur != '-'
+                            && operateur != '$'
+                            && operateur != '!'
+                            && operateur != '%'
+                            && operateur != 'v'
+                            && operateur != 'V'
+                            ));
+
+                    if (operateur == 'v')
+                        operateur = char.ToUpper(operateur);
+                    return operateur;
+                }
+
+
+                static double calculSimple(double valeur1, char operateur, double valeur2)
+                {
+                    double resultat;
+                    switch (operateur)
+                    {
+                        case '+':
+                            resultat = valeur1 + valeur2;
+                            break;
+                        case '-':
+                            resultat = valeur1 - valeur2;
+                            break;
+                        case '*':
+                            resultat = valeur1 * valeur2;
+                            break;
+                        case '/':
+                            resultat = valeur1 / valeur2;
+                            break;
+                        case '$':
+                            resultat = Math.Pow(valeur1, valeur2);
+                            break;
+                        default:
+                            break;
+
+                            Console.Write(" Trouver mon deuxieme chiffre : \n ");
+                            b = Console.ReadLine();
+                            Console.WriteLine(" Et nous essaye encore ! \");
+
+                    }
+                    return resultat;
+                }
+
+                demanderEntierPositif();
+                demanderDouble();
+                demanderDoubleNonNull();
+                demanderOperateur();
+
+
+
+
+                Console.WriteLine(" Bien jouer tu a bien trouver mon premier numero : " + a + " et mon deuxieme " + b + ", Felicitation");
 
 
             }

@@ -10,15 +10,15 @@ namespace Exercice_Tableaux
 
             //char[] c = new char[4];      /* on cree un nouveau tableau a 4 cases */
             //c[0] = 'a';                  /* la position 1 */
-            //c[3] = 'J';                  /* la position 2 */
+            //c[3] = 'J';                  /* la position 4 */
             //c[2] = 'k';                  /* la position 3 */
-            //c[1] = 'R';                  /* la position 4 */
+            //c[1] = 'R';                  /* la position 2 */
             //for (int k = 0; k < 4; k++)  /* tant que k est inferieur a 4 */
             //    Console.WriteLine(c[k]); /* on ecrit les lettres dans l'ordre du tableau */
             //for (int k = 0; k < 4; k++)  /* tant que k est inferieur a 4 */
             //    c[k]++;                  /* on fait la position +1 */
-            //foreach (char i in c)        /* on recherche la position */
-            //    Console.WriteLine(i);    /* on affiche les données de i */
+            //foreach (char i in c)        /* on recherche i dans le tableau c  */
+            //    Console.WriteLine(i);    /* on affiche les données  */
 
             ///* resultat R k J b S l K */
 
@@ -39,19 +39,75 @@ namespace Exercice_Tableaux
 
             /**************** Analyse ****************/
 
-           // int[] k;                            /* on prepare le tableau */
-           // k = new int[10];                    /* on cree le tableau k */ 
-           // k[0] = 1;                           /* a la position 1 on ecrit 1 */ 
-           // k[1] = 1;                           /* a la deuxieme position on ecrit 1 */ 
-           // for (int i =  2; i < 10; i++)       /* pour i est inferieur a 10 jusque i superieur */ 
-           //     k[i] = 0;                       /* on met i a 0 */
-           // for (int j = 1; j <= 3; j++)        /* pour j jusqua j sup ou egal a i */
-           //     for (int i = 1; i < 10; i++)    /* pour i inf a 10 jusque 10 */ 
-           //         k[i] += k[i - 1];           /* on fait i -1 que l'on stock dans k[i] */ 
-           // foreach (int p in k)                /* on recherche p dans le tableau */ 
-           //     Console.WriteLine(p);           /* on affiche la recherche */
+            // int[] k;                            /* on prepare le tableau */
+            // k = new int[10];                    /* on cree le tableau k */ 
+            // k[0] = 1;                           /* a la position 1 on ecrit 1 */ 
+            // k[1] = 1;                           /* a la deuxieme position on ecrit 1 */ 
+            // for (int i =  2; i < 10; i++)       /* pour i est inferieur a 10 jusque i superieur */ 
+            //     k[i] = 0;                       /* on met i a 0 */
+            // for (int j = 1; j <= 3; j++)        /* pour j jusqua j sup ou egal a i */
+            //     for (int i = 1; i < 10; i++)    /* pour i inf a 10 jusque 10 */ 
+            //         k[i] += k[i - 1];           /* on fait i -1 que l'on stock dans k[i] */ 
+            // foreach (int p in k)                /* on recherche p dans le tableau */ 
+            //     Console.WriteLine(p);           /* on affiche la recherche */
 
-           ///*resultat : 1 4 9 16 25 36 49 64 81 100 */ 
+            ///*resultat : 1 4 9 16 25 36 49 64 81 100 */ 
+
+            /****************  Initialisation et affichage ****************/
+
+            int[] liste = new int[10] { 1, 2, 3, 4, 5,6,7,8,9,10 };
+            Console.WriteLine("Un beau tableau : ");
+            Console.WriteLine("+-------------+");
+            for (int i = 0; i < liste.Length; i++)
+           {
+
+                if (liste[i] < 10)
+                {
+                    Console.WriteLine("              | Poste {0}: {1}  |", i, liste[i]);
+                }
+                else { Console.WriteLine("           | Poste {0}: {1} |", i, liste[i]); }
+            }
+                       Console.WriteLine("           +-------------+");
+
+            /****************  Initialisation et boucle ****************/
+
+            //int[] liste = new int[5] { 4, 2, 3, 1, 5 };
+
+            //for (int i = 0; i < liste.Length; i++)
+            //{
+            //    Console.WriteLine("Poste {0}: {1}", i, liste[i]);
+            //}
+
+
+
+
+
+
+
+
+
+
+
+            //    // création nouveau tableau
+            //    int[] nouveauT = CreeTableau(5);
+            //    Console.WriteLine("Nb de postes ={0}", nouveauT.Length);
+            //    // ....
+            //    // Affichage du tableau
+            //    AfficheTableau(nouveauT);
+            //    //
+            //    Console.ReadLine();
+            //}
+
+            //static int[] CreeTableau(int taille)
+            //{
+            //    return new int[taille];
+            //}
+            //static void AfficheTableau(int[] unTableau)
+            //{
+            //    for (int i = 0; i < unTableau.Length; i++)
+            //    {
+            //        Console.WriteLine("Poste {0}: {1}", i, unTableau[i]);
+            //    }
 
 
         }
