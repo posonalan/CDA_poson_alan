@@ -55,34 +55,121 @@ namespace Exercice_Tableaux
 
             /****************  Initialisation et affichage ****************/
 
-            int[] liste = new int[10] { 1, 2, 3, 4, 5,6,7,8,9,10 };
-            Console.WriteLine("Un beau tableau : ");
-            Console.WriteLine("+-------------+");
-            for (int i = 0; i < liste.Length; i++)
-           {
+            // int[] liste = new int[10] { 1, 2, 3, 4, 5,6,7,8,9,10 };
+            //             Console.WriteLine("              Un beau tableau  ");
+            //             Console.WriteLine("              +-------------+");
+            // for (int i = 0; i < liste.Length; i++)
+            //{
 
-                if (liste[i] < 10)
-                {
-                    Console.WriteLine("              | Poste {0}: {1}  |", i, liste[i]);
-                }
-                else { Console.WriteLine("           | Poste {0}: {1} |", i, liste[i]); }
-            }
-                       Console.WriteLine("           +-------------+");
+            //     if (liste[i] < 10)
+            //     {
+            //            Console.WriteLine("              | Position {0}: {1}  |", i, liste[i]);
+            //     }
+            //     else { Console.WriteLine("              | Position {0}: {1} |", i, liste[i]); }
+            // }
+            //            Console.WriteLine("              +-------------+");
 
             /****************  Initialisation et boucle ****************/
 
-            //int[] liste = new int[5] { 4, 2, 3, 1, 5 };
 
-            //for (int i = 0; i < liste.Length; i++)
+            //int[] tab = new int[10];                                      /* creation d'un tableau a 10 cases */
+            //Console.WriteLine("              Un beau tableau  ");
+            //Console.WriteLine("              +-------------+");
+            //for (int i = 0; i < tab.Length; i++)                          /* faire jusqu'a arriver a la fin du tableau */
             //{
-            //    Console.WriteLine("Poste {0}: {1}", i, liste[i]);
+            //    tab[i] = i + 1;                                           /* on range les valeur de i au fur et a mesure des tours de boucle */
+            //    Console.WriteLine(" | Position {0}: {1} |", i, tab[i]);   /* on affiche les valeurs */
+
+            //}
+            //Console.WriteLine("              +-------------+");
+
+
+            /****************           Somme           ****************/
+
+            //int[] t = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; /* notre tableau de taille 10 */ 
+            //int somme = 0;                                           /* on met la somme a 0 */ 
+
+            //for (int i = 0; i < t.Length; i++)                       /* jusqua taille final du tableau */ 
+            //{
+
+            //    somme = somme + t[i];                                /* on additionne les valeurs a chaque tour de boucle */ 
             //}
 
+            //Console.Write(" La somme est de : " + somme+".");        /* on affiche le resultat ( la somme ) 
+
+
+            /****************         Recherche        ****************/
+
+            //int[] t = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; /* notre tableau de taille 10 */ 
+            //int compteur = 0;                                        /* initialisation du compteur a 0 */ 
+
+            //Console.WriteLine("Donner un chiffre :");                /* demande */ 
+            //int value = int.Parse(Console.ReadLine());
+
+            //while (compteur < t.Length && t[compteur] != value)      /* tant que la compteur est plus petit que la taille du tableau et que le compteur est different de la valeur */ 
+            //{
+            //    compteur++;                                          /* on fait compteur +1 */
+            //}
+
+            //if (compteur < t.Length)                                 /* si le compteur est inferieur a la taille du tableau */ 
+            //{
+            //    Console.WriteLine("Ton chiffre est bien la ");       /* on affiche que le chiffre est bien dans le tableau */ 
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Ton chiffre n'est pas dans le tableau "); /* sinon affichage : il n'est pas dans le tableau */ 
+            //}
+
+            /****************  Permutation circulaire  ****************/
+
+            //int[] tableauA = new int[10]; /* on fait un tableau de 10 cases */ 
+            //int[] tableauB = new int[10]; /* on fait un tableau 2 de 10 cases */  
+            //for (int i = 0; i < tableauA.Length; i++) /* boucle tant que i est pas sup  a la taille du tableau */ 
+            //    tableauA[i] = i + 1; /* on fait i+1 et on place le resultat dans le tableau */ 
+            //for (int i = 0; i < tableauA.Length; i++) /* boucle tant que i est pas sup  a la taille du tableau */
+            //    tableauB[(i + 1) % tableauA.Length] = tableauA[i]; /* on rentre dans le tableaub les valeur de i modulo */ 
+            //foreach (int p in tableauB) /* on recherche dans le tableau */ 
+            //    Console.WriteLine(p); /* et on affiche */ 
+
+
+
+
+            /*****  Permutation circulaire sans deuxième tableau  *****/
 
 
 
 
 
+
+
+
+
+            //            arrayFill1 = [| 1..25 |]
+            //Array.fill arrayFill1 2 20 0
+            //printfn "%A" arrayFill1
+
+            //int[] liste = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //Console.WriteLine("              Un beau tableau  ");
+            //Console.WriteLine("              +-------------+");
+            //for (int i = 0; i < liste.Length; i++)
+            //{
+
+            //    liste[i] = i + 1;
+            //    a = liste[i]; 
+
+
+            //    if (liste[i] < 10)
+            //    {
+
+            //        Console.WriteLine("              | Position {0}: {1}  |", i, liste[i]);
+            //    }
+            //    else { Console.WriteLine("              | Position {0}: {1} |", i, liste[i]); }
+            //}
+            //Console.WriteLine("              +-------------+");
+
+
+
+            /************************  Miroir  ************************/
 
 
 
