@@ -1,0 +1,16 @@
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.exe
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.deps.json
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.dll
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\ref\C Sharp Application Console.dll
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\bin\Debug\net5.0\C Sharp Application Console.pdb
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.dll
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\ref\C Sharp Application Console.dll
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.pdb
+U:\59011-07-09\projetCDA\c sharp\C Sharp Application Console\C Sharp Application Console\obj\Debug\net5.0\C Sharp Application Console.genruntimeconfig.cache
