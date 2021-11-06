@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lilyy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lilyy\\.nuget\\packages",
+      "D:\\visual studio partage_outil_sdk\\NuGetPackages"
+    ]
+  }
+}
