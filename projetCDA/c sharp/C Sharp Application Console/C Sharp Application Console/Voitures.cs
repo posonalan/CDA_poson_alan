@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp_Application_Console
+namespace C_Sharp_Applicatio_Console
 {
     class Voitures
     {
-        /*********** Propriete ***********/
+        /* ********** Propriétaire ********** */
         public string Couleur { get; set; }
         public string Marque { get; set; }
         public string Modele { get; set; }
@@ -16,8 +16,7 @@ namespace C_Sharp_Application_Console
         public string Motorisation { get; set; }
 
 
-        /********* Constructeur *********/
-
+        /* ******** Constructeur ******** */
         public Voitures()
         {
 
@@ -41,10 +40,13 @@ namespace C_Sharp_Application_Console
 
         public override string ToString()
         {
-            return " Cette voiture est une " + this.Modele + " de la marque " + this.Marque+" , de couleur "+Couleur+" de motorisation "+Motorisation+" avec "+NbKilometre+" kilometres" ;
+            return " Cette voiture est une " + this.Modele + " de la marque " + this.Marque + " , de couleur " + Couleur + " de motorisation " + Motorisation + " avec " + NbKilometre + " kilometres";
         }
 
-
+        public void Rouler(int KilometrePlus)
+        {
+            NbKilometre = NbKilometre + KilometrePlus;
+        }
 
 
     }
