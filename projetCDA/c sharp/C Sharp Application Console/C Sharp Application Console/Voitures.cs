@@ -45,7 +45,7 @@ namespace C_Sharp_Applicatio_Console
 
         public void Rouler(int KilometrePlus)
         {
-            NbKilometre = NbKilometre + KilometrePlus;
+            this.NbKilometre = NbKilometre + KilometrePlus;
         }
 
 

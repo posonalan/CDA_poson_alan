@@ -15,7 +15,8 @@ namespace Compte
         public double Solde { get; set; }
         public string Code { get; set; }
         public Clients Proprietaire { get; set; }
-        private static int Compteur = 1;
+
+        public static  int Compteur = 0;
         public string Operation { get; set; }
 
         /* ******** Constructeur ******** */
@@ -29,7 +30,7 @@ namespace Compte
             Code = code;
             Solde = solde;
             Proprietaire = proprietaire;
-            
+            Compteur++;
 
         }
 

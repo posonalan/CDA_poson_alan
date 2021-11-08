@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace C_Sharp_Application_Console
+namespace C_Sharp_Applicatio_Console
 {
     class Program
     {

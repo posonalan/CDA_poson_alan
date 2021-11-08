@@ -6,9 +6,9 @@ namespace Compte
     {
         static void Main(string[] args)
         {
-            string Aa;
+            string Aa; /* montant a credite */ 
             int a;
-            string Bb;
+            string Bb; /* montant a debite */ 
             int b;
             string numCompte;
             int nC;
@@ -18,8 +18,10 @@ namespace Compte
             string numero;
             int num;
             string operation;
-            string som;
-            int so; 
+            string som; /* sommes */ 
+            int so;     /* sommes */
+            string tra; /* argent a transferer */ 
+            int tr; 
 
 
             Clients Clients2 = new Clients(/*CIN*/"EE333444",/*nom*/"Karimi",/*prenom*/"Samir",/*telephone*/ 06222222);
@@ -55,7 +57,7 @@ namespace Compte
             Console.WriteLine("********************************************\n");
 
             Comptes Compte1 = new Comptes(0, "Euro", Clients1);
-            Comptes Compte2 = new Comptes(0, "Euro", Clients2);
+            Comptes Compte2 = new Comptes(4000, "Euro", Clients2);
 
             Console.WriteLine(Compte1.ToString());
 
@@ -74,7 +76,7 @@ namespace Compte
             Console.WriteLine("*******************************************");
 
             Console.WriteLine(" Donnez moi le montant a retirer ");
-            Console.WriteLine("Opération bien effectuée");
+            Console.WriteLine(" Opération bien effectuée");
 
             Console.WriteLine("******************Debite*******************");
 
@@ -90,8 +92,8 @@ namespace Compte
 
             Console.WriteLine("********************************************");
 
-            Compte1.CrediteCompte(a, "euro");
-            Console.WriteLine(Compte1.ToString());
+            //Compte1.CrediteCompte(a, "euro");
+            //Console.WriteLine(Compte1.ToString());
 
             Console.WriteLine("**************Fonction Choix Debit ou Credit ******************************");
 
@@ -105,6 +107,21 @@ namespace Compte
             Console.WriteLine(Compte1.ToString());
 
             Console.WriteLine("Opération bien effectuée");
+
+            Console.WriteLine("******************* Transfere *******************");
+
+            Console.WriteLine(" Combien souhaitez vous transferer vers le compte 2 :  ");
+            tra = Console.ReadLine();
+            tr = Int32.Parse(tra);
+            Compte1.Crediter(tr);
+            Compte2.Debiter(tr);
+            Console.WriteLine("Opération bien effectuée");
+            Console.WriteLine(Compte1.ToString());
+            Console.WriteLine(Compte2.ToString());
+
+            Console.WriteLine(" Le nombre de comptes crées: " + Comptes.Compteur);
+
+           
 
 
 
