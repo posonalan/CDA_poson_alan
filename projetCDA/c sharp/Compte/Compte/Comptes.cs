@@ -15,6 +15,8 @@ namespace Compte
         public double Solde { get; set; }
         public string Code { get; set; }
         public Clients Proprietaire { get; set; }
+        private static int Compteur = 1;
+        public string Operation { get; set; }
 
         /* ******** Constructeur ******** */
         public Comptes()
@@ -27,8 +29,17 @@ namespace Compte
             Code = code;
             Solde = solde;
             Proprietaire = proprietaire;
+            
 
         }
+
+        //public Comptes(double solde, string code, Clients proprietaire)
+        //{
+        //    Proprietaire = proprietaire;
+        //    solde = 0.00;
+        //    code = "euros";
+        //}
+
 
         public override string ToString()
         {
@@ -40,7 +51,7 @@ namespace Compte
         {
             Solde = Solde + montant;
         }
-        public string CrediteCompte(double montant, string code, Clients proprietaire)
+        public string CrediteCompte(double montant, string code)
         {
             Solde = Solde + montant;
             return " Le compte de " + this.Proprietaire + " a etait augmenter de " +
@@ -55,6 +66,19 @@ namespace Compte
             return " est de " + this.Solde +
            " " + this.Code;
         }
+
+        public void Transfere(double montant, string operation )
+        {
+            if (operation == "-")
+            {
+                Solde = Solde - montant;
+            }
+            else if (operation == "+")
+            {
+                Solde = Solde + montant;
+            }
+        }
+        //static string CompteurObjet(compteur)
     }
 
 }

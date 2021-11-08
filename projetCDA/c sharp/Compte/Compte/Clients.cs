@@ -45,7 +45,7 @@ namespace Compte
 
         public override string ToString()
         {
-            return " Matricule :" + this.Cin + " \n Nom : " + this.Nom + "\n Prenom : " + Prenom + "\n Telephone : " + Telephone + " \n";
+            return " Matricule :" + this.Cin + " \n Nom : " + this.Nom + "\n Prenom : " + Prenom + "\n Telephone : " + Telephone + " ";
         }
 
        
