@@ -12,10 +12,11 @@ namespace Compte
     class Comptes
     {/* ********** Propriétaire ********** */
 
-        public double Solde { get; set; }
-        public string Code { get; set; }
+        public double Solde { get; private set; }
+        public int Code { get; private set; }
         public Clients Proprietaire { get; set; }
-        private static int Compteur = 1;
+
+        public static  int Compteur { get; set; } = 0;
         public string Operation { get; set; }
 
         /* ******** Constructeur ******** */
@@ -23,48 +24,63 @@ namespace Compte
         {
         }
 
-        public Comptes(double solde, string code, Clients proprietaire)
+        public Comptes( Clients proprietaire)
         {
-
-            Code = code;
-            Solde = solde;
-            Proprietaire = proprietaire;
-            
-
+            Code = ++Compteur;
+            this.Proprietaire = proprietaire;
+            this.Solde = 0; // on définit la valeur par défaut
         }
-
-        //public Comptes(double solde, string code, Clients proprietaire)
-        //{
-        //    Proprietaire = proprietaire;
-        //    solde = 0.00;
-        //    code = "euros";
-        //}
-
 
         public override string ToString()
         {
             return " \n Solde : " + this.Solde + " " + this.Code + "\n" + this.Proprietaire.ToString();
         }
 
-
+        /// <summary>
+        /// Permet de créditer le compte du montant passé en paramètre
+        /// </summary>
+        /// <param name="somme">Montant à créditer</param>
         public void Crediter(double montant)
         {
-            Solde = Solde + montant;
+            //Solde = Solde + montant;
+            this.Solde += montant;
         }
-        public string CrediteCompte(double montant, string code)
+        /// <summary>
+        /// Permet de créditer le compte du montant passé en paramètre et débite le compte passé en paramètre
+        /// </summary>
+        /// <param name="somme">Montant à créditer</param>
+        /// <param name="compte">Compte à débiter</param>
+        /// <returns>Renvoi vrai si le traitement s'est bien passé</returns>
+        public bool Credite(double montant, Comptes compteADebiter)
         {
-            Solde = Solde + montant;
-            return " Le compte de " + this.Proprietaire + " a etait augmenter de " +
-                montant + this.Code + "\n Votre solde est maintenent de " + this.Solde + this.Code + ".";
+            this.Crediter(montant);  // équivalent à  this.Solde += somme;
+            compteADebiter.Debiter(montant);
+            return true;
         }
+        /// <summary>
+        /// Permet de débité le compte du montant passé en paramètre
+        /// </summary>
+        /// <param name="montant">montant a débité</param>
         public void Debiter(double montant)
         {
-            Solde = Solde - montant;
+            //Solde = Solde - montant;
+            this.Solde -= montant;
         }
-        public string Decrire()
+        /// <summary>
+        /// Permet de créditer le compte du montant passé en paramètre et débite le compte passé en paramètre
+        /// </summary>
+        /// <param name="montant">Montant a debité</param>
+        /// <param name="compte">Compte a credité</param>
+        public void Debiter(double montant, Comptes compte)
         {
-            return " est de " + this.Solde +
-           " " + this.Code;
+            this.Debiter(montant);
+            compte.Crediter(montant);
+        }
+
+
+        public void Afficher()
+        {
+            Console.WriteLine(this);
         }
 
         public void Transfere(double montant, string operation )
@@ -78,6 +94,12 @@ namespace Compte
                 Solde = Solde + montant;
             }
         }
+
+        public static void afficherNbrDeCompte()  // méthode static parce qu'elle appele une propriété static
+        {
+            Console.WriteLine("nombre de compte crées: " + Compteur);
+        }
+
         //static string CompteurObjet(compteur)
     }
 

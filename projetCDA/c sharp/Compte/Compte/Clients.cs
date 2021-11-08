@@ -39,16 +39,15 @@ namespace Compte
             Telephone = telephone;
         }
 
-
-
-
-
         public override string ToString()
         {
             return " Matricule :" + this.Cin + " \n Nom : " + this.Nom + "\n Prenom : " + Prenom + "\n Telephone : " + Telephone + " ";
         }
 
-       
+        public void Afficher()
+        {
+            Console.WriteLine(this);            // équivalent à Console.WriteLine(this.ToString());
+        }
 
     }
 }
