@@ -11,56 +11,58 @@ namespace SpaceInvaders_Alan
         /***** Proprietés *****/
         public int NbLigne { get; set; } /* nombres de ligne */
         public int NbColonne { get; set; } /* nombres de colonne */
-
-        public List<Space> ListeGrille { get; set; }
-
-        public Invader Invader { get; set; } /* j'ai la liaison entre les invaders et l'espace     */
+        public char[,] Grille { get; set; }
+      
 
 
 
         /***** Constructeur *****/
-        public Space(int nbLigne, int nbColonne, List<Space> listeGrille, Invader invader)
+        public Space(int nbLigne, int nbColonne)
         {
             NbLigne = nbLigne;
             NbColonne = nbColonne;
-            ListeGrille = listeGrille;
-            Invader = invader;
+           
+           
+
+            CreeGrille();
 
         }
 
-        public string CreeGrille()
+        public void CreeGrille()
         {
-
-            int[] tab = new int[4, 10] { " ", " ", " ", " " }{ " "," "," "," "," "," "," "," "," "," ",}
-            for (int i = 0; i < 4; i++)
+            Grille = new char[this.NbLigne, this.NbColonne];
+            for (int i = 0; i < this.NbLigne; i++)
             {
-                tab[i] += tab[i];
-                for (int j = 0; i < 10; j++)
+                for (int j = 0; j < this.NbColonne; j++)
                 {
-                    tab[j] += tab[j];
+                    Grille[i, j] = ' ' ;
                 }
             }
-
+        }
+        public void AfficherGrille()
+        {
+            foreach (int valeur in Grille)
+            {
+                Console.WriteLine(Grille);
+            }
 
         }
 
-        //public CreeGrille()
+        //public void EnvahisseurDuHaut()
         //{
-
+            
         //}
 
-        //public  string CreeCadre()
-        //{
-        //    for (int i=0; i<10; i++)
-        //    {
-        //        Console.WriteLine("|                   |");
-        //    }
 
 
-    }
-    public override string ToString()
-    {
-        return " Nombre de ligne " + this.NbLigne + "\nNombre de colonne " + this.NbColonne + "\nContenu de la grille " + this.ListeGrille + ".";
+
+
+  
+
+        public override string ToString()
+        {
+            return " Nombre de ligne " + this.NbLigne + "\nNombre de colonne " + this.NbColonne  + ".";
+        }
     }
 
 
@@ -77,6 +79,5 @@ namespace SpaceInvaders_Alan
 
 
 
+}
 
-}
-}
