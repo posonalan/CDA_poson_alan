@@ -134,7 +134,19 @@ namespace Entreprise_National
             return this.Salaire + this.Prime();
         }
 
+        public bool ChequeVacance()
+        {
+            if (this.NbAnneesAnciennete() > 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false; 
+            } 
+        }
 
+        }
 
     }
 
