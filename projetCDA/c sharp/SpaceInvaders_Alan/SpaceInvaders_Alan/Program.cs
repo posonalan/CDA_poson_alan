@@ -7,20 +7,19 @@ namespace SpaceInvaders_Alan
     {
         static void Main(string[] args)
         {
-            //List<> listeGrille = new List<Space>()
-            //{ 
-            //};
+          
+            
 
-            Invader alien1 = new Invader("^=^", 2, true);
-            Invader alien2 = new Invader("=_=", 2, true);
-            Invader alien3 = new Invader("*o*", 2, true);
-            Invader alien4 = new Invader("è=è", 2, true);
+            //Invader alien1 = new Invader("^=^", 2, true);
+            //Invader alien2 = new Invader("=_=", 2, true);
+            //Invader alien3 = new Invader("*o*", 2, true);
+            //Invader alien4 = new Invader("è=è", 2, true);
 
 
-            Space grille1 = new Space(5, 10);   grille1.CreeGrille();
+            Space grille1 = new Space(5, 10);  
             Console.WriteLine("┌───────────────────┐");
 
-            grille1.AfficherGrille(); 
+            grille1.Afficher(); 
 
            
 

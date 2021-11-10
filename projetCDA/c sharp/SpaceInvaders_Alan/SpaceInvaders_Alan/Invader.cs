@@ -10,16 +10,23 @@ namespace SpaceInvaders_Alan
     {
         /***** Proprieté *****/
 
-        public string Motif { get; set; } = "#"; /* type d'envahisseur exemple  alien , vache , claude francois */ 
-        public int Position { get; set; } /* position de l'envahisseur */ 
-        public bool Shoot { get; set; }
+        public char Motif { get; set; }  /* type d'envahisseur exemple  alien , vache , claude francois */ 
+       
+       
 
-        public Invader(string motif, int position, bool shoot)
+        public Invader(char motif )
         {
             this.Motif = motif;
-            this.Position = position;
-            this.Shoot = shoot; 
+            
+           
         }
+
+      
+        public Invader()
+        {
+            this.Motif = '§';
+        }
+
 
         //public bool tirer()
         //{
@@ -34,7 +41,8 @@ namespace SpaceInvaders_Alan
 
         public override string ToString()
         {
-            return " type d'envahisseur : "+ this.Motif+ " " ;
+            return this.Motif+"" ;
+            // ou   return char.ToString(this.Motif);
         }
 
 
