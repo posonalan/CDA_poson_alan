@@ -1,0 +1,5 @@
+U:\59011-07-09\projetCDA\c sharp\Calculette_v1\Calculette_v1\obj\Debug\Calculette_v1.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette_v1\Calculette_v1\obj\Debug\MainWindow.g.cs
+U:\59011-07-09\projetCDA\c sharp\Calculette_v1\Calculette_v1\obj\Debug\App.g.cs
+U:\59011-07-09\projetCDA\c sharp\Calculette_v1\Calculette_v1\obj\Debug\Calculette_v1_MarkupCompile.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette_v1\Calculette_v1\obj\Debug\Calculette_v1_MarkupCompile.lref

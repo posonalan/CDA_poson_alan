@@ -11,6 +11,25 @@
             <GradientStop Color="LightSlateGray" Offset="1"/>
             <GradientStop Color="white" Offset="0.299"/>
         </LinearGradientBrush>
+
+
+        <Style x:Key="bordurColor">
+            <Setter Property="Control.BorderBrush" Value="#FF363636" />
+            <Setter Property="Control.BorderThickness" Value="1" />
+        </Style>
+        
+         <Style x:Key="GreenBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Green" />
+            <Setter Property="BorderThickness" Value="0,0,1,1" />          
+        </Style>
+     
+        
+        <Style x:Key="RedBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Red" />
+            <Setter Property="BorderThickness" Value="1,1,0,0" />
+        </Style>
+        
+        <!--<Style x:FieldModifier="shadow" TargetType="Border"></Style>-->
         
     </Application.Resources>
     
