@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Adhesion"
   ],
-  "SelectedNode": "\\Adhesion.sln",
+  "SelectedNode": "\\Adhesion\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

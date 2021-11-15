@@ -27,3 +27,4 @@ U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.Gen
 U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.CoreCompileInputs.cache
 U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.exe
 U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.pdb
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.AssemblyReference.cache

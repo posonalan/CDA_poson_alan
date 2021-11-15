@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Calculette"
   ],
-  "SelectedNode": "\\Calculette.sln",
+  "SelectedNode": "\\Calculette\\Calculette.csproj",
   "PreviewInSolutionExplorer": false
 }
