@@ -13,3 +13,4 @@ U:\59011-07-09\projetCDA\c sharp\GestionProduits\GestionProduits\obj\Debug\Gesti
 U:\59011-07-09\projetCDA\c sharp\GestionProduits\GestionProduits\obj\Debug\GestionProduits.csproj.CoreCompileInputs.cache
 U:\59011-07-09\projetCDA\c sharp\GestionProduits\GestionProduits\obj\Debug\GestionProduits.exe
 U:\59011-07-09\projetCDA\c sharp\GestionProduits\GestionProduits\obj\Debug\GestionProduits.pdb
+U:\59011-07-09\projetCDA\c sharp\GestionProduits\GestionProduits\obj\Debug\App.baml

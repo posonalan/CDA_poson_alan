@@ -5,47 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionProduits"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" MinWidth="496" MinHeight="527">
-    <Grid  Background="ForestGreen">
+        Title="MainWindow" Height="500" Width="900" 
+	    MinWidth="750" MinHeight="200">
+	
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="wallpaper.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="160*"/>
-            <RowDefinition Height="95*"/>
-            <RowDefinition Height="95*"/>
-            <RowDefinition Height="106*"/>
-            <RowDefinition Height="23*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="135*"/>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="105*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="120*"/>
                 <ColumnDefinition Width="10*"/>
                 <ColumnDefinition Width="120*"/>
                 <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="115*"/>
+                <ColumnDefinition Width="120*"/>
                 <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="135*"/>
-                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
-            
-            <Button x:Name="Ajouter" Content="Ajouter" Grid.Row="1" Grid.Column="1" Background="AliceBlue"  />
-            <Button x:Name="Modifier" Content="Modifier" Grid.Row="1" Grid.Column="3" Background="AliceBlue"  />
-            <Button x:Name="Supprimer" Content="Supprimer" Grid.Row="1" Grid.Column="5" Background="AliceBlue"  />
-            <Button x:Name="Duppliquer" Content="Ajouter" Grid.Row="1" Grid.Column="7" Background="AliceBlue"  />
-            <Button x:Name="Vider" Content="Ajouter" Grid.Row="1" Grid.Column="9" Background="AliceBlue"  />
+
+            <Button x:Name="Ajouter" 
+                    Content="Ajouter"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                   
+                    />
+
+            <Button x:Name="Modifier" 
+                    Content="Modifier"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Background="{DynamicResource LeLinearGradient}"  FontSize="20"
+                    />
+
+            <Button x:Name="Supprimer"
+                    Content="Supprimer"
+                    Grid.Row="1"
+                    Grid.Column="5"
+                   Background="{DynamicResource LeLinearGradient}"  FontSize="20"
+                    />
+
+
+            <Button x:Name="Duppliquer"
+                    Content="Duppliquer"
+                    Grid.Row="1"
+                    Grid.Column="7"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                    />
+
+            <Button x:Name="Vider"
+                    Content="Vider"
+                    Grid.Row="1" 
+                    Grid.Column="9"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                    
+                    />
 
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Margin="0,0,0,3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="115*"/>
-                <ColumnDefinition Width="530*"/>
-                <ColumnDefinition Width="147*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="400*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="115*"/>
             </Grid.ColumnDefinitions>
+            <TabControl    Grid.Column="1">
+                <TabItem Header="IdProduit">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+            <TabControl    Grid.Column="2">
+                <TabItem Header="LibelleProduit">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+            <TabControl    Grid.Column="3">
+                <TabItem Header="Catégories">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+            <TabControl    Grid.Column="4">
+                <TabItem Header="Rayons">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+
         </Grid>
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="82*"/>
                 <ColumnDefinition Width="248*"/>
@@ -53,8 +113,23 @@
                 <ColumnDefinition Width="201*"/>
                 <ColumnDefinition Width="104*"/>
             </Grid.ColumnDefinitions>
+            
+            <Button x:Name="ListeDesCategorie"
+                    Content="Liste des categories"
+                    Grid.Column="1" 
+                    Background="{DynamicResource LeLinearGradient}"
+                    FontSize="20" 
+                    />
+
+            <Button x:Name="ListeDesCrayons"
+                    Content="Liste des crayons"
+                    Grid.Column="3"
+                    Background="{DynamicResource LeLinearGradient}" 
+                    FontSize="20" 
+                    />
+
         </Grid>
-      
+
 
     </Grid>
 </Window>
