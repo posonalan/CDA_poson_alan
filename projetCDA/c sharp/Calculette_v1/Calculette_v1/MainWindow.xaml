@@ -3,18 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calculette"
+        xmlns:local="clr-namespace:Calculette_v1"
         mc:Ignorable="d"
-        Title="Calculette" Height="500" Width="400" MinHeight="450">
-    <Grid Background="#FFB0B0BA" >
+        Title="Calculette_v1" Height="527" Width="496"  MinWidth="496" MinHeight="527"
+    
+    >
+
+    <Grid Background="#FFB0B0BA"   >
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="16*"/>
+            <RowDefinition Height="45*"/>
             <RowDefinition Height="13*"/>
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="69*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="13*"/>
             <RowDefinition Height="69*"/>
             <RowDefinition Height="13*"/>
@@ -24,18 +26,22 @@
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="textBox"  Grid.Column="1"   Grid.Row="1"  Grid.ColumnSpan="7" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Text="425,58" Margin="0,0,0,8" Background="#FFC0C0C2"
-                 Foreground="#FF0F0A0A" SelectionBrush="#FFE1E8EE" >
+        <TextBox x:Name="tbxResultat"  Grid.Column="2"  
+                 Grid.Row="1"  Grid.ColumnSpan="7" 
+                  Background="#FFC0C0C2"
+                   >
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -43,145 +49,168 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="button_1" Content="1"  Grid.Row="4" HorizontalAlignment="Right" Width="66" Grid.Column="1" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" 
-                Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_1_Copy" Content="2" Grid.Column="3"  Grid.Row="4" HorizontalAlignment="Right" Width="65" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_1_Copy1" Content="3" Grid.Column="4"  Grid.Row="4" HorizontalAlignment="Right" Width="66" FontFamily="Yu Gothic UI" FontSize="24" Grid.ColumnSpan="2" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_1_Copy2" Content="CE" Grid.Column="7"  Grid.Row="4" HorizontalAlignment="Right" Width="65" RenderTransformOrigin="0.925,0.603" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_diviser" Content="/"  Grid.Row="10" HorizontalAlignment="Right" Width="66" Grid.Column="5" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_X" Content="X"  Grid.Row="10" HorizontalAlignment="Right" Width="66" Grid.Column="7" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_moin" Content="-"  Grid.Row="8" HorizontalAlignment="Right" Width="66" Grid.Column="6" FontFamily="Yu Gothic UI" FontSize="24" Grid.ColumnSpan="2" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_1_Copy6" Content="1"  Grid.Row="8" HorizontalAlignment="Right" Width="66" Grid.Column="4" Grid.ColumnSpan="2" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_plus" Content="+"  Grid.Row="6" HorizontalAlignment="Right" Width="66" Grid.Column="7" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_1_Copy8" Content="1"  Grid.Row="6" HorizontalAlignment="Right" Width="66" Grid.Column="4" Grid.ColumnSpan="2" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_virgule" Content=","  Grid.Row="10" HorizontalAlignment="Right" Width="66" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_6" Content="6"  Grid.Row="8" HorizontalAlignment="Right" Width="66" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_5" Content="5"  Grid.Row="6" HorizontalAlignment="Right" Width="66" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,25,0" FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_egal" Content="="  Grid.Row="12" HorizontalAlignment="Right" Width="340" Grid.Column="1"  FontFamily="Yu Gothic UI" FontSize="24" Grid.ColumnSpan="7" Click="button_1_Copy12_Click" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_7" Content="7"  Grid.Row="8" HorizontalAlignment="Right" Width="66" Grid.Column="1" RenderTransformOrigin="0.439,2.221"  FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_4" Content="4"  Grid.Row="6" HorizontalAlignment="Right" Width="66" Grid.Column="1"  FontFamily="Yu Gothic UI" FontSize="24" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="button_0" Content="0"  Grid.Row="10" HorizontalAlignment="Right" Width="66" Grid.Column="1" FontFamily="Yu Gothic UI" FontSize="24" Click="button_1_Copy4_Click" Background="#FFC0C0C2" Foreground="#FF2E1111">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF170404" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
+
+        <Button x:Name="bouton1" 
+                Content="1" 
+                Grid.Row="3"  
+                Grid.Column="2"  
+                FontSize="24" 
+                Background="#FFC0C0C2" 
+                Click="BoutonNumerique_Click">
         </Button>
 
+        <Button x:Name="bouton2" 
+                Content="2"
+                Grid.Row="3"
+                Grid.Column="4" 
+                FontSize="24" Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+        <Button x:Name="bouton3" 
+                Content="3"
+                Grid.Row="3"
+                Grid.Column="6" 
+                FontSize="24" Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        <Button x:Name="bouton4" 
+                 Content="4"
+                Grid.Row="5"
+                Grid.Column="2" 
+                FontSize="24" Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+
+        <Button x:Name="bouton5"
+               Content="5"
+                Grid.Row="5"
+                Grid.Column="4" 
+                FontSize="24"
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+
+        <Button x:Name="bouton6" 
+                Content="6" 
+                Grid.Row="5"
+                Grid.Column="6" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+        <Button x:Name="bouton7" 
+                Content="7" 
+                Grid.Row="7"
+                Grid.Column="2" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+        <Button x:Name="boutonRemZero" 
+                Content="CE"
+                Grid.Row="3"
+                Grid.Column="8" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonInit_Click">
+        </Button>
+         
+        
+        <Button x:Name="boutonDiviser" 
+                Content="/" 
+                Grid.Row="9"
+                Grid.Column="6" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="button_X" 
+                Content="X" 
+                Grid.Row="9"
+                Grid.Column="4" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+        <Button x:Name="button_moin"
+                Content="-" 
+                Grid.Row="7"
+                Grid.Column="8" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+
+        <Button x:Name="bouton9" 
+                Content="9" 
+                Grid.Row="7"
+                Grid.Column="6" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="button_plus" 
+                Content="+" 
+                Grid.Row="5"
+                Grid.Column="8" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="boutonVirgule"
+                Content="," 
+               Grid.Row="11"
+                Grid.Column="8" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="bouton8"
+                Content="8"
+                Grid.Row="7"
+                Grid.Column="4" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="button_egal" Content="=" 
+                Grid.Row="11"
+                Grid.Column="2" 
+                Grid.ColumnSpan="5"
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="bouton0" 
+                Content="0" 
+                Grid.Row="9"
+                Grid.Column="2" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
+        
+        <Button x:Name="boutonSup" Content="suppr" 
+                Grid.Row="9"
+                Grid.Column="8" 
+                FontSize="24" 
+                Background="#FFC0C0C2"
+                Click="BoutonNumerique_Click">
+        </Button>
 
     </Grid>
 </Window>
+
 
