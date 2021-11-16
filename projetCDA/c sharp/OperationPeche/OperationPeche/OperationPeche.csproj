@@ -97,5 +97,20 @@
   <ItemGroup>
     <Resource Include="wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="questions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fleche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="moins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="soucoupe.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
