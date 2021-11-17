@@ -25,14 +25,15 @@ namespace RPG
                 {
                     remy.Attaque(bart);
 
-                    if (bart.Pdv)
+                    if (bart.Pdv == false)
                     {
                         bart.Attaque(remy);
                     }
 
-                } while (remy.Statue() && bart.Pdv);
-
-                remy.Pdv--; 
+                } while (remy.Statue() && bart.Pdv == false );
+               
+                Console.WriteLine(remy.Pdv);
+                Console.WriteLine(remy.Score);
 
 
 

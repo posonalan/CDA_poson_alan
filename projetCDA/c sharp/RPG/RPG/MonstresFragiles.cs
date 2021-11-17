@@ -30,13 +30,18 @@ namespace RPG
 
             if (lanceJoueur < lanceMonstre)
             {
+                Console.WriteLine(" Brandir le bouclier \n");
                 lanceBouclier = De.LanceLeDe();
+
                 if (lanceBouclier > 2)
                 {
                     Console.WriteLine(" le monstre te fait mal ");
 
                     remy.SubitDegats(10); 
                 }
+                else {
+                Console.WriteLine(" Attaque bloquer ! \n");
+ }
             } 
         }
         public bool Statue(int pdv) /* en vie ou mort */
