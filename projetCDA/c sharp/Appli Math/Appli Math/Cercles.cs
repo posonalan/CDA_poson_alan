@@ -8,12 +8,12 @@ namespace Appli_Math
 {
     class Cercles
     {
-        public int Diametre { get; set; }
+        public double Diametre { get; set; }
     
 
 
 
-        public Cercles(int diametre)
+        public Cercles(double diametre)
         {
             this.Diametre = diametre; 
         }
@@ -24,17 +24,16 @@ namespace Appli_Math
             return this.Diametre*3.14 ; /* Cercles */
         }
 
-        public int Aire()
+        public double Aire()
         {
-            return 3.14((this.Diametre /2)2) ; /* Triangle */
+            return (Math.Pow((this.Diametre/2),2)*Math.PI) ; /* cercles */
         }
 
 
 
-        public string AfficherTriangle()
+        public virtual string Afficher()
         {
-            return "Hauteur : " + Hauteur + " cm -" +
-                " Base : " + Base + " cm - " +
+            return "Diametre : " + Diametre + " cm -" +
                 "Perimetre : " + Perimetre() + " cm -" +
                 "Aire : " + Aire() + " cm .";
         }

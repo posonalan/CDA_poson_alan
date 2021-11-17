@@ -19,12 +19,12 @@ namespace Appli_Math
         }
 
 
-        public int Perimetre() 
+        public virtual int Perimetre() 
         {
             return (this.Longueur + this.Largeur)*2; /* rectangle */ 
         }
 
-        public int Aire()
+        public  int Aire()
         {
             return this.Longueur * this.Largeur; /* rectangle */ 
         }

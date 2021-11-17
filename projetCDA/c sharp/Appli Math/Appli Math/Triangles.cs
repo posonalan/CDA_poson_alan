@@ -20,7 +20,7 @@ namespace Appli_Math
 
         /***** Methode *****/
 
-        public double Perimetre()
+        public virtual double Perimetre()
         {
             return this.Hauteur + this.Base + Math.Sqrt((this.Hauteur* this.Hauteur)+(this.Base * this.Base) ); /* triangle */
         }
@@ -32,7 +32,7 @@ namespace Appli_Math
 
     
 
-        public string AfficherTriangle()
+        public virtual string Afficher()
         {
             return "Hauteur : " + Hauteur + " cm -" +
                 " Base : " + Base + " cm - " +
