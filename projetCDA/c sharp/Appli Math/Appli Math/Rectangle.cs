@@ -6,36 +6,62 @@ using System.Threading.Tasks;
 
 namespace Appli_Math
 {
-    class Rectangle
+    class Rectangles
     {
         public int Longueur { get; set; }
         public int Largeur { get; set; }
 
 
-        public Rectangle(int longueur, int largeur)
+        public Rectangles(int longueur, int largeur)
         {
             this.Longueur = longueur;
             this.Largeur = largeur;
         }
 
 
-        public int perimetre()
+        public int Perimetre() 
         {
-            return (this.Longueur + this.Largeur)*2 ;
-
+            return (this.Longueur + this.Largeur)*2; /* rectangle */ 
         }
+
+        public int Aire()
+        {
+            return this.Longueur * this.Largeur; /* rectangle */ 
+        }
+
+        public bool EstCarre()
+        {
+            if (this.Longueur == this.Largeur)
+            {
+               
+                return true; 
+            }
+           
+            return false; 
+        }
+            
+        public string AfficherRectangle() 
+                {
+            return "Longueur : "+Longueur+" cm -" +
+                " Largeur : "+Largeur+" cm - " +
+                "Perimetre : " +Perimetre()+" cm -" +
+                "Aire : "+Aire()+" cm -" +
+                " la forme geometrique est un carre : "
+                + EstCarre();
+                }
 
         /* affichage */
         public override string ToString()
+
         {
 
-            string reponse =
+           return
             "****_Information_****" +
             "\n|Longueur                : " + this.Longueur +
             "\n|Largeur           : " + this.Largeur +
             "."; 
           
-            return reponse;
+           
         }
 
     }
