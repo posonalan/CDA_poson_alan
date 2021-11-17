@@ -457,6 +457,12 @@
                 <TextBlock Text="opération" Grid.Row="3" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
                 <TextBlock Text="substrat" Grid.Row="4" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
 
+                <TextBlock Grid.Row="0" Grid.Column="4" Text="Support" Background="WhiteSmoke" Foreground="Black"/>
+                <TextBlock Text="navire" Grid.Row="1" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
+                <TextBlock Text="masse d'eau" Grid.Row="2" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
+                <TextBlock Text="opération" Grid.Row="3" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
+                <TextBlock Text="substrat" Grid.Row="4" Grid.Column="4" Foreground="{DynamicResource ColorOvni}"/>
+
 
 
 
