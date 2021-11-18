@@ -6,7 +6,10 @@ namespace RPG
     {
         static void Main(string[] args)
         {
-            Joueurs remy = new Joueurs("remy"); 
+           
+            Console.WriteLine("     ********** RPG AUTO **********\n");
+
+            Joueurs remy = new Joueurs("Remy"); 
             MonstresFragiles bart; 
             
             
@@ -15,11 +18,11 @@ namespace RPG
             {
                 if (De.LanceLeDe() == 1)
                 {
-                    bart = new MonstresPuissants("miguelle");
+                    bart = new MonstresPuissants("Miguelle");
                 }
                 else
                 {
-                    bart = new MonstresFragiles("baptou");
+                    bart = new MonstresFragiles("José");
                 }
                 do
                 {
@@ -34,7 +37,7 @@ namespace RPG
                
                 Console.WriteLine(remy.Pdv);
                 Console.WriteLine(remy.Score);
-
+                
 
 
             } while (remy.Statue());

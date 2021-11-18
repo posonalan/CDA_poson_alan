@@ -24,6 +24,7 @@ namespace RPG
             int lanceJoueur = De.LanceLeDe();
             int lanceMonstre = De.LanceLeDe();
             int lanceBouclier;
+            
 
             Console.WriteLine(" Lancer de dé : \n");
             Console.WriteLine(" le " + Nom + " realise un " + lanceMonstre + " , " + "le joueur realise un " + lanceJoueur + ".");
@@ -32,7 +33,7 @@ namespace RPG
             {
                 Console.WriteLine(" Brandir le bouclier \n");
                 lanceBouclier = De.LanceLeDe();
-
+                
                 if (lanceBouclier > 2)
                 {
                     Console.WriteLine(" le monstre te fait mal ");
