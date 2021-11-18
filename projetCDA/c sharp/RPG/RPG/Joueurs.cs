@@ -36,7 +36,7 @@ namespace RPG
             int lanceJoueur = De.LanceLeDe();
             int lanceMonstre = De.LanceLeDe();
             Console.WriteLine(" Lancer de dé : \n");
-            Console.WriteLine(" le joueur realise un " + lanceJoueur + " , " + "le monstre realise un " + lanceMonstre + ".");
+            Console.WriteLine(" le "+Nom+" realise un " + lanceJoueur + " , " + "le monstre realise un " + lanceMonstre + ".");
 
             if (lanceJoueur >= lanceMonstre)
             {
@@ -54,7 +54,7 @@ namespace RPG
         public void SubitDegats(int degatSubis)
         {
             this.Pdv -= degatSubis;
-            Console.WriteLine(Nom + " perd " + degatSubis + " il lui reste " + Pdv + " point de vie.");
+            Console.WriteLine(Nom + " perd " + degatSubis + "points de vie, il lui reste " + Pdv + " point de vie.");
 
         }
 

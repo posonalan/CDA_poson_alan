@@ -27,7 +27,7 @@ namespace RPG
             
 
             Console.WriteLine(" Lancer de dé : \n");
-            Console.WriteLine(" le " + Nom + " realise un " + lanceMonstre + " , " + "le joueur realise un " + lanceJoueur + ".");
+            Console.WriteLine(" le " + Nom + " realise un " + lanceMonstre + " , " + "le "+ remy.Nom +"realise un " + lanceJoueur + ".");
 
             if (lanceJoueur < lanceMonstre)
             {
@@ -35,8 +35,8 @@ namespace RPG
                 lanceBouclier = De.LanceLeDe();
                 
                 if (lanceBouclier > 2)
-                {
-                    Console.WriteLine(" le monstre te fait mal ");
+                { 
+                    Console.WriteLine(" le "+Nom+" te fait mal ");
 
                     remy.SubitDegats(10); 
                 }

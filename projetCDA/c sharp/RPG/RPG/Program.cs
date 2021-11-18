@@ -36,14 +36,14 @@ namespace RPG
                 } while (remy.Statue() && bart.Pdv == false );
                
                 Console.WriteLine(remy.Pdv);
-                Console.WriteLine(remy.Score);
-                
+                Console.WriteLine("Le score de remy est : " + remy.Score + " points.");
+
 
 
             } while (remy.Statue());
-            Console.WriteLine(remy.Score); 
-            
-             
+            Console.WriteLine("Le score de remy est : " + remy.Score + " points.");
+
+
 
         }
     }
