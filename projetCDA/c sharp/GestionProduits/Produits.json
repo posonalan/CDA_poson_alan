@@ -1,1 +1,51 @@
-null
+[
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Banane",
+    "Quantite": 2,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 2,
+    "LibelleProduit": "Cornichon",
+    "Quantite": 4,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 3,
+    "LibelleProduit": "Paté",
+    "Quantite": 6,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 4,
+    "LibelleProduit": "Courgette",
+    "Quantite": 8,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 5,
+    "LibelleProduit": "Limonade",
+    "Quantite": 10,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 6,
+    "LibelleProduit": "Graisse de Canard",
+    "Quantite": 12,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  },
+  {
+    "IdProduit": 7,
+    "LibelleProduit": "Pâte fraiche",
+    "Quantite": 14,
+    "Categorie": "fruits",
+    "Rayon": "Frais"
+  }
+]

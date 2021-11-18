@@ -94,6 +94,7 @@ namespace GestionProduits
         {
             /* une fois modifier on met le contenue dans la chaine a la place de l'ancien contenu */
             string chaine = LireFichier();
+            chaine.Dump();
             /* on met au format json notre liste */
             List<Produits> liste = JsonConvert.DeserializeObject<List<Produits>>(chaine);
             return liste;
