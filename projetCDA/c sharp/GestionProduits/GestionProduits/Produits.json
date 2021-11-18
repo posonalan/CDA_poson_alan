@@ -1,72 +1,51 @@
 [
   {
     "IdProduit": 1,
-    "LibelleProduit": "banane",
-    "Quantite": 2
+    "LibelleProduit": "Banane",
+    "Quantite": 2,
+      "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "abricot",
-    "Quantite": 4
+    "IdProduit": 2,
+    "LibelleProduit": "Cornichon",
+    "Quantite": 4,
+       "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "kiwi",
+    "IdProduit": 3,
+    "LibelleProduit": "Paté",
     "Quantite": 6
+       "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "pomme",
+    "IdProduit": 4,
+    "LibelleProduit": "Courgette",
     "Quantite": 8
+        "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "mandarine",
+    "IdProduit": 5,
+    "LibelleProduit": "Limonade",
     "Quantite": 10
+        "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "pasteque",
+    "IdProduit": 6,
+    "LibelleProduit": "Graisse de Canard",
     "Quantite": 12
+        "Categorie":"fruits",
+      "Rayon":"Frais"
   },
   {
-    "IdProduit": 1,
-    "LibelleProduit": "ananas",
+    "IdProduit": 7,
+    "LibelleProduit": "Pâte fraiche",
     "Quantite": 14
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "orange",
-    "Quantite": 16
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "clementine",
-    "Quantite": 18
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "cerise",
-    "Quantite": 20
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "fraise",
-    "Quantite": 22
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "prune",
-    "Quantite": 24
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "raisin",
-    "Quantite": 26
-  },
-  {
-    "IdProduit": 1,
-    "LibelleProduit": "peche",
-    "Quantite": 28
-  }
-]
+            "Categorie":"fruits",
+      "Rayon":"Frais"
+ 
+  }]

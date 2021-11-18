@@ -7,17 +7,21 @@
 
     <Application.Resources>
 
-        <LinearGradientBrush x:Key="LeLinearGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="DarkBlue" Offset="0"/>
-            <GradientStop Color="CadetBlue" Offset="1"/>
-            <GradientStop Color="White" Offset="2"/>
-            <GradientStop Color="IndianRed" Offset="3"/>
-            <GradientStop Color="DarkRed" Offset="4"/>
-            
-        </LinearGradientBrush>
-        <BitmapImage x:Key="Croissant" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Design\Design\Ressources\croissant2.jpg"/>
+        <LinearGradientBrush x:Key="LeLinearGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Offset="0" Color="DarkBlue" />
+            <GradientStop Offset="1" Color="CadetBlue" />
+            <GradientStop Offset="2" Color="White" />
+            <GradientStop Offset="3" Color="IndianRed" />
+            <GradientStop Offset="4" Color="DarkRed" />
 
-        
-        
-        </Application.Resources >
+        </LinearGradientBrush>
+        <BitmapImage
+            x:Key="Croissant"
+            CacheOption="OnLoad"
+            CreateOptions="IgnoreImageCache"
+            UriSource="U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Design\Design\Ressources\croissant2.jpg" />
+
+
+
+    </Application.Resources>
 </Application>

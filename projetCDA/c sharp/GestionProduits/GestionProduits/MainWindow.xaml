@@ -34,54 +34,66 @@
                 <ColumnDefinition Width="120*"/>
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
-
+            
+ <Label Content="Entrer un mot" Grid.Column="1"/>
+        <TextBox x:Name="tbxMot" Grid.Row="1" Grid.Column="1"  />
+        
+        <Label Content="Retour" Grid.Row="2" Grid.Column="2"/>
+        <Label x:Name="labelRetour" Grid.Column="2" Grid.Row="3"/>
+            
             <Button x:Name="Ajouter" 
                     Content="Ajouter"
                     Grid.Row="1"
                     Grid.Column="1"
-                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20" Click="Button_Click"/>
+                    <!--Click="BoutonNumerique_Click">-->
                    
-                    />
+			
 
             <Button x:Name="Modifier" 
                     Content="Modifier"
                     Grid.Row="1"
                     Grid.Column="3"
-                    Background="{DynamicResource LeLinearGradient}"  FontSize="20"
+                    Background="{DynamicResource LeLinearGradient}"  FontSize="20" Click="Button_Click"
                     />
 
             <Button x:Name="Supprimer"
                     Content="Supprimer"
                     Grid.Row="1"
                     Grid.Column="5"
-                   Background="{DynamicResource LeLinearGradient}"  FontSize="20"
+                   Background="{DynamicResource LeLinearGradient}"  FontSize="20" Click="Button_Click"
                     />
-
+            
 
             <Button x:Name="Duppliquer"
                     Content="Duppliquer"
                     Grid.Row="1"
                     Grid.Column="7"
-                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20" Click="Button_Click"
                     />
 
             <Button x:Name="Vider"
                     Content="Vider"
                     Grid.Row="1" 
                     Grid.Column="9"
-                   Background="{DynamicResource LeLinearGradient}" FontSize="20"
+                   Background="{DynamicResource LeLinearGradient}" FontSize="20" Click="boutonNvFenetre_Click"
                     
                     />
-
+            
         </Grid>
-	<!--Grille contenant mes produits--> 
+       
+        
+        <!--Grille contenant mes produits--> 
            <DataGrid x:Name="listeProduits" Grid.Row="2" Grid.Column="1" 
                   ScrollViewer.HorizontalScrollBarVisibility="Auto" 
                   ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                   AutoGenerateColumns="False">
             <DataGrid.Columns>
+          
                 <DataGridTextColumn Header="Libelle du Produit"  Binding="{Binding LibelleProduit}"/>
                 <DataGridTextColumn Header="Quantité Disponible"  Binding="{Binding  Quantite}"/>
+				<DataGridTextColumn Header="Catégories"  Binding="{Binding  Categorie}"/>
+				<DataGridTextColumn Header="Rayon"  Binding="{Binding  Rayon}"/>
             </DataGrid.Columns>
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -106,6 +118,7 @@
                     Grid.Column="1" 
                     Background="{DynamicResource LeLinearGradient}"
                     FontSize="20" 
+					Click="Button_Click"
                     />
 
             <Button x:Name="ListeDesCrayons"
@@ -113,6 +126,8 @@
                     Grid.Column="3"
                     Background="{DynamicResource LeLinearGradient}" 
                     FontSize="20" 
+					Click="Button_Click"
+					
                     />
 
         </Grid>
