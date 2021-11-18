@@ -1,0 +1,72 @@
+[
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "banane",
+    "Quantite": 2
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "abricot",
+    "Quantite": 4
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "kiwi",
+    "Quantite": 6
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "pomme",
+    "Quantite": 8
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "mandarine",
+    "Quantite": 10
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "pasteque",
+    "Quantite": 12
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "ananas",
+    "Quantite": 14
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "orange",
+    "Quantite": 16
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "clementine",
+    "Quantite": 18
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "cerise",
+    "Quantite": 20
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "fraise",
+    "Quantite": 22
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "prune",
+    "Quantite": 24
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "raisin",
+    "Quantite": 26
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "peche",
+    "Quantite": 28
+  }
+]

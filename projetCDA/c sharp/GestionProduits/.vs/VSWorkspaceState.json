@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GestionProduits"
+    "\\GestionProduits",
+    "\\GestionProduits\\bin",
+    "\\GestionProduits\\bin\\Release",
+    "\\GestionProduits\\obj",
+    "\\GestionProduits\\obj\\Release"
   ],
-  "SelectedNode": "\\GestionProduits\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-public class GestionsProduits
+public class GestionProduits
 {  /* fichier de transformation en json */ 
     static class ObjectHelper
     {
