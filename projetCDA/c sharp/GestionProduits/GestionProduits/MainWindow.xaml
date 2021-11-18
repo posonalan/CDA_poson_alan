@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionProduits"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900" 
+        Title="Gestions produits" Height="500" Width="900" 
 	    MinWidth="750" MinHeight="200">
 	
     <Grid>
@@ -74,44 +74,31 @@
                     />
 
         </Grid>
-        <Grid Grid.Row="2" Margin="0,0,0,3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="115*"/>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="400*"/>
-                <ColumnDefinition Width="200*"/>
-                <ColumnDefinition Width="200*"/>
-                <ColumnDefinition Width="115*"/>
-            </Grid.ColumnDefinitions>
-            <TabControl    Grid.Column="1">
-                <TabItem Header="IdProduit">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-            </TabControl>
-            <TabControl    Grid.Column="2">
-                <TabItem Header="LibelleProduit">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-            </TabControl>
-            <TabControl    Grid.Column="3">
-                <TabItem Header="Catégories">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-            </TabControl>
-            <TabControl    Grid.Column="4">
-                <TabItem Header="Rayons">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-            </TabControl>
+	<!--Grille contenant mes produits--> 
+           <DataGrid x:Name="listeProduits" Grid.Row="2" Grid.Column="1" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                  ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Libelle du Produit"  Binding="{Binding LibelleProduit}"/>
+                <DataGridTextColumn Header="Quantité Disponible"  Binding="{Binding  Quantite}"/>
+            </DataGrid.Columns>
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFC4C4C4" Offset="0.147"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
 
-        </Grid>
+        </DataGrid>
         <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="104*"/>
                 <ColumnDefinition Width="82*"/>
                 <ColumnDefinition Width="248*"/>
                 <ColumnDefinition Width="157*"/>
                 <ColumnDefinition Width="201*"/>
-                <ColumnDefinition Width="104*"/>
             </Grid.ColumnDefinitions>
             
             <Button x:Name="ListeDesCategorie"
