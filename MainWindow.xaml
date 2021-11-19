@@ -5,25 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IntervensionMaintenance"
         mc:Ignorable="d"
-        Title="Interventions de maintenance" Height="450" Width="800">
+        Title="Interventions de maintenance" Height="1000" Width="926" MinWidth="926">
+
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10*"/>
-        </Grid.ColumnDefinitions>
+        <!--                Structure de base           -->
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="150*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+
         </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="1" >
+        <!--     **********     -->
+        <!--          Annee intervention         -->
+        <Grid Grid.Row="1" Grid.Column="1" >
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25"/>
@@ -31,13 +46,10 @@
                 <ColumnDefinition Width="27*"/>
                 <ColumnDefinition Width="180*"/>
                 <ColumnDefinition Width="370*"/>
-
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
-
-
             </Grid.RowDefinitions>
 
 
@@ -45,9 +57,9 @@
             <ComboBox   Grid.Column="3"   />
 
         </Grid>
-
-
-        <Grid Grid.Row="3">
+        <!--     **********     -->
+        <!--          La data grille          -->
+        <Grid Grid.Row="3" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -57,12 +69,15 @@
                   ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                    >
                 <DataGrid.Columns>
-
-                    <DataGridTextColumn Header="Numero" />
-                    <DataGridTextColumn Header="Prestataire" />
-                    <DataGridTextColumn Header="Code UEM"/>
+                    <DataGridTextColumn Header=" Numero " />
+                    <DataGridTextColumn Header=" Prestataire " />
+                    <DataGridTextColumn Header=" Code UEM "/>
+                    <DataGridTextColumn Header=" Type de travail " />
+                    <DataGridTextColumn Header=" Kilometrage depart " />
+                    <DataGridTextColumn Header=" Kilometrage arriver " />
+                    <DataGridTextColumn Header=" Volume " />
+                    <DataGridTextColumn Header=" Prix Unitaire(€) " />
                     <DataGridTextColumn Header="Type de travail" />
-
                 </DataGrid.Columns>
 
                 <DataGrid.Background>
@@ -75,18 +90,15 @@
 
             </DataGrid>
         </Grid>
-
-        <Button Content="Ajout Ligne" Grid.Row="7" />
-        <Button Content="Modifier"  Grid.Row="7"/>
-        <Button Content="Sauvegarde"  Grid.Row="7"/>
-        <Button Content="Suppression"  Grid.Row="7"/>
-        <Button Content="Impression"  Grid.Row="7"/>
-
-
-
-        <GroupBox Grid.Row="5" Header="UEM">
+        <!--     **********     -->
+        <!--          UEM          -->
+        <TextBlock Text=" Information d'intervention " Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" Margin="0,16"/>
+        <!--     **********     -->
+        <!--          UEM          -->
+        <GroupBox Grid.Row="9" Header="UEM" Grid.Column="1">
 
             <Grid>
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="5*"/>
@@ -94,33 +106,188 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="1*"/>
-
-
-
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="2*"/>
-
-
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
+                <TextBlock Text="Accés UEM"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" />
+                <CheckBox Content=" Canal" IsChecked="False" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+                <CheckBox Content=" Tous" IsChecked="True"  Grid.Column="1" Grid.Row="5" VerticalAlignment="Center"/>
+                <TextBlock Text=" Type de canal : " Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" />
+                <ComboBox Name="TypeCanal" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" />
+                <TextBlock Text=" Canal : " Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" />
+                <ComboBox Name="Canal" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center"/>
+                <TextBlock Text=" Code UEM : " Grid.Column="3" Grid.Row="7" VerticalAlignment="Center" />
+                <TextBox x:Name="CodeUEM" Grid.Column="4" Grid.Row="7"/>
+            </Grid>
+        </GroupBox>
+        <!--     **********     -->
+        <!--          Bouton          -->
+        <Grid Grid.Row="5" Grid.Column="1">
 
-                <CheckBox Content=" Canal" IsChecked="False" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
-                <CheckBox Content=" Tous" IsChecked="True" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
-                <TextBlock Text=" Type de canal : " Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" />
-                <ComboBox Name="TypeCanal" Grid.Column="4" Grid.Row="1" VerticalAlignment="Center"/>
-                <TextBlock Text=" Canal : " Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" />
-                <ComboBox Name="Canal" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Ajouter" Grid.Column="1" />
+            <Button Content="Modifier" Grid.Column="3" />
+            <Button Content="Sauvegarder" Grid.Column="5" />
+            <Button Content="Supprimer" Grid.Column="7" />
+            <Button Content="Impression"  Grid.Column="9" />
+
+        </Grid>
+        <!--     **********     -->
+        <!--          Prevision & Réalisation          -->
+        <Grid Grid.Row="11" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Prévision">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Type de travail : " VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                    <TextBox x:Name="TypeTravail" Grid.Row="1" Grid.Column="3" />
+                    <TextBlock Text="Type d'entretient : " VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                    <TextBox x:Name="TypeEntretient" Grid.Row="3" Grid.Column="3"/>
+                    <TextBlock Text="Kilometrage depart : " VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"/>
+                    <TextBox x:Name="kmd" Grid.Row="5" Grid.Column="3"/>
+                    <TextBlock Text="Kilometrage arriver : " VerticalAlignment="Center" Grid.Row="7" Grid.Column="1"/>
+                    <TextBox x:Name="kmm" Grid.Row="7" Grid.Column="3"/>
+                    <TextBlock Text="Montant estimé : " VerticalAlignment="Center" Grid.Row="9" Grid.Column="1"/>
+                    <TextBox x:Name="MoEs" Grid.Row="9" Grid.Column="3"/>
+
+                </Grid>
 
 
+            </GroupBox>
+            <GroupBox Header="Réalisation"  Grid.Column="2" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Type de travail : " VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                    <TextBox x:Name="TyTr" Grid.Row="1" Grid.Column="3"/>
+                    <TextBlock Text="Type d'entretient : " VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                    <TextBox x:Name="TyEn" Grid.Row="3" Grid.Column="3"/>
+                    <TextBlock Text="Kilometrage depart : " VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"/>
+                    <TextBox x:Name="kmDe" Grid.Row="5" Grid.Column="3"/>
+                    <TextBlock Text="Kilometrage arriver : " VerticalAlignment="Center" Grid.Row="7" Grid.Column="1"/>
+                    <TextBox x:Name="kmAr" Grid.Row="7" Grid.Column="3"/>
+                    <TextBlock Text="Montant Réel : " VerticalAlignment="Center" Grid.Row="9" Grid.Column="1"/>
+                    <TextBox x:Name="MontantR" Grid.Row="9" Grid.Column="3"/>
+                    <TextBlock Text="Prestataire: " VerticalAlignment="Center" Grid.Row="11" Grid.Column="1"/>
+                    <TextBox x:Name="Prestataire" Grid.Row="11" Grid.Column="3"/>
+                    <TextBlock Text="durée : " VerticalAlignment="Center" Grid.Row="13" Grid.Column="1"/>
+                    <TextBox x:Name="duree" Grid.Row="13" Grid.Column="3"/>
+
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="13" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="110*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="10*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text=" Statut : " VerticalAlignment="Center" Grid.Row="1"/>
+                <CheckBox Content="En Attente" IsChecked="True" Foreground="red" Grid.Row="3"/>
+                <CheckBox Content="En Cour" IsChecked="false" Foreground="Orange"  Grid.Row="5"/>
+                <CheckBox Content="Terminer" IsChecked="false" Foreground="Green"  Grid.Row="7"/>
             </Grid>
 
+            <TextBlock Text=" Description de l'intervention : " Grid.Column="3"  VerticalAlignment="Center"/>
+            <TextBox x:Name="Observation" Text="La chaudiere de Mm dupain a bien etait changer. 
+                     "   ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                  ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="auto" 
+                     Grid.Column="5" TextChanged="Observation_TextChanged" />
 
-        </GroupBox>
 
+        </Grid>
     </Grid>
 </Window>

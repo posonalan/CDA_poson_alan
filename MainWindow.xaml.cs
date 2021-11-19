@@ -34,5 +34,10 @@ namespace IntervensionMaintenance
         {
 
         }
+
+        private void Observation_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
