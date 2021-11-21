@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IntervensionMaintenance"
         mc:Ignorable="d"
-        Title="Interventions de maintenance" Height="1000" Width="926" MinWidth="926">
+        Title="Interventions de maintenance" Height="1000" Width="926" MinWidth="926" MinHeight="750">
 
 
-    <Grid>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="fond.jpg" Stretch="Uniform" TileMode="Tile"/>
+        </Grid.Background>
         <!--                Structure de base           -->
 
         <Grid.RowDefinitions>
@@ -39,13 +42,17 @@
         <!--     **********     -->
         <!--          Annee intervention         -->
         <Grid Grid.Row="1" Grid.Column="1" >
+           
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="190*"/>
-                <ColumnDefinition Width="27*"/>
-                <ColumnDefinition Width="180*"/>
-                <ColumnDefinition Width="370*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -54,7 +61,19 @@
 
 
             <TextBlock  Text="Annee intervention : " Grid.Column="1" />
-            <ComboBox   Grid.Column="3"   />
+            <ComboBox   Grid.Column="3" SelectionChanged="ComboBox_SelectionChanged"  >
+               
+                <ComboBoxItem Tag="2019" Content="2019"/>
+                <ComboBoxItem Tag="2020" Content="2020"/>
+                <ComboBoxItem Tag="2021" Content="2021"/>
+
+            </ComboBox>
+            <TextBlock  Text="Alan Corps " Grid.Column="5" HorizontalAlignment="Center" FontSize="18" FontFamily=" Times New Roman " Foreground="MediumPurple" >
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="pink"/>
+                </TextBlock.Effect>
+
+            </TextBlock>
 
         </Grid>
         <!--     **********     -->
@@ -123,9 +142,21 @@
                 <CheckBox Content=" Canal" IsChecked="False" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
                 <CheckBox Content=" Tous" IsChecked="True"  Grid.Column="1" Grid.Row="5" VerticalAlignment="Center"/>
                 <TextBlock Text=" Type de canal : " Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" />
-                <ComboBox Name="TypeCanal" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" />
+                
+                <ComboBox Name="TypeCanal" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center">
+                    <ComboBoxItem Tag="riviere" Content="riviere"/>
+                    <ComboBoxItem Tag="fleuve" Content="fleuve"/>
+                    <ComboBoxItem Tag="ruisseau" Content="ruisseau"/>
+                </ComboBox>
+                
                 <TextBlock Text=" Canal : " Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" />
-                <ComboBox Name="Canal" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center"/>
+                
+                <ComboBox Name="Canal" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center">
+                    <ComboBoxItem Tag="Bergues" Content="Bergues"/>
+                    <ComboBoxItem Tag="Furne" Content="Furne"/>
+                    <ComboBoxItem Tag="basse colme" Content="basse colme"/>
+                </ComboBox>
+                
                 <TextBlock Text=" Code UEM : " Grid.Column="3" Grid.Row="7" VerticalAlignment="Center" />
                 <TextBox x:Name="CodeUEM" Grid.Column="4" Grid.Row="7"/>
             </Grid>
@@ -148,11 +179,11 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="Ajouter" Grid.Column="1" />
-            <Button Content="Modifier" Grid.Column="3" />
-            <Button Content="Sauvegarder" Grid.Column="5" />
-            <Button Content="Supprimer" Grid.Column="7" />
-            <Button Content="Impression"  Grid.Column="9" />
+            <Button Content="Ajouter" Grid.Column="1"  Background="{DynamicResource fond}" />
+            <Button Content="Modifier" Grid.Column="3"  Background="{DynamicResource fond}" />
+            <Button Content="Sauvegarder" Grid.Column="5" Background="{DynamicResource fond}" />
+            <Button Content="Supprimer" Grid.Column="7"  Background="{DynamicResource fond}"/>
+            <Button Content="Impression"  Grid.Column="9"  Background="{DynamicResource fond}"/>
 
         </Grid>
         <!--     **********     -->

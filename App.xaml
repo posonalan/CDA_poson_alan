@@ -4,6 +4,19 @@
              xmlns:local="clr-namespace:IntervensionMaintenance"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <LinearGradientBrush x:Key="fond" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Offset="-1" Color="purple" />
+            <GradientStop Offset="1" Color="White" />
+            <GradientStop Offset="2" Color="LightPink" />
+            <GradientStop Offset="4" Color="White" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="BoutonC" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Offset="-1" Color="purple" />
+            <GradientStop Offset="2" Color="HotPink" />
+            <GradientStop Offset="4" Color="White" />
+        </LinearGradientBrush>
+
     </Application.Resources>
 </Application>

@@ -39,5 +39,10 @@ namespace IntervensionMaintenance
         {
 
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
