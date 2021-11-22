@@ -86,6 +86,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ecran.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +94,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazon %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazon3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazon4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ecran1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazonLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="amazonLogo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

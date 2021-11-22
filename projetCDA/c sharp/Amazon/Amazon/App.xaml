@@ -4,5 +4,26 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Amazon"
     StartupUri="MainWindow.xaml">
-    <Application.Resources />
+
+    <Application.Resources>
+
+        <LinearGradientBrush x:Key="fond" StartPoint="0.5,0" EndPoint="0.5,1">
+
+            <GradientStop Offset="0" Color="orange" />
+            <GradientStop Offset="1" Color="white" />
+            <GradientStop Offset="2" Color="orange" />
+           
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="bouton" StartPoint="0.5,0" EndPoint="0.5,1">
+
+            <GradientStop Offset="0" Color="orange" />
+            <GradientStop Offset="1" Color="white" />
+            <GradientStop Offset="2" Color="orange" />
+            <GradientStop Offset="3" Color="white" />
+
+        </LinearGradientBrush>
+
+    </Application.Resources >
+
 </Application>
