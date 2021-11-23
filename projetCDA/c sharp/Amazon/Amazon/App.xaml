@@ -12,7 +12,7 @@
             <GradientStop Offset="0" Color="orange" />
             <GradientStop Offset="1" Color="white" />
             <GradientStop Offset="2" Color="orange" />
-           
+
         </LinearGradientBrush>
 
         <LinearGradientBrush x:Key="bouton" StartPoint="0.5,0" EndPoint="0.5,1">
@@ -24,6 +24,6 @@
 
         </LinearGradientBrush>
 
-    </Application.Resources >
+    </Application.Resources>
 
 </Application>
