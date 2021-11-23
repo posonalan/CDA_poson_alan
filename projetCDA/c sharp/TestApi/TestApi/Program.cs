@@ -13,6 +13,7 @@ namespace TestApi
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("********************");
             CreateHostBuilder(args).Build().Run();
         }
 

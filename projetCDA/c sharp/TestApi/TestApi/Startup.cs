@@ -1,4 +1,4 @@
-using DemoBDD.Data;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestApi.Data;
+using TestApi.Data.Service;
 
 namespace TestApi
 {
@@ -30,13 +32,15 @@ namespace TestApi
         {
             services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
 
-            services.AddControllersWithViews();
+            services.AddTransient<PersonnesServices>();
 
-            //services.AddControllers();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestApi", Version = "v1" });
-            //});
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DemoEF", Version = "v1" });
+            });
 
         }
 
