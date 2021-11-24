@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: personnes
+-- Host: localhost    Database: dunkerque
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,36 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `personnes`
+-- Current Database: `dunkerque`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `personnes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dunkerque` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `personnes`;
+USE `dunkerque`;
 
 --
--- Table structure for table `utilisateurs`
+-- Table structure for table `personnes`
 --
 
-DROP TABLE IF EXISTS `utilisateurs`;
+DROP TABLE IF EXISTS `personnes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `utilisateurs` (
-  `Identifiant` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `personnes` (
+  `IdPersonnes` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Prenom` varchar(50) NOT NULL,
-  PRIMARY KEY (`Identifiant`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`IdPersonnes`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `utilisateurs`
+-- Dumping data for table `personnes`
 --
 
-LOCK TABLES `utilisateurs` WRITE;
-/*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
-INSERT INTO `utilisateurs` VALUES (1,'Poson','Alan'),(2,'Degaulle','Charles');
-/*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
+LOCK TABLES `personnes` WRITE;
+/*!40000 ALTER TABLE `personnes` DISABLE KEYS */;
+INSERT INTO `personnes` VALUES (1,'Poson','Alan'),(2,'DeGaulle','Charles'),(3,'Poson','Alan');
+/*!40000 ALTER TABLE `personnes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
