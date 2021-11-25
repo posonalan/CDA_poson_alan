@@ -10,7 +10,7 @@ namespace GestionAnimaux.Data.Models
     {
         [Key]
         public int IdAliment { get; set; }
-        public string Nom { get; set; }
+        public string NomAliment { get; set; }
 
 
         internal void Dump()

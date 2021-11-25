@@ -32,7 +32,7 @@ namespace GestionAnimaux
         {
             services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
 
-            services.AddTransient<AnimauxServices>();
+            services.AddTransient<AnimauxService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

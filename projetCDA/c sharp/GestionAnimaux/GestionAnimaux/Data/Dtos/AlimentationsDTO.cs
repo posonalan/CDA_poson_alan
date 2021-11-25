@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace GestionAnimaux.Data.Dtos
 {
-    public class Alimentation
+    public class AlimentationsDTO
     {
 
-        public string Nom { get; set; }
+        public string NomAliment { get; set; }
 
 
         internal void Dump()

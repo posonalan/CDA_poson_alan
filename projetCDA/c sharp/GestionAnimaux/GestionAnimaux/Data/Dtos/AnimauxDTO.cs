@@ -10,11 +10,12 @@ namespace GestionAnimaux.Data.Dtos
     {
 
         public string Nom { get; set; }
-       
+        // On masque également les informations dans Alimentation
+        public AlimentationsDTO Aliment { get; set; }
 
-        internal void Dump()
-        {
-            throw new NotImplementedException();
-        }
+        //internal void Dump()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
