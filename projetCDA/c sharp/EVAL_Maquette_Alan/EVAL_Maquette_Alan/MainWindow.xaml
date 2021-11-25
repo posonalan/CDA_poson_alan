@@ -1,0 +1,429 @@
+﻿<Window x:Class="EVAL_Maquette_Alan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EVAL_Maquette_Alan"
+        mc:Ignorable="d"
+        Title="Gestion fiche de paie" Height="700" Width="1000" MinHeight="610" MinWidth="960" WindowStartupLocation="CenterScreen">
+
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="fondGris.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FFF0F0DE" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Gestion de Paie" HorizontalAlignment="Center" Grid.Column="1" FontSize="16" FontFamily="SimSun" FontWeight="Bold" />
+            <!--<Image Source=" "-->
+
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid  Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.4*"/>
+                    <ColumnDefinition Width="1.1*" />
+                    <ColumnDefinition Width="2.7*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Nom salarie : " Grid.Row="0" Grid.Column="0"/>
+                <ListBox x:Name="NomSalarie" Grid.Row="0" Grid.Column="1">
+                    <ListBoxItem>Poson</ListBoxItem>
+                    <ListBoxItem>Poix</ListBoxItem>
+                    <ListBoxItem>Poutine</ListBoxItem>
+                    <ListBoxItem>Degaulle</ListBoxItem>
+                    <ListBoxItem>Dicaprio</ListBoxItem>
+
+                </ListBox>
+                <Label Content="Prenom salarie : " Grid.Row="3" Grid.Column="0"/>
+                <ListBox x:Name="PrenomSalarie"  Grid.Row="3" Grid.Column="1">
+                    <ListBoxItem>Alan</ListBoxItem>
+                    <ListBoxItem>Martine</ListBoxItem>
+                    <ListBoxItem>Vladimir</ListBoxItem>
+                    <ListBoxItem>Charles</ListBoxItem>
+                    <ListBoxItem>Leonardo</ListBoxItem>
+                </ListBox>
+
+                <Grid Grid.Row="2" Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="Rechercher" Content="Rechercher" Grid.Column="3" Grid.Row="2"
+                         Background="{DynamicResource bouton}"/>
+                </Grid>
+
+
+
+            </Grid>
+
+
+
+            <Image Grid.Column="1"  Source="logo2.png" />
+
+        </Grid>
+
+
+        <!-- Partie Identité -->
+
+        <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="21*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="30*"/>
+
+
+
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Header="Identité" Grid.Row="0" Grid.Column="0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Nom : " Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="Nom" Text="Poutine" Grid.Row="1"  Grid.Column="1"/>
+                    <Label Content="Prenom : " Grid.Row="3" Grid.Column="0"/>
+                    <TextBox x:Name="Prenom" Text="Vladimir" Grid.Row="3"  Grid.Column="1" />
+                    <Label Content="Genre : " Grid.Row="5" Grid.Column="0"/>
+
+                    <Grid  Grid.Row="5" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton Content="M" IsChecked="True"  Grid.Row="0" Grid.Column="0"/>
+                        <RadioButton Content="F" IsChecked="False"  Grid.Row="2" Grid.Column="0"/>
+                    </Grid>
+                    <Label Content="Date de naissance : "  Grid.Row="7" Grid.Column="0"/>
+                    <DatePicker Name="DateDeNaissance" Grid.Row="7" Grid.Column="1"/>
+
+
+
+
+
+                </Grid>
+
+
+            </GroupBox>
+            <GroupBox Header="Informations Complementaires"  Grid.Column="2">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Adresse : " Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="Adresse" Grid.Row="1" Grid.Column="1" />
+                    <Label Content="Situation familliale : " Grid.Row="3" Grid.Column="0"/>
+                    <ComboBox Name="SituationF" Grid.Row="3" Grid.Column="1">
+                        <ComboBoxItem Content="Celibataire" Tag="Celibataire" IsSelected="True"/>
+                        <ComboBoxItem Content="Marié" Tag="Marié" IsSelected="False"/>
+                    </ComboBox>
+                    <Label Content="Nb Enfants : " Grid.Row="5" Grid.Column="0"/>
+                    <ComboBox Name="NbEnfants" Grid.Row="5" Grid.Column="1">
+                        <ComboBoxItem Content="0" Tag="0" IsSelected="True"/>
+                        <ComboBoxItem Content="1" Tag="1" IsSelected="False"/>
+                        <ComboBoxItem Content="2" Tag="" IsSelected="False"/>
+                    </ComboBox>
+                    <Label Content="Date Entrée : " Grid.Row="7" Grid.Column="0"/>
+                    <DatePicker Name="dateEntree" Grid.Row="7" Grid.Column="1"/>
+
+                </Grid>
+            </GroupBox>
+            <!--Informations professionnelles -->
+            <GroupBox Header="Informations professionnelles" Grid.Row="0" Grid.Column="4">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+
+
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Fonction : " Grid.Row="1" Grid.Column="0"/>
+                    <ComboBox Name="Fonction" Grid.Row="1" Grid.Column="1">
+                        <ComboBoxItem Content="Comptable" Tag="Comptable" IsSelected="True"/>
+                        <ComboBoxItem Content="Commercial" Tag="Commercial" IsSelected="False"/>
+                        <ComboBoxItem Content="DAF" Tag="DAF" IsSelected="False"/>
+                    </ComboBox>
+                    <Label Content="CNSS : " Grid.Row="3" Grid.Column="0"/>
+                    <TextBox x:Name="CNSS"  Grid.Row="3" Grid.Column="1"/>
+                    <Label Content="Matricule : " Grid.Row="5" Grid.Column="0"/>
+                    <TextBox x:Name="Matricule"  Grid.Row="5" Grid.Column="1"/>
+                    <Label Content="Departement : " Grid.Row="7" Grid.Column="0"/>
+                    <ComboBox Name="Departement" Grid.Row="7" Grid.Column="1">
+                        <ComboBoxItem Tag="Administratif" Content="Administratif" IsSelected="False"/>
+                        <ComboBoxItem Tag="Commercial" Content="Commerce" IsSelected="True"/>
+                    </ComboBox>
+                    <!--Partie 2 -->
+                    <Label Content="Service : "  Grid.Row="1" Grid.Column="3"/>
+                    <ComboBox Name="Service"  Grid.Row="1" Grid.Column="4">
+                        <ComboBoxItem Tag="Finance" Content="Administratif" IsSelected="True"/>
+                        <ComboBoxItem Tag="Commercial" Content="Commercial" IsSelected="False"/>
+                        <ComboBoxItem Tag="Comptabilite" Content="Comptabilité" IsSelected="False"/>
+                    </ComboBox>
+                    <Label Content="CIMR : " Grid.Row="3" Grid.Column="3"/>
+                    <TextBox x:Name="CIMR"  Grid.Row="3" Grid.Column="4"/>
+                    <Label Content="Mutuelle : " Grid.Row="5" Grid.Column="3"/>
+                    <TextBox x:Name="Mutuelle"  Grid.Row="5" Grid.Column="4"/>
+                    <Label Content="Durée service : "  Grid.Row="7" Grid.Column="3"/>
+                    <ComboBox Name="DureeService" Grid.Row="7" Grid.Column="4">
+                        <ComboBoxItem Tag=">2 ans" Content=">2 ans" IsSelected="True"/>
+                        <ComboBoxItem Tag=">5 ans" Content=">5 ans" IsSelected="False"/>
+                        <ComboBoxItem Tag=">12 ans" Content=">12 ans" IsSelected="False"/>
+                    </ComboBox>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+
+        <Grid Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.25*"/>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Mois : " Grid.Column="0"/>
+            <ComboBox Name="Mois" Grid.Column="1">
+                <ComboBoxItem Tag="Janvier" Content="Janvier" IsSelected="True"/>
+                <ComboBoxItem Tag="Fevrier" Content="Fevrier" IsSelected="False"/>
+            </ComboBox>
+            <Button x:Name="Valider"  Content="Valider"  Grid.Column="3"
+                     Background="{DynamicResource bouton}"/>
+        </Grid>
+
+
+        <GroupBox Header="Espace Finance" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1.2*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Type de paiement : " Grid.Row="0" Grid.Column="0" />
+                <ComboBox Name="TypePaie" Grid.Row="0" Grid.Column="1">
+                    <ComboBoxItem Tag="Mensuel" Content="Mensuel" IsSelected="True"/>
+                    <ComboBoxItem Tag="Annumel" Content="Annuel" IsSelected="False"/>
+                </ComboBox>
+                <Label Content="Mode de paiement : " Grid.Row="2" Grid.Column="0"/>
+                <ComboBox Name="ModePaie" Grid.Row="2" Grid.Column="1">
+                    <ComboBoxItem Tag="Virement" Content="Virement" IsSelected="True"/>
+                    <ComboBoxItem Tag="Cheque" Content="Cheque" IsSelected="False"/>
+                    <ComboBoxItem Tag="Bitcoin" Content="Bitcoin" IsSelected="False"/>
+                    <ComboBoxItem Tag="Ecu" Content="Ecu" IsSelected="False"/>
+                </ComboBox>
+                <Label Content="Salaire de base Horaire : " Grid.Row="4" Grid.Column="0"/>
+                <TextBox x:Name="SalaireBH" Grid.Row="4" Grid.Column="1"/>
+                <Label Content="Prime : " Grid.Row="6" Grid.Column="0"/>
+                <TextBox x:Name="Prime" Grid.Row="6" Grid.Column="1"/>
+                <!--Partie 2-->
+
+                <Label Content="Taux CNSS : " Grid.Row="0" Grid.Column="3" />
+                <TextBox Name="TauxCNSS" Grid.Row="0" Grid.Column="4"/>
+                <Label Content="%" Grid.Row="0" Grid.Column="5" />
+
+                <Label Content="Taux Service : " Grid.Row="2" Grid.Column="3"/>
+                <TextBox Name="TauxService" Grid.Row="2" Grid.Column="4"/>
+                <Label Content="%" Grid.Row="2" Grid.Column="6" />
+
+                <Label Content="Part Mutuelle : " Grid.Row="4" Grid.Column="3"/>
+
+                <Grid Grid.Row="4" Grid.Column="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton Content="Mutuelle contracté" Grid.Row="0" />
+                    <RadioButton Content="Mutuelle Non contracté" Grid.Row="2" />
+                </Grid>
+
+                <Label Content="Montant : " Grid.Row="6" Grid.Column="3"/>
+                <TextBox x:Name="Montant" Grid.Row="6" Grid.Column="4"/>
+                <Label Content="€/Mois"  Grid.Row="6" Grid.Column="5"/>
+
+            </Grid>
+
+
+        </GroupBox>
+
+        <Grid Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Enregistrer" Content="Enregistrer" Grid.Column="0"
+                     Background="{DynamicResource bouton}"/>
+            <Button x:Name="Annuler" Content="Annuler" Grid.Column="2"
+                     Background="{DynamicResource bouton}"/>
+            <Button x:Name="Imprimer" Content="Imprimer" Grid.Column="4"
+                     Background="{DynamicResource bouton}"/>
+            <Button x:Name="Sortie" Content="Sortie " Grid.Column="6"
+                     Background="{DynamicResource bouton}"/>
+
+
+
+
+        </Grid>
+
+
+    </Grid>
+
+
+
+</Window>
