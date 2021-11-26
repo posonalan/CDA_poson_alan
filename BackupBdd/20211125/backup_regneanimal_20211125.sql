@@ -57,6 +57,7 @@ DROP TABLE IF EXISTS `animaux`;
 CREATE TABLE `animaux` (
   `IdAnimal` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
+  `IdAliment` int(11) NOT NULL,
   PRIMARY KEY (`IdAnimal`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -67,7 +68,7 @@ CREATE TABLE `animaux` (
 
 LOCK TABLES `animaux` WRITE;
 /*!40000 ALTER TABLE `animaux` DISABLE KEYS */;
-INSERT INTO `animaux` VALUES (1,'Lion'),(2,'Vache'),(3,'Zebre'),(4,'Chat');
+INSERT INTO `animaux` VALUES (1,'Lion',1),(2,'Vache',2),(3,'Zebre',2),(4,'Chat',1);
 /*!40000 ALTER TABLE `animaux` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-25 12:20:46
+-- Dump completed on 2021-11-25 17:20:48
