@@ -47,8 +47,8 @@ namespace GestionAnimaux.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Animal>()
-                .HasOne<Aliment> s.Aliment)
-                .WithMany(g => g.Animal)
+                .HasOne<Aliment>(s=>s.Aliment)
+                .WithMany(g => g.Animaux)
                 .HasForeignKey(s => s.IdAliment);
         }
 

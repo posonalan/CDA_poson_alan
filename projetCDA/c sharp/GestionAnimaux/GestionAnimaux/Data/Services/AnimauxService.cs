@@ -63,11 +63,11 @@ namespace GestionAnimaux.Data.Services
             var ani = new Animal()
             {
                 Nom = p.Nom,
-                IdAliment = p.IdAliment,
+                IdAliment = p.IdAliment
             };
             /* ajout du p et sauvegarde */
-            _context.Add(p);
-
+            _context.Add(ani);
+            
             _context.SaveChanges(); 
         }
 

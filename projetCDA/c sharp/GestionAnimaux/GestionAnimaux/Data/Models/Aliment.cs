@@ -12,6 +12,7 @@ namespace GestionAnimaux.Data.Models
         public int IdAliment { get; set; }
         public string NomAliment { get; set; }
 
+        public ICollection<Animal> Animaux { get; set; }
 
         internal void Dump()
         {
