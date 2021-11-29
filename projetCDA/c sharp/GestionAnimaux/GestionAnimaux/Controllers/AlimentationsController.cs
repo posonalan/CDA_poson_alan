@@ -19,14 +19,19 @@ namespace GestionAnimaux.Controllers
         private readonly AlimentationsService _service;
         private readonly IMapper _mapper;
 
-        [HttpGet] 
+        public AlimentationsController(AlimentationsService service, IMapper mapper)
+        {
+            _service = service;
+            _mapper = mapper; 
+        }
+
+        [HttpGet]
         public ActionResult<IEnumerable<AlimentationsDTO>> GetAllAliment()
         {
             IEnumerable<Aliment> listeAliment = _service.GetAllAliment();
             return Ok(_mapper.Map<IEnumerable<AlimentationsDTO>>(listeAliment));
         }
 
-
-
+ 
     }
 }

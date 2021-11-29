@@ -1,4 +1,5 @@
-﻿using GestionAnimaux.Data.Models;
+﻿using GestionAnimaux.Data.Dtos;
+using GestionAnimaux.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,17 +45,26 @@ namespace GestionAnimaux.Data.Services
                              IdAliment = aliment.IdAliment,
                              Aliment = aliment
                          }).FirstOrDefault(p => p.IdAnimal == id);
-            yield return UnAnimal;
+             return UnAnimal;
         }
 
 
 
 
         /* Fonction ajout de un Animal */
-        public void AddAnimal(Animal p) /* le p est au format personne */
+        public void AddAnimal(AnimauxDTOIn p) /* le p est au format personne */
         {
-            if (p == null) { throw new ArgumentNullException(nameof(p)); } /* si le p est null 'vide' on genere une erreur et on la montre */
-            _context.Animaux.Add(p); _context.SaveChanges(); /* ajout du p et sauvegarde */
+            if (p == null) 
+            { 
+                throw new ArgumentNullException(nameof(p));
+            } /* si le p est null 'vide' on genere une erreur et on la montre */
+            var entite = new Animal()
+            {
+                Nom = p.Nom,
+                IdAliment = p.IdAliment,
+            };
+            _context.Add(p);
+            _context.SaveChanges(); /* ajout du p et sauvegarde */
         }
 
         /* fonction de suppression d'un Animal , pauvre Bete :'( */
@@ -79,12 +89,25 @@ namespace GestionAnimaux.Data.Services
 
         public void UpdateAnimal(Animal p)
         {
-            /* nothing on va mettre à jour le context dans le controller par mapping et passer les modifs à la base */
+           if (p == null)
+            {
+                throw new ArgumentNullException(nameof(p)); 
+            }
+            var ani = new Animal()
+            {
+                IdAnimal = p.IdAnimal,
+                Nom = p.Nom,
+                IdAliment = p.IdAliment,
+            };
+            _context.Update(p);
+            _context.SaveChanges();
 
+
+           }
         }
 
 
 
 
     }
-}
+

@@ -56,51 +56,42 @@ namespace GestionAnimaux.Controllers
             return NotFound();
         }
 
-
-
-
-
-
-    }
-}
-
-
-
         /* ********** */
 
         /* POST api/Animaux */
-        //[HttpPost]
-        ///* fonction de creation d'animaux */
-        //public ActionResult<AnimauxDTO> CreateAnimaux(Animal animal)
-        //{
-        //    //on ajoute l’objet à la base de données
-        //    _service.AddAnimal(animal); //on retourne le chemin de findById avec l'objet créé
-        //    return CreatedAtRoute(nameof(GetAnimalById), new { Id = animal.IdAnimal }, animal);
-        //}
+        [HttpPost]
+        /* fonction de creation d'animaux */
+        public ActionResult CreateAnimaux(AnimauxDTOIn animal)
+        {
+            //on ajoute l’objet à la base de données
+            _service.AddAnimal(animal); //on retourne le chemin de findById avec l'objet créé
+            //return CreatedAtRoute(nameof(GetAnimalById), new { Id = animal.IdAnimal }, animal);
+            return NoContent();
+        }
 
         /* ********** */
 
         //PUT api/Animaux/{id}
-        //[HttpPut("{id}")]
+        [HttpPut("{id}")]
         /* fonction de mise a jour de l'animal */
-        //public ActionResult UpdateAnimal(int id, AnimauxDTO animal)
-        //{ /* prendre les personne de service par leur id */
-        //    var animalFromRepo = _service.GetAnimalById(id);
-        //    /* On récupère l’objet en base, s’il n’existe pas, on renvoi une erreur. */
-        //    if (animalFromRepo == null)
-        //    { /* on retourne pas remplis */
-        //        return NotFound();
-        //    }
-        //    animalFromRepo.Dump();
-        //    /* On propage les modifications grâce au mapper. */
-        //    _mapper.Map(animal, animalFromRepo);
-        //    animalFromRepo.Dump();
-        //    // inutile puisque la fonction ne fait rien, mais garde la cohérence
-        //    /* On persiste les données. */
-        //    _service.UpdateAnimal(animalFromRepo);
+        public ActionResult UpdateAnimal(int id, AnimauxDTO animal)
+        { /* prendre les personne de service par leur id */
+            var animalFromRepo = _service.GetAnimalById(id);
+            /* On récupère l’objet en base, s’il n’existe pas, on renvoi une erreur. */
+            if (animalFromRepo == null)
+            { /* on retourne pas remplis */
+                return NotFound();
+            }
 
-        //    return NoContent();
-        //}
+            /* On propage les modifications grâce au mapper. */
+            _mapper.Map(animal, animalFromRepo);
+
+            // inutile puisque la fonction ne fait rien, mais garde la cohérence
+            /* On persiste les données. */
+            _service.UpdateAnimal(animalFromRepo);
+
+            return NoContent();
+        }
 
         /* ********** */
 
@@ -146,8 +137,7 @@ namespace GestionAnimaux.Controllers
         //    }
         //    _service.DeleteAnimal(animalModelFromRepo);
         //    return NoContent();
-     
 
 
-    
-
+    }
+}

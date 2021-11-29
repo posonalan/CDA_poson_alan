@@ -26,6 +26,19 @@ namespace GestionAnimaux.Data
         //}
         /* ___________________________ */
 
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Aliment>(aliment =>
+            {
+                aliment.ToTable("Alimentation");
+                aliment.Property(e => e.IdAliment).HasColumnName("IdAliment");
+            });
+            modelBuilder.Entity<Animal>(animal =>
+            {
+                animal.ToTable("Animaux");
+                animal.Property(e => e.IdAliment).HasColumnName("IdAliment");
+                animal.HasOne(e => e.Aliment).WithOne().HasForeignKey<Aliment>(e => e.IdAliment);
+            });
+        }
     }
 }
