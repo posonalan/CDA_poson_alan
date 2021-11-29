@@ -11,7 +11,7 @@ namespace GestionAnimaux.Data.Profiles
     public class AlimentationsProfile : Profile
     {
         public AlimentationsProfile()
-        {
+        { /* cree les liaison entre classe et dto */ 
             CreateMap<AlimentationsDTO, Aliment>();
             CreateMap<Aliment, AlimentationsDTO>();
 

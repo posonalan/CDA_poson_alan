@@ -46,11 +46,13 @@ namespace GestionAnimaux.Controllers
 
         ///* GET api/Animaux/{id} */
         [HttpGet("{id}", Name = "GetAnimalById")]
+        /* fonction de selection d'un animal par rapport a son id */ 
         public ActionResult<AnimauxDTO> GetAnimalById(int id)
-        {
+        { /* on va chercher la fonction dans le service */ 
             var commandItem = _service.GetAnimalById(id);
+            /* si different de vide */ 
             if (commandItem != null)
-            {
+            { /* retour de l'objet rechercher */
                 return Ok(_mapper.Map<AnimauxDTO>(commandItem));
             }
             return NotFound();

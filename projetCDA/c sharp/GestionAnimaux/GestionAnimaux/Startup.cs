@@ -26,14 +26,13 @@ namespace GestionAnimaux
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /* fonction de routage */ 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
 
             services.AddTransient<AnimauxService>();
-
+            services.AddTransient<AlimentationsService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();

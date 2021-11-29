@@ -19,6 +19,7 @@ namespace GestionAnimaux.Data.Services
             _context = context;
         }
 
+        /* GetAllAnimal presente tout les animaux */ 
         public IEnumerable<Animal> GetAllAnimal()
         {
             var liste = (from animal in _context.Animaux
@@ -33,9 +34,10 @@ namespace GestionAnimaux.Data.Services
                          }).ToList();
             return liste;
         }
-        public IEnumerable<Animal> GetAnimalById(int id)
+        /* fonction permettant de selectionner un animal par rapport a son id */
+        public Animal GetAnimalById(int id)
         {
-            var UnAnimal = (from animal in _context.Animaux
+            var unAnimal = (from animal in _context.Animaux
                          join aliment in _context.Alimentation
                          on animal.IdAliment equals aliment.IdAliment
                          select new Animal
@@ -45,26 +47,28 @@ namespace GestionAnimaux.Data.Services
                              IdAliment = aliment.IdAliment,
                              Aliment = aliment
                          }).FirstOrDefault(p => p.IdAnimal == id);
-             return UnAnimal;
+             return unAnimal;
         }
 
 
 
 
         /* Fonction ajout de un Animal */
-        public void AddAnimal(AnimauxDTOIn p) /* le p est au format personne */
-        {
+        public void AddAnimal(AnimauxDTOIn p) /* le p est au format animaux */
+        {/* si le p est null 'vide' on genere une erreur et on la montre */
             if (p == null) 
             { 
                 throw new ArgumentNullException(nameof(p));
-            } /* si le p est null 'vide' on genere une erreur et on la montre */
-            var entite = new Animal()
+            } /* on cree un nouvelle objet et on le remplie */ 
+            var ani = new Animal()
             {
                 Nom = p.Nom,
                 IdAliment = p.IdAliment,
             };
+            /* ajout du p et sauvegarde */
             _context.Add(p);
-            _context.SaveChanges(); /* ajout du p et sauvegarde */
+
+            _context.SaveChanges(); 
         }
 
         /* fonction de suppression d'un Animal , pauvre Bete :'( */
@@ -87,21 +91,23 @@ namespace GestionAnimaux.Data.Services
         //    return _context.Animaux.FirstOrDefault(p => p.IdAnimal == id);
         //}
 
+        /* mise a jour de l'animal */ 
         public void UpdateAnimal(Animal p)
-        {
+        { /* si vide ... */
            if (p == null)
             {
                 throw new ArgumentNullException(nameof(p)); 
             }
+           /* cree et remplie */ 
             var ani = new Animal()
             {
                 IdAnimal = p.IdAnimal,
                 Nom = p.Nom,
                 IdAliment = p.IdAliment,
             };
+            /* MAJ et Save */ 
             _context.Update(p);
             _context.SaveChanges();
-
 
            }
         }
