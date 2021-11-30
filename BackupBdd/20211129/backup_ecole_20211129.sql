@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: personnes
+-- Host: localhost    Database: ecole
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,37 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `personnes`
+-- Current Database: `ecole`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `personnes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `ecole` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `personnes`;
-
---
--- Table structure for table `utilisateurs`
---
-
-DROP TABLE IF EXISTS `utilisateurs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `utilisateurs` (
-  `Identifiant` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) NOT NULL,
-  `Prenom` varchar(50) NOT NULL,
-  PRIMARY KEY (`Identifiant`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `utilisateurs`
---
-
-LOCK TABLES `utilisateurs` WRITE;
-/*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
-INSERT INTO `utilisateurs` VALUES (1,'Poson','Alan'),(2,'Degaulle','Charles');
-/*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
-UNLOCK TABLES;
+USE `ecole`;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -57,4 +32,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-29 17:20:49
+-- Dump completed on 2021-11-29 17:20:48
