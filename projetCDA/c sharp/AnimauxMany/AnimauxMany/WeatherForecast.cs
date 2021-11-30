@@ -1,6 +1,6 @@
 using System;
 
-namespace AnimauxTest
+namespace AnimauxMany
 {
     public class WeatherForecast
     {
