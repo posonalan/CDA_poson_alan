@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace BiblioJeux.Data.Dtos
 {
-    public class AccessoireDTOAvecMarque
+    public class JeuDTOAvecMarque
     {
-        public AccessoireDTOAvecMarque()
-            {
 
-            }
+        public JeuDTOAvecMarque()
+        {
+
+        }
         // les colonnes de la table sans les id
 
         public string LibelleAccessoire { get; set; }
@@ -19,9 +20,12 @@ namespace BiblioJeux.Data.Dtos
         // ajouter les données attachées
         // ATTENTION il faut retourner un DTOOut
 
-        public virtual MarqueDTOOut Marque { get; set; }
+        public string LibelleJeu { get; set; }
+        public int IdMarque { get; set; }
 
+        public virtual MarqueDTOOut IdMarqueNavigation { get; set; }
 
 
     }
+
 }

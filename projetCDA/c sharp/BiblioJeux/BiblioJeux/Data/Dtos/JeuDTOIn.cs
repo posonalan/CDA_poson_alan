@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace BiblioJeux.Data.Dtos
 {
-    public class MarqueDTOOut
+    public class JeuDTOIn
     {
-
-        public MarqueDTOOut()
+        public JeuDTOIn()
         {
+
         }
 
-        public string LibelleMarque { get; set; }
+        public int IdJeu { get; set; }
+        public string LibelleJeu { get; set; }
+
     }
 }
