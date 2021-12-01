@@ -1,4 +1,7 @@
 ﻿using AnimauxMany.Data.Models;
+using AnimauxMany.Data.Dtos;
+using AnimauxMany.Data.Services;
+using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,12 +11,13 @@ using System.Threading.Tasks;
 
 namespace AnimauxMany.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+
     public class HabitatController : ControllerBase
     {
 
-        [Route("api/[controllers]")]
-        [ApiController]
-
+        
         private readonly HabitatService _service;
         private readonly IMapper _mapper;
 
@@ -23,15 +27,15 @@ namespace AnimauxMany.Controllers
             _mapper = mapper;
         }
 
-        //GET api/NomController
+        //GET api/Habitat
         [HttpGet]
-        public ActionResult<IEnumerable<HabitatDTOIn>> GetAllNomController()
+        public ActionResult<IEnumerable<HabitatDTOIn>> GetAllHabitat()
         {
-            IEnumerable<Habitat> listeNomController = _service.GetAllNomController();
-            return Ok(_mapper.Map<IEnumerable<HabitatDTOIn>>(listeNomController));
+            IEnumerable<Habitat> listeHabitat = _service.GetAllHabitat();
+            return Ok(_mapper.Map<IEnumerable<HabitatDTOIn>>(listeHabitat));
         }
 
-        //GET api/NomController/{i}
+        //GET api/Habitat/{i}
         [HttpGet("{id}", Name = "GetHabitatById")]
         public ActionResult<HabitatDTOIn> GetHabitatById(int id)
         {
@@ -43,15 +47,15 @@ namespace AnimauxMany.Controllers
             return NotFound();
         }
 
-        //POST api/NomController
+        //POST api/Habitat
         [HttpPost]
         public ActionResult<HabitatDTOIn> CreateHabitat(Habitat obj)
         {
             _service.AddHabitat(obj);
-            return CreatedAtRoute(nameof(GetHabitatById), new { Id = obj.Id }, obj);
+            return CreatedAtRoute(nameof(GetHabitatById), new { Id = obj.IdHabitat }, obj);
         }
 
-        //POST api/NomController/{id}
+        //POST api/Habitat/{id}
         [HttpPut("{id}")]
         public ActionResult UpdateHabitat(int id, HabitatDTOIn obj)
         {
@@ -71,11 +75,11 @@ namespace AnimauxMany.Controllers
         // "path":"",
         // "value":""
         // }]
-        //PATCH api/NomController/{id}
+        //PATCH api/Habitat/{id}
         [HttpPatch("{id}")]
         public ActionResult PartialHabitatUpdate(int id, JsonPatchDocument<Habitat> patchDoc)
         {
-            //Habitat objFromRepo = _service.GetHabitatById(id);
+            Habitat objFromRepo = _service.GetHabitatById(id);
             if (objFromRepo == null)
             {
                 return NotFound();
@@ -91,7 +95,7 @@ namespace AnimauxMany.Controllers
             return NoContent();
         }
 
-        //DELETE api/NomController/{id}
+        //DELETE api/Habitat/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteHabitat(int id)
         {

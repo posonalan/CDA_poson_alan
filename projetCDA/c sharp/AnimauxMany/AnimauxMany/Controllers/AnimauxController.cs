@@ -1,8 +1,7 @@
-﻿using AnimauxTest.Data.Dtos;
-using AnimauxTest.Data.Models;
-using AnimauxTest.Data.Services;
+﻿using AnimauxMany.Data.Models;
+using AnimauxMany.Data.Dtos;
+using AnimauxMany.Data.Services;
 using AutoMapper;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,12 +9,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Animauxmany.Controllers
+
+namespace AnimauxMany.Controllers
 {
+    [Route("api/[controller]")]
+        [ApiController]
     public class AnimauxController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
+        
 
 
         private readonly AnimauxService _service;
@@ -31,8 +32,8 @@ namespace Animauxmany.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<AnimauxDTOIn>> GetAllAnimaux()
         {
-            IEnumerable<Animaux> listeNomController = _service.GetAllAnimaux();
-            return Ok(_mapper.Map<IEnumerable<AnimauxDTOIn>>(listeNomController));
+            IEnumerable<Animaux> listeAnimaux = _service.GetAllAnimaux();
+            return Ok(_mapper.Map<IEnumerable<AnimauxDTOIn>>(listeAnimaux));
         }
 
         //GET api/NomController/{i}
@@ -52,7 +53,7 @@ namespace Animauxmany.Controllers
         public ActionResult<AnimauxDTOIn> CreateAnimaux(Animaux obj)
         {
             _service.AddAnimaux(obj);
-            return CreatedAtRoute(nameof(GetAnimauxById), new { Id = obj.IdAnimal }, obj);
+            return CreatedAtRoute(nameof(GetAnimauxById), new { Id = obj.IdAnimaux }, obj);
         }
 
         //POST api/NomController/{id}

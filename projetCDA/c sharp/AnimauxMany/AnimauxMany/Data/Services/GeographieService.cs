@@ -1,11 +1,11 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Services
+namespace AnimauxMany.Data.Services
 {
     public class GeographieService
     {
@@ -39,12 +39,12 @@ namespace AnimauxTest.Data.Services
 
         public IEnumerable<Geographie> GetAllGeographie()
         {
-            return _context.Geographies.ToList();
+            return _context.Geographies.Include("MilieuVies").ToList();
         }
 
         public Geographie GetGeographieById(int id)
         {
-            return _context.Geographies.FirstOrDefault(obj => obj.Id == id);
+            return _context.Geographies.FirstOrDefault(obj => obj.IdGeographie == id);
         }
 
         public void UpdateGeographie(Geographie obj)

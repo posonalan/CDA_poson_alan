@@ -1,4 +1,3 @@
-using AnimauxTest.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,10 +8,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using AnimauxMany.Data.Models;
+using AnimauxMany.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace AnimauxMany
 {
@@ -29,11 +31,12 @@ namespace AnimauxMany
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<AnimauxtestContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<animauxmanybddContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
             services.AddTransient<AnimauxService>();
             services.AddTransient<AlimentationService>();
             services.AddTransient<HabitatService>();
             services.AddTransient<GeographieService>();
+            services.AddTransient<MilieuVieService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>

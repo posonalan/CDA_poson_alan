@@ -18,10 +18,10 @@ namespace AnimauxMany.Data.Models
         }
 
         public virtual DbSet<Alimentation> Alimentations { get; set; }
-        public virtual DbSet<Animaux> Animauxes { get; set; }
+        public virtual DbSet<Animaux> Animaux { get; set; }
         public virtual DbSet<Geographie> Geographies { get; set; }
         public virtual DbSet<Habitat> Habitats { get; set; }
-        public virtual DbSet<MilieuVie> Milieuvies { get; set; }
+        public virtual DbSet<MilieuVie> MilieuVies { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -67,13 +67,13 @@ namespace AnimauxMany.Data.Models
                 entity.Property(e => e.TypeAnimal).HasMaxLength(50);
 
                 entity.HasOne(d => d.IdAlimentationsNavigation)
-                    .WithMany(p => p.Animauxes)
+                    .WithMany(p => p.Animaux)
                     .HasForeignKey(d => d.IdAlimentations)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("animaux_ibfk_2");
 
                 entity.HasOne(d => d.IdHabitatNavigation)
-                    .WithMany(p => p.Animauxes)
+                    .WithMany(p => p.Animaux)
                     .HasForeignKey(d => d.IdHabitat)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("animaux_ibfk_1");
@@ -121,12 +121,12 @@ namespace AnimauxMany.Data.Models
                 entity.Property(e => e.IdGeographie).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.IdAnimauxNavigation)
-                    .WithMany(p => p.Milieuvies)
+                    .WithMany(p => p.MilieuVies)
                     .HasForeignKey(d => d.IdAnimaux)
                     .HasConstraintName("milieuvie_ibfk_1");
 
                 entity.HasOne(d => d.IdGeographieNavigation)
-                    .WithMany(p => p.Milieuvies)
+                    .WithMany(p => p.MilieuVies)
                     .HasForeignKey(d => d.IdGeographie)
                     .HasConstraintName("milieuvie_ibfk_2");
             });

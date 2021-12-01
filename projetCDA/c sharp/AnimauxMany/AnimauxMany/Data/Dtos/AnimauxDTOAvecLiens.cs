@@ -1,10 +1,10 @@
-﻿using AnimauxTest.Data.Models;
+﻿using AnimauxMany.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Dtos
+namespace AnimauxMany.Data.Dtos
 {
     public class AnimauxDTOAvecLiens
     {

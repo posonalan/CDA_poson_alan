@@ -1,7 +1,8 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Dtos;
-using AnimauxTest.Data.Services;
+using AnimauxMany.Data.Dtos;
+using AnimauxMany.Data.Services;
 using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,13 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace AnimauxMany.Controllers
-{
+{  
+    [Route("api/[controller]")]
+        [ApiController]
     public class AlimentationController : ControllerBase
     {
 
-        [Route("api/[controller]")]
-        [ApiController]
+      
 
         private readonly AlimentationService _service;
         private readonly IMapper _mapper;
@@ -29,8 +31,8 @@ namespace AnimauxMany.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<AlimentationDTOIn>> GetAllAlimentation()
         {
-            IEnumerable<Alimentation> listeNomController = _service.GetAllAlimentation();
-            return Ok(_mapper.Map<IEnumerable<AlimentationDTOIn>>(listeNomController));
+            IEnumerable<Alimentation> listeAlimentation = _service.GetAllAliment();
+            return Ok(_mapper.Map<IEnumerable<AlimentationDTOIn>>(listeAlimentation));
         }
 
         //GET api/NomController/{i}
@@ -49,8 +51,8 @@ namespace AnimauxMany.Controllers
         [HttpPost]
         public ActionResult<AlimentationDTOIn> CreateAlimentation(Alimentation obj)
         {
-            _service.AddAlimentation(obj);
-            return CreatedAtRoute(nameof(GetAlimentById), new { Id = obj.IdAliment }, obj);
+            _service.AddAliment(obj);
+            return CreatedAtRoute(nameof(GetAlimentById), new { Id = obj.IdAlimentations }, obj);
         }
 
         //POST api/NomController/{id}
@@ -63,7 +65,7 @@ namespace AnimauxMany.Controllers
                 return NotFound();
             }
             _mapper.Map(obj, objFromRepo);
-            _service.UpdateAlimentation(objFromRepo);
+            _service.UpdateAliment(objFromRepo);
             return NoContent();
         }
 
@@ -89,7 +91,7 @@ namespace AnimauxMany.Controllers
                 return ValidationProblem(ModelState);
             }
             _mapper.Map(objToPatch, objFromRepo);
-            _service.UpdateAlimentation(objFromRepo);
+            _service.UpdateAliment(objFromRepo);
             return NoContent();
         }
 
@@ -102,7 +104,7 @@ namespace AnimauxMany.Controllers
             {
                 return NotFound();
             }
-            _service.DeleteAlimentation(obj);
+            _service.DeleteAliment(obj);
             return NoContent();
         }
 

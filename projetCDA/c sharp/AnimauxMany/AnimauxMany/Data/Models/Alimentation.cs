@@ -9,12 +9,12 @@ namespace AnimauxMany.Data.Models
     {
         public Alimentation()
         {
-            Animauxes = new HashSet<Animaux>();
+            Animaux = new HashSet<Animaux>();
         }
 
         public int IdAlimentations { get; set; }
         public string LibelleAliment { get; set; }
 
-        public virtual ICollection<Animaux> Animauxes { get; set; }
+        public virtual ICollection<Animaux> Animaux { get; set; }
     }
 }

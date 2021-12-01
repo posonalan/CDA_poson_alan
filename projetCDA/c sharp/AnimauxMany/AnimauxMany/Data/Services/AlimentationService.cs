@@ -1,11 +1,11 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Services
+namespace AnimauxMany.Data.Services
 {
     public class AlimentationService
     {
@@ -44,7 +44,7 @@ namespace AnimauxTest.Data.Services
 
         public Alimentation GetAlimentById(int id)
         {
-            return _context.Alimentations.FirstOrDefault(obj => obj.Id == id);
+            return _context.Alimentations.FirstOrDefault(obj => obj.IdAlimentations == id);
         }
 
         public void UpdateAliment(Alimentation obj)

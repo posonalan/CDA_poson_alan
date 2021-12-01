@@ -1,6 +1,7 @@
-﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Models;
-using AnimauxTest.Data.Services;
+﻿using AnimauxMany.Data.Dtos;
+using AnimauxMany.Data.Models;
+
+using AnimauxMany.Data.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -27,10 +28,10 @@ namespace AnimauxMany.Controllers
 
         //GET api/Geographie
         [HttpGet]
-        public ActionResult<IEnumerable<GeographieDTOIn>> GetAllGeographie()
+        public ActionResult<IEnumerable<GeographieDTOOut>> GetAllGeographie()
         {
             IEnumerable<Geographie> listeGeographie = _service.GetAllGeographie();
-            return Ok(_mapper.Map<IEnumerable<GeographieDTOIn>>(listeGeographie));
+            return Ok(_mapper.Map<IEnumerable<GeographieDTOOut>>(listeGeographie));
         }
 
         //GET api/Geographie/{i}

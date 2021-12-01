@@ -20,5 +20,8 @@ namespace AnimauxMany.Data.Models
 
         public virtual Animaux IdAnimauxNavigation { get; set; }
         public virtual Geographie IdGeographieNavigation { get; set; }
+        public virtual ICollection<Animaux> Animaux { get; set; }
+        public virtual ICollection<Geographie> Geographie { get; set; }
     }
 }
+

@@ -1,4 +1,4 @@
-﻿using AnimauxTest.Data.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AnimauxMany.Data.Models;
 
-namespace AnimauxTest.Data.Services
+namespace AnimauxMany.Data.Services
 {
     public class HabitatService
     {
@@ -39,14 +39,14 @@ namespace AnimauxTest.Data.Services
             _context.SaveChanges();
         }
 
-        public IEnumerable<Habitat> GetAllNomService()
+        public IEnumerable<Habitat> GetAllHabitat()
         {
             return _context.Habitats.ToList();
         }
 
         public Habitat GetHabitatById(int id)
         {
-            return _context.Habitats.FirstOrDefault(obj => obj.Id == id);
+            return _context.Habitats.FirstOrDefault(obj => obj.IdHabitat == id);
         }
 
         public void UpdateHabitat(Habitat obj)

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: animauxtest
+-- Host: localhost    Database: animauxmanybdd
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `animauxtest`
+-- Current Database: `animauxmanybdd`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `animauxtest` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `animauxmanybdd` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `animauxtest`;
+USE `animauxmanybdd`;
 
 --
 -- Table structure for table `alimentations`
@@ -34,7 +34,7 @@ CREATE TABLE `alimentations` (
   `IdAlimentations` int(11) NOT NULL AUTO_INCREMENT,
   `LibelleAliment` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`IdAlimentations`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,6 @@ CREATE TABLE `alimentations` (
 
 LOCK TABLES `alimentations` WRITE;
 /*!40000 ALTER TABLE `alimentations` DISABLE KEYS */;
-INSERT INTO `alimentations` VALUES (1,'Viande'),(2,'Vegetal');
 /*!40000 ALTER TABLE `alimentations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,15 +59,12 @@ CREATE TABLE `animaux` (
   `TypeAnimal` varchar(50) DEFAULT NULL,
   `IdHabitat` int(11) NOT NULL,
   `IdAlimentations` int(11) NOT NULL,
-  `IdGeographie` int(11) NOT NULL,
   PRIMARY KEY (`IdAnimaux`),
   KEY `IdHabitat` (`IdHabitat`),
   KEY `IdAlimentations` (`IdAlimentations`),
-  KEY `IdGeographie` (`IdGeographie`),
   CONSTRAINT `animaux_ibfk_1` FOREIGN KEY (`IdHabitat`) REFERENCES `habitat` (`IdHabitat`),
-  CONSTRAINT `animaux_ibfk_2` FOREIGN KEY (`IdAlimentations`) REFERENCES `alimentations` (`IdAlimentations`),
-  CONSTRAINT `animaux_ibfk_3` FOREIGN KEY (`IdGeographie`) REFERENCES `geographie` (`IdGeographie`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  CONSTRAINT `animaux_ibfk_2` FOREIGN KEY (`IdAlimentations`) REFERENCES `alimentations` (`IdAlimentations`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +73,6 @@ CREATE TABLE `animaux` (
 
 LOCK TABLES `animaux` WRITE;
 /*!40000 ALTER TABLE `animaux` DISABLE KEYS */;
-INSERT INTO `animaux` VALUES (1,'Lion','Mamifere',1,1,1),(2,'Carpe','Poisson',2,2,2);
 /*!40000 ALTER TABLE `animaux` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +87,7 @@ CREATE TABLE `geographie` (
   `IdGeographie` int(11) NOT NULL AUTO_INCREMENT,
   `LibelleGeographie` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`IdGeographie`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +96,6 @@ CREATE TABLE `geographie` (
 
 LOCK TABLES `geographie` WRITE;
 /*!40000 ALTER TABLE `geographie` DISABLE KEYS */;
-INSERT INTO `geographie` VALUES (1,'Asie'),(2,'Europe');
 /*!40000 ALTER TABLE `geographie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +110,7 @@ CREATE TABLE `habitat` (
   `IdHabitat` int(11) NOT NULL AUTO_INCREMENT,
   `LibelleHabitat` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`IdHabitat`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,8 +119,35 @@ CREATE TABLE `habitat` (
 
 LOCK TABLES `habitat` WRITE;
 /*!40000 ALTER TABLE `habitat` DISABLE KEYS */;
-INSERT INTO `habitat` VALUES (1,'Terrestre'),(2,'Aquatique');
 /*!40000 ALTER TABLE `habitat` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `milieuvie`
+--
+
+DROP TABLE IF EXISTS `milieuvie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `milieuvie` (
+  `IdMilieuVie` int(11) NOT NULL AUTO_INCREMENT,
+  `IdAnimaux` int(11) DEFAULT NULL,
+  `IdGeographie` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdMilieuVie`),
+  KEY `IdAnimaux` (`IdAnimaux`),
+  KEY `IdGeographie` (`IdGeographie`),
+  CONSTRAINT `milieuvie_ibfk_1` FOREIGN KEY (`IdAnimaux`) REFERENCES `animaux` (`IdAnimaux`),
+  CONSTRAINT `milieuvie_ibfk_2` FOREIGN KEY (`IdGeographie`) REFERENCES `geographie` (`IdGeographie`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `milieuvie`
+--
+
+LOCK TABLES `milieuvie` WRITE;
+/*!40000 ALTER TABLE `milieuvie` DISABLE KEYS */;
+/*!40000 ALTER TABLE `milieuvie` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

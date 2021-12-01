@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Microsoft.EntityFrameworkCore;
 #nullable disable
 
 namespace AnimauxMany.Data.Models
@@ -9,7 +9,7 @@ namespace AnimauxMany.Data.Models
     {
         public Animaux()
         {
-            Milieuvies = new HashSet<Milieuvie>();
+            MilieuVies = new HashSet<MilieuVie>();
         }
 
         public int IdAnimaux { get; set; }
@@ -20,6 +20,6 @@ namespace AnimauxMany.Data.Models
 
         public virtual Alimentation IdAlimentationsNavigation { get; set; }
         public virtual Habitat IdHabitatNavigation { get; set; }
-        public virtual ICollection<Milieuvie> Milieuvies { get; set; }
+        public virtual ICollection<MilieuVie> MilieuVies { get; set; }
     }
 }

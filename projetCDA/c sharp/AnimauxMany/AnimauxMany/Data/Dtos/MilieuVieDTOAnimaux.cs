@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace AnimauxMany.Data.Dtos
 {
-    public class AlimentationDTOOut
+    public class MilieuVieDTOAnimaux
     {
-        public AlimentationDTOOut()
-        {
-        }
-        public string LibelleAliment { get; set; }
+
     }
 }

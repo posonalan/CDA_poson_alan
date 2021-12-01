@@ -1,11 +1,11 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Services
+namespace AnimauxMany.Data.Services
 {
     public class AnimauxService
     {
@@ -24,7 +24,7 @@ namespace AnimauxTest.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Animauxes.Add(obj);
+            _context.Animaux.Add(obj);
             _context.SaveChanges();
         }
 
@@ -34,18 +34,18 @@ namespace AnimauxTest.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Animauxes.Remove(obj);
+            _context.Animaux.Remove(obj);
             _context.SaveChanges();
         }
 
-        public IEnumerable<Animaux> GetAllAnimauxService()
+        public IEnumerable<Animaux> GetAllAnimaux()
         {
-            return _context.Animauxes.ToList();
+            return _context.Animaux.ToList();
         }
 
         public Animaux GetAnimauxById(int id)
         {
-            return _context.Animauxes.FirstOrDefault(obj => obj.IdAnimaux == id);
+            return _context.Animaux.FirstOrDefault(obj => obj.IdAnimaux == id);
         }
 
         public void UpdateAnimaux(Animaux obj)

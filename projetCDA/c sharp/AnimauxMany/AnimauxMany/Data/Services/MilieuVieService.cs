@@ -42,7 +42,7 @@ namespace AnimauxMany.Data.Services
 
         public MilieuVie GetMilieuVieById(int id)
         {
-            return _context.MilieuVies.FirstOrDefault(obj => obj.Id == id);
+            return _context.MilieuVies.FirstOrDefault(obj => obj.IdMilieuVie == id);
         }
 
         public void UpdateMilieuVie(MilieuVie obj)

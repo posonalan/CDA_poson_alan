@@ -7,7 +7,11 @@ namespace AnimauxMany.Data.Dtos
 {
     public class MilieuVieDTOIn
     {
+        public MilieuVieDTOIn()
+        {
+        }
+   public int IdMilieuVie { get; set; }
     }
-    public int IdMilieuVie { get; set; }
+ 
 
 }

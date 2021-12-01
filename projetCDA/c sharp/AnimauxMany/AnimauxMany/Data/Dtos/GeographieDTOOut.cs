@@ -1,9 +1,10 @@
-﻿using System;
+﻿using AnimauxMany.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Dtos
+namespace AnimauxMany.Data.Dtos
 {
     public class GeographieDTOOut
     {
@@ -11,5 +12,10 @@ namespace AnimauxTest.Data.Dtos
         {
         }
         public string LibelleGeographie { get; set; }
+        public virtual ICollection<MilieuVieDTOIn> MilieuVies { get; set; }
+
     }
+
+
+
 }

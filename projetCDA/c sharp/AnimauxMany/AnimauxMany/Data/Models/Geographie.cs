@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-#nullable disable
+using Microsoft.EntityFrameworkCore;
 
 namespace AnimauxMany.Data.Models
 {
@@ -9,12 +8,12 @@ namespace AnimauxMany.Data.Models
     {
         public Geographie()
         {
-            Milieuvies = new HashSet<Milieuvie>();
+            MilieuVies = new HashSet<MilieuVie>();
         }
 
         public int IdGeographie { get; set; }
         public string LibelleGeographie { get; set; }
 
-        public virtual ICollection<Milieuvie> Milieuvies { get; set; }
+        public virtual ICollection<MilieuVie> MilieuVies { get; set; }
     }
 }

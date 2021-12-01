@@ -1,13 +1,12 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Dtos;
-using AnimauxTest.Data.Models;
+using AnimauxMany.Data.Dtos;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Profiles
+namespace AnimauxMany.Data.Profiles
 {
     public class GeographieProfile : Profile
     {
@@ -17,7 +16,12 @@ namespace AnimauxTest.Data.Profiles
             CreateMap<GeographieDTOIn, Geographie>();
 
             CreateMap<Geographie, GeographieDTOOut>();
+            CreateMap<Geographie, AnimauxDTOAvecLiens>();
+
             CreateMap<GeographieDTOOut, Geographie>();
+            CreateMap<AnimauxDTOAvecLiens, Geographie>();
+
+
         }
     }
 }

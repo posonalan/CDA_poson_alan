@@ -1,13 +1,13 @@
 ﻿using AnimauxMany.Data.Models;
-using AnimauxTest.Data.Dtos;
-using AnimauxTest.Data.Models;
+using AnimauxMany.Data.Dtos;
+
 using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimauxTest.Data.Profiles
+namespace AnimauxMany.Data.Profiles
 {
     public class HabitatProfile : Profile
     {
@@ -17,7 +17,11 @@ namespace AnimauxTest.Data.Profiles
             CreateMap<HabitatDTOIn, Habitat>();
 
             CreateMap<Habitat, HabitatDTOOut>();
+            CreateMap<Habitat, AnimauxDTOAvecLiens>();
+
             CreateMap<HabitatDTOOut, Habitat>();
+            CreateMap<AnimauxDTOAvecLiens, Habitat>();
+
         }
     }
 }
