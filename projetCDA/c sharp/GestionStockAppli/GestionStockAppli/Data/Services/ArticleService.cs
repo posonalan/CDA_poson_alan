@@ -37,7 +37,7 @@ namespace GestionStockAppli.Data.Models
         }
 
         public IEnumerable<article> GetAllArticle()
-        {
+        {/* ceci est un test*/
             return _context.Articles.ToList();
         }
 
