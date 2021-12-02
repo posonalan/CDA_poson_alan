@@ -31,6 +31,7 @@ namespace AnimauxMany.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<HabitatDTOIn>> GetAllHabitat()
         {
+
             IEnumerable<Habitat> listeHabitat = _service.GetAllHabitat();
             return Ok(_mapper.Map<IEnumerable<HabitatDTOIn>>(listeHabitat));
         }
@@ -49,8 +50,9 @@ namespace AnimauxMany.Controllers
 
         //POST api/Habitat
         [HttpPost]
-        public ActionResult<HabitatDTOIn> CreateHabitat(Habitat obj)
+        public ActionResult<HabitatDTOIn> CreateHabitat(HabitatDTOIn objDTO)
         {
+            var obj = _mapper.Map<Habitat>(objDTO);
             _service.AddHabitat(obj);
             return CreatedAtRoute(nameof(GetHabitatById), new { Id = obj.IdHabitat }, obj);
         }

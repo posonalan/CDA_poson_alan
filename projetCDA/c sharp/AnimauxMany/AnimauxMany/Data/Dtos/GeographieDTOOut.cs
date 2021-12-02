@@ -12,7 +12,7 @@ namespace AnimauxMany.Data.Dtos
         {
         }
         public string LibelleGeographie { get; set; }
-        public virtual ICollection<MilieuVieDTOIn> MilieuVies { get; set; }
+        public virtual ICollection<MilieuVieDTOAnimaux> MilieuVies { get; set; }
 
     }
 

@@ -7,6 +7,9 @@ namespace AnimauxMany.Data.Dtos
 {
     public class MilieuVieDTOAnimaux
     {
+        
+        public virtual AnimauxDTOIn Animaux { get; set; }
+
 
     }
 }

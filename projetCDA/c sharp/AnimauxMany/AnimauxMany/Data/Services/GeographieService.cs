@@ -39,7 +39,7 @@ namespace AnimauxMany.Data.Services
 
         public IEnumerable<Geographie> GetAllGeographie()
         {
-            return _context.Geographies.Include("MilieuVies").ToList();
+            return _context.Geographies.Include("MilieuVies.Animaux").ToList();
         }
 
         public Geographie GetGeographieById(int id)
@@ -49,6 +49,7 @@ namespace AnimauxMany.Data.Services
 
         public void UpdateGeographie(Geographie obj)
         {
+            _context.Update(obj);
             _context.SaveChanges();
         }
 

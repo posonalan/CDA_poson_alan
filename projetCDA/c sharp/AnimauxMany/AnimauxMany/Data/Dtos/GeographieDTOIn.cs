@@ -10,7 +10,7 @@ namespace AnimauxMany.Data.Models
         public GeographieDTOIn()
         {
         }
-        public int IdGeographie { get; set; }
+   
         public string LibelleGeographie { get; set; }
     }
 }

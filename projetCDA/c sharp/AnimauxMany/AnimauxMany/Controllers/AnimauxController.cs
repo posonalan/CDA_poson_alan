@@ -4,11 +4,11 @@ using AnimauxMany.Data.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Threading.Tasks;
-
+using System;
 
 namespace AnimauxMany.Controllers
 {
@@ -50,8 +50,9 @@ namespace AnimauxMany.Controllers
 
         //POST api/NomController
         [HttpPost]
-        public ActionResult<AnimauxDTOIn> CreateAnimaux(Animaux obj)
+        public ActionResult<AnimauxDTOIn> CreateAnimaux(AnimauxDTOIn objDTO)
         {
+            var obj = _mapper.Map<Animaux>(objDTO);
             _service.AddAnimaux(obj);
             return CreatedAtRoute(nameof(GetAnimauxById), new { Id = obj.IdAnimaux }, obj);
         }

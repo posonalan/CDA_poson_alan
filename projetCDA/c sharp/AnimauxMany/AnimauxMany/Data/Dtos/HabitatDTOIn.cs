@@ -10,7 +10,7 @@ namespace AnimauxMany.Data.Dtos
         public HabitatDTOIn()
         {
         }
-        public int IdHabitat { get; set; }
+       
         public string LibelleHabitat { get; set; }
 
     }

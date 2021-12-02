@@ -22,6 +22,9 @@ namespace AnimauxMany.Data.Profiles
             CreateMap<MilieuVie, MilieuVieDTOLiens>();
             CreateMap<MilieuVieDTOLiens, MilieuVie>();
 
+            CreateMap<MilieuVie, MilieuVieDTOAnimaux>();
+            CreateMap<MilieuVieDTOAnimaux, MilieuVie>();
+
         }
     }
 }

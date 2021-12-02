@@ -48,8 +48,9 @@ namespace AnimauxMany.Controllers
 
         //POST api/Geographie
         [HttpPost]
-        public ActionResult<GeographieDTOIn> CreateGeographie(Geographie obj)
+        public ActionResult<GeographieDTOIn> CreateGeographie(GeographieDTOIn objDTO)
         {
+            var obj = _mapper.Map<Geographie>(objDTO);
             _service.AddGeographie(obj);
             return CreatedAtRoute(nameof(GetGeographieById), new { Id = obj.IdGeographie }, obj);
         }

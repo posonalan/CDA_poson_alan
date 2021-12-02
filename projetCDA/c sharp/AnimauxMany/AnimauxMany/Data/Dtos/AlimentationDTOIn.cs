@@ -11,7 +11,7 @@ namespace AnimauxMany.Data.Dtos
         public AlimentationDTOIn()
         { }
 
-        public int IdAlimentations { get; set; }
+    
         public string LibelleAliment { get; set; }
 
     }

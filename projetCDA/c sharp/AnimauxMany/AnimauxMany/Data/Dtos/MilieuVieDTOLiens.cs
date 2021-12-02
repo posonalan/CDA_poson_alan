@@ -14,8 +14,8 @@ namespace AnimauxMany.Data.Dtos
         public int? IdAnimaux { get; set; }
         public int? IdGeographie { get; set; }
 
-        public virtual Animaux IdAnimauxNavigation { get; set; }
-        public virtual Geographie IdGeographieNavigation { get; set; }
+        public virtual Animaux Animaux { get; set; }
+        public virtual Geographie Geographie{ get; set; }
     }
 
 }

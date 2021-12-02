@@ -10,11 +10,11 @@ namespace AnimauxMany.Data.Dtos
         public AnimauxDTOIn()
         {
         }
-        public int IdAnimaux { get; set; }
+   
         public string LibelleAnimal { get; set; }
         public string TypeAnimal { get; set; }
         public int IdHabitat { get; set; }
         public int IdAlimentations { get; set; }
-        public int IdGeographie { get; set; }
+    
     }
 }

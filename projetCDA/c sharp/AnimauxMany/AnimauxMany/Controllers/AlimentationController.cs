@@ -49,8 +49,9 @@ namespace AnimauxMany.Controllers
 
         //POST api/NomController
         [HttpPost]
-        public ActionResult<AlimentationDTOIn> CreateAlimentation(Alimentation obj)
+        public ActionResult<AlimentationDTOIn> CreateAlimentation(AlimentationDTOIn objDTO)
         {
+            var obj = _mapper.Map<Alimentation>(objDTO);
             _service.AddAliment(obj);
             return CreatedAtRoute(nameof(GetAlimentById), new { Id = obj.IdAlimentations }, obj);
         }

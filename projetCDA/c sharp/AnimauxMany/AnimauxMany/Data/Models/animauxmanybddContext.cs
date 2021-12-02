@@ -120,12 +120,12 @@ namespace AnimauxMany.Data.Models
 
                 entity.Property(e => e.IdGeographie).HasColumnType("int(11)");
 
-                entity.HasOne(d => d.IdAnimauxNavigation)
+                entity.HasOne(d => d.Animaux)
                     .WithMany(p => p.MilieuVies)
                     .HasForeignKey(d => d.IdAnimaux)
                     .HasConstraintName("milieuvie_ibfk_1");
 
-                entity.HasOne(d => d.IdGeographieNavigation)
+                entity.HasOne<Geographie>(d => d.Geographie)
                     .WithMany(p => p.MilieuVies)
                     .HasForeignKey(d => d.IdGeographie)
                     .HasConstraintName("milieuvie_ibfk_2");
