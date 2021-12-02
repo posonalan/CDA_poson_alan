@@ -42,7 +42,6 @@ U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\n
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.AssemblyInfoInputs.cache
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.AssemblyInfo.cs
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.csproj.CoreCompileInputs.cache
-U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.csproj.CopyComplete
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.dll
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\ref\GestionStockAppli.dll
 U:\59011-07-09\projetCDA\c sharp\GestionStockAppli\GestionStockAppli\obj\Debug\net5.0-windows\GestionStockAppli.pdb

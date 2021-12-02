@@ -35,7 +35,7 @@ namespace GestionStockAppli.Data.Models
             _context.Articles.Remove(obj);
             _context.SaveChanges();
         }
-
+       // public article GetAllArticle()
         public IEnumerable<article> GetAllArticle()
         {/* ceci est un test*/
             return _context.Articles.ToList();

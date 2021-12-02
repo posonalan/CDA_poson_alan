@@ -14,8 +14,8 @@ using System;
 
 namespace GestionStockAppli.Data.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    //[Route("api/[controller]")]
+    //[ApiController]
     class ArticleController : ControllerBase
     {
 
@@ -34,13 +34,13 @@ namespace GestionStockAppli.Data.Controllers
         }
 
         //GET api/Article
-        [HttpGet]
-        //public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
-        public IEnumerable<article> GetAllArticle()
+        //[HttpGet]
+        public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
+       // public IEnumerable<article> GetAllArticle()
         {
             IEnumerable<article> listeArticle = _service.GetAllArticle();
-            //return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
-            return listeArticle;
+            return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
+            //return listeArticle;
         }
 
 
