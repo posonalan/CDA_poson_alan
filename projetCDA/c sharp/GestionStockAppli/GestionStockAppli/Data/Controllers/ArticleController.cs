@@ -2,7 +2,7 @@
 using GestionStockAppli.Data.Dtos;
 using GestionStockAppli.Data.Models;
 using GestionStockAppli.Data.Services;
-
+using GestionStockAppli.Data.Profiles;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
 using System.Collections.Generic;
@@ -23,20 +23,28 @@ namespace GestionStockAppli.Data.Controllers
         private readonly ArticleService _service;
         private readonly IMapper _mapper;
 
-        public ArticleController(ArticleService service, IMapper mapper)
+        public ArticleController(MyDbContext _context)
         {
-            _service = service;
-            _mapper = mapper;
+            _service = new ArticleService(_context);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ArticleProfile>();
+            });
+            _mapper = config.CreateMapper();
         }
 
         //GET api/Article
         [HttpGet]
-        public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
+        //public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
+        public IEnumerable<article> GetAllArticle()
         {
             IEnumerable<article> listeArticle = _service.GetAllArticle();
-            return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
+            //return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
+            return listeArticle;
         }
 
+
+        /****************************************************************************/
         //GET api/Article/{i}
         [HttpGet("{id}", Name = "GetArticleById")]
         public ActionResult<ArticleDTOIn> GetArticleById(int id)
@@ -86,7 +94,7 @@ namespace GestionStockAppli.Data.Controllers
             {
                 return NotFound();
             }
-            article objToPatch = _mapper.Map<ArticleDTOIn>(objFromRepo);
+            article objToPatch = _mapper.Map<article>(objFromRepo);
             patchDoc.ApplyTo(objToPatch, ModelState);
             if (!TryValidateModel(objToPatch))
             {
@@ -112,3 +120,4 @@ namespace GestionStockAppli.Data.Controllers
 
 
     }
+}

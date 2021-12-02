@@ -2,7 +2,7 @@
 using GestionStockAppli.Data.Dtos;
 using GestionStockAppli.Data.Models;
 using GestionStockAppli.Data.Services;
-
+using GestionStockAppli.Data.Profiles;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
 using System.Collections.Generic;
@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System;
+
+
 namespace GestionStockAppli.Data.Controllers
 {
     [Route("api/[controller]")]
@@ -21,11 +23,16 @@ namespace GestionStockAppli.Data.Controllers
         private readonly CategorieService _service;
         private readonly IMapper _mapper;
 
-        public CategorieController(CategorieService service, IMapper mapper)
+        public CategorieController(MyDbContext _context)
         {
-            _service = service;
-            _mapper = mapper;
+            _service = new CategorieService(_context);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CategorieProfile>();
+            });
+            _mapper = config.CreateMapper();
         }
+
 
         //GET api/Categorie
         [HttpGet]

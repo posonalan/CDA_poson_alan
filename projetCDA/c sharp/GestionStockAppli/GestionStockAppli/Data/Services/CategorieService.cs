@@ -37,7 +37,7 @@ namespace GestionStockAppli.Data.Services
             _context.SaveChanges();
         }
 
-        public IEnumerable<category> GetAllCategories()
+        public IEnumerable<category> GetAllCategorie()
         {
             return _context.Categories.ToList();
         }
@@ -47,7 +47,7 @@ namespace GestionStockAppli.Data.Services
             return _context.Categories.FirstOrDefault(obj => obj.IdCategorie == id);
         }
 
-        public void UpdateCategories(category obj)
+        public void UpdateCategorie(category obj)
         {
             _context.SaveChanges();
         }

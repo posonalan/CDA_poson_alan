@@ -36,7 +36,7 @@ namespace GestionStockAppli.Data.Models
             _context.SaveChanges();
         }
 
-        public IEnumerable<article> GetAllArticleService()
+        public IEnumerable<article> GetAllArticle()
         {
             return _context.Articles.ToList();
         }

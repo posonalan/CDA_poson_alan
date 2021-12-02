@@ -1,4 +1,5 @@
 ﻿using GestionStockAppli.Data;
+using GestionStockAppli.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GestionStockAppli.Data;
+
 
 namespace GestionStockAppli
 {
@@ -25,9 +26,13 @@ namespace GestionStockAppli
         public MainWindow()
         {
             InitializeComponent();
-            MyDbContext _context = new MyDbContext();
+            //MyDbContext _context = new MyDbContext();
+            //ArticleService _service = new ArticleService(_context);
+            var _context = new MyDbContext();
+            var _service = new ArticleService(_context);
+            alan.ItemsSource = _service.GetAllArticle(); 
 
-            dataGrid.ItemsSource = _context.Articles.ToList();
+            //dataGrid.ItemsSource = _context.Articles.ToList();
 
         }
     }

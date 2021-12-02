@@ -18,7 +18,7 @@ namespace GestionStockAppli.Data.Services
             _context = context;
         }
 
-        public void AddTypesproduits(typesproduit obj)
+        public void AddTypeProduit(typesproduit obj)
         {
             if (obj == null)
             {
@@ -28,7 +28,7 @@ namespace GestionStockAppli.Data.Services
             _context.SaveChanges();
         }
 
-        public void DeleteTypesProduits(typesproduit obj)
+        public void DeleteTypeProduit(typesproduit obj)
         {
             if (obj == null)
             {
@@ -38,17 +38,17 @@ namespace GestionStockAppli.Data.Services
             _context.SaveChanges();
         }
 
-        public IEnumerable<typesproduit> GetAllTypesProduits()
+        public IEnumerable<typesproduit> GetAllTypeProduit()
         {
             return _context.TypesProduits.ToList();
         }
 
-        public typesproduit GetTypesproduitsById(int id)
+        public typesproduit GetTypeProduitById(int id)
         {
             return _context.TypesProduits.FirstOrDefault(obj => obj.IdTypeProduit == id);
         }
 
-        public void UpdateTypesproduits(typesproduit obj)
+        public void UpdateTypeProduit(typesproduit obj)
         {
             _context.SaveChanges();
         }
