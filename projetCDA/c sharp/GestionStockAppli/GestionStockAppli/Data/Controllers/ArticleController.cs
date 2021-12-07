@@ -1,12 +1,14 @@
-﻿using AutoMapper;
+﻿
 using GestionStockAppli.Data.Dtos;
 using GestionStockAppli.Data.Models;
-using GestionStockAppli.Data.Services;
 using GestionStockAppli.Data.Profiles;
+
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
 using System.Collections.Generic;
 
+using GestionStockAppli.Data.Services;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
