@@ -107,13 +107,14 @@ DROP TABLE IF EXISTS `contenuplat`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contenuplat` (
   `IdContenuPlat` int(11) NOT NULL AUTO_INCREMENT,
-  `IdProduits` int(11) DEFAULT NULL,
+  `IdProduit` int(11) DEFAULT NULL,
   `IdPlat` int(11) DEFAULT NULL,
+  `Quantite` int(11) DEFAULT NULL,
   PRIMARY KEY (`IdContenuPlat`),
-  KEY `FK_ContenuPlat_Produits` (`IdProduits`),
+  KEY `FK_ContenuPlat_Produits` (`IdProduit`),
   KEY `FK_ContenuPlat_Plats` (`IdPlat`),
   CONSTRAINT `FK_ContenuPlat_Plats` FOREIGN KEY (`IdPlat`) REFERENCES `plats` (`IdPlat`),
-  CONSTRAINT `FK_ContenuPlat_Produits` FOREIGN KEY (`IdProduits`) REFERENCES `produits` (`IdProduits`)
+  CONSTRAINT `FK_ContenuPlat_Produits` FOREIGN KEY (`IdProduit`) REFERENCES `produits` (`IdProduit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -183,11 +184,11 @@ DROP TABLE IF EXISTS `produits`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produits` (
-  `IdProduits` int(11) NOT NULL AUTO_INCREMENT,
+  `IdProduit` int(11) NOT NULL AUTO_INCREMENT,
   `LibelleProduit` varchar(50) DEFAULT NULL,
   `QuantiteProduit` int(11) DEFAULT NULL,
   `IdCategorieProduit` int(11) NOT NULL,
-  PRIMARY KEY (`IdProduits`),
+  PRIMARY KEY (`IdProduit`),
   KEY `FK_Produits_CategorieProduits` (`IdCategorieProduit`),
   CONSTRAINT `FK_Produits_CategorieProduits` FOREIGN KEY (`IdCategorieProduit`) REFERENCES `categoriesproduits` (`IdCategorieProduit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -211,4 +212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-06 12:20:47
+-- Dump completed on 2021-12-06 17:20:49
