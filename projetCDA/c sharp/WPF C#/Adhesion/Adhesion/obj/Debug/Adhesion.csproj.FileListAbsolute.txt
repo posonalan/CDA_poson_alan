@@ -1,0 +1,30 @@
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.exe.config
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.AssemblyReference.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\MainWindow.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\App.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion_MarkupCompile.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion_MarkupCompile.lref
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\MainWindow.baml
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.g.resources
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.Properties.Resources.resources
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.GenerateResource.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.CoreCompileInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.pdb
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.exe.config
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.exe
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\bin\Debug\Adhesion.pdb
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\MainWindow.g.cs
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\App.g.cs
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion_MarkupCompile.cache
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion_MarkupCompile.lref
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\MainWindow.baml
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.g.resources
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.Properties.Resources.resources
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.GenerateResource.cache
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.exe
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.pdb
+U:\59011-07-09\projetCDA\c sharp\Adhesion\Adhesion\obj\Debug\Adhesion.csproj.AssemblyReference.cache

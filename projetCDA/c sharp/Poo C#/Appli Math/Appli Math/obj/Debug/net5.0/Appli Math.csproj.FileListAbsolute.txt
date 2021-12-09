@@ -1,0 +1,16 @@
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.exe
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.deps.json
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.dll
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\ref\Appli Math.dll
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\bin\Debug\net5.0\Appli Math.pdb
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.dll
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\ref\Appli Math.dll
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.pdb
+U:\59011-07-09\projetCDA\c sharp\Appli Math\Appli Math\obj\Debug\net5.0\Appli Math.genruntimeconfig.cache

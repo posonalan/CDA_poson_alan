@@ -1,0 +1,30 @@
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.exe.config
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.AssemblyReference.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\MainWindow.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\App.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette_MarkupCompile.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette_MarkupCompile.lref
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\MainWindow.baml
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.g.resources
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.Properties.Resources.resources
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.GenerateResource.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.CoreCompileInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.pdb
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.exe.config
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.exe
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\bin\Debug\Calculette.pdb
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\MainWindow.g.cs
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\App.g.cs
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette_MarkupCompile.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette_MarkupCompile.lref
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\MainWindow.baml
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.g.resources
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.Properties.Resources.resources
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.GenerateResource.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.exe
+U:\59011-07-09\projetCDA\c sharp\Calculette\Calculette\obj\Debug\Calculette.pdb
