@@ -1,0 +1,423 @@
+﻿<Window x:Class="CantineMartine.Windows.GestionMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CantineMartine.Windows"
+        mc:Ignorable="d"
+        Title="GestionMenu" Height="450" Width="1100"   >
+    <Window.Background>
+        <ImageBrush ImageSource="/Windows/fondcantine.jpg"/>
+    </Window.Background>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Menu de la semaine " Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center"  
+               FontSize="25" Foreground="LightCoral"/>
+
+
+        <Grid Grid.Row="3" Grid.Column="1"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Content="Semaine : " Grid.Column="0"/>
+            <ComboBox Name="Semaine" Grid.Column="1" Background="Orange"/>
+
+        </Grid>
+
+        <Grid Grid.Row="5" Grid.Column="1">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox  Header="Lundi" Grid.Column="0">
+
+                <Grid Background="{DynamicResource FondGroup}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--dispo-->
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Masqué jour :" Grid.Column="0" VerticalAlignment="Center"/>
+                        <CheckBox  x:Name="Jour1" Content="Activé" Grid.Column="1" VerticalAlignment="Center"
+                                   Click="Jour_Check"   />
+                    </Grid>
+                    
+                    <!--contenu lundi-->
+                    <Grid Grid.Row="3" x:Name="Lundi">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Entrée" Grid.Row="1" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Entree1" Grid.Row="3" >
+                        </ComboBox>
+                        <Label Content="Plat" Grid.Row="5" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Plat1" Grid.Row="7"/>
+                        <Label Content="Dessert" Grid.Row="9" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Dessert1" Grid.Row="11"/>
+
+                    </Grid>
+
+
+
+                </Grid>
+
+
+
+            </GroupBox>
+            <GroupBox  Header="Mardi" Grid.Column="2">
+
+                <Grid Background="{DynamicResource FondGroup}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--dispo-->
+                    <Grid Grid.Row="1">
+                        
+                        <Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Masqué jour :" Grid.Column="0" VerticalAlignment="Center"/>
+                        <CheckBox  x:Name="Jour2" Content="Activé" Grid.Column="1" VerticalAlignment="Center"
+                                   Click="Jour_Check"   />
+                    </Grid>
+
+                    <!--contenu Mardi-->
+                    <Grid Grid.Row="3" x:Name="Mardi">
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Content="Entrée" Grid.Row="1" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Entree2" Grid.Row="3" >
+                        </ComboBox>
+                        <Label Content="Plat" Grid.Row="5" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Plat2" Grid.Row="7"/>
+                        <Label Content="Dessert" Grid.Row="9" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Dessert2" Grid.Row="11"/>
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox  Header="Mecredi" Grid.Column="4">
+
+                <Grid Background="{DynamicResource FondGroup}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--dispo-->
+                    <Grid Grid.Row="1">
+
+                        <Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Masqué jour :" Grid.Column="0" VerticalAlignment="Center"/>
+                        <CheckBox  x:Name="Jour3" Content="Activé" Grid.Column="1" VerticalAlignment="Center"
+                                   Click="Jour_Check"   />
+                    </Grid>
+
+                    <!--contenu Mercredi-->
+                    <Grid Grid.Row="3" x:Name="Mercredi">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Entrée" Grid.Row="1" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Entree3" Grid.Row="3" >
+                        </ComboBox>
+                        <Label Content="Plat" Grid.Row="5" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Plat3" Grid.Row="7"/>
+                        <Label Content="Dessert" Grid.Row="9" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Dessert3" Grid.Row="11"/>
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+            <GroupBox  Header="Jeudi" Grid.Column="6">
+
+                <Grid Background="{DynamicResource FondGroup}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--dispo-->
+                    <Grid Grid.Row="1">
+
+                        <Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Masqué jour :" Grid.Column="0" VerticalAlignment="Center"/>
+                        <CheckBox  x:Name="Jour4" Content="Activé" Grid.Column="1" VerticalAlignment="Center"
+                                   Click="Jour_Check"   />
+                    </Grid>
+
+                    <!--contenu Mardi-->
+                    <Grid Grid.Row="3" x:Name="Jeudi">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Entrée" Grid.Row="1" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Entree4" Grid.Row="3" >
+                        </ComboBox>
+                        <Label Content="Plat" Grid.Row="5" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Plat4" Grid.Row="7"/>
+                        <Label Content="Dessert" Grid.Row="9" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Dessert4" Grid.Row="11"/>
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox  Header="Vendredi" Grid.Column="10">
+
+                <Grid Background="{DynamicResource FondGroup}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="40*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--dispo-->
+                    <Grid Grid.Row="1">
+
+                        <Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Masqué jour :" Grid.Column="0" VerticalAlignment="Center"/>
+                        <CheckBox  x:Name="Jour5" Content="Activé" Grid.Column="1" VerticalAlignment="Center"
+                                   Click="Jour_Check"   />
+                    </Grid>
+
+                    <!--contenu Mardi-->
+                    <Grid Grid.Row="3" x:Name="Vendredi">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Entrée" Grid.Row="1" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Entree5" Grid.Row="3" >
+                        </ComboBox>
+                        <Label Content="Plat" Grid.Row="5" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Plat5" Grid.Row="7"/>
+                        <Label Content="Dessert" Grid.Row="9" HorizontalAlignment="Center"/>
+                        <ComboBox Name="Dessert5" Grid.Row="11"/>
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="7" Grid.Column="1">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button x:Name="ValiderMenu" Content="Valider" Grid.Column="1" Grid.Row="0" Style="{DynamicResource BoutonRond}"
+              Click="BoutonValider_Click"      
+                    />
+            <Button x:Name="RetourMenu" Content="Retour" Grid.Column="3" Grid.Row="0" Style="{DynamicResource BoutonRond}"
+                    Click="BoutonRetour_Click"/>
+
+
+        </Grid>
+
+
+
+
+    </Grid>
+
+</Window>

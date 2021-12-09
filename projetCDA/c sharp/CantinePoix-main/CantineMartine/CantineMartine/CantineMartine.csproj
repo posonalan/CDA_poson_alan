@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cantineLogo.png" />
+    <None Remove="fondcantine.jpg" />
+    <None Remove="Images\cantineLogo.png" />
+    <None Remove="Images\fondcantine.jpg" />
+    <None Remove="Images\Martine1.png" />
+    <None Remove="Images\Martine2.png" />
+    <None Remove="Images\pois.png" />
+    <None Remove="Martine1.png" />
+    <None Remove="Martine2.png" />
+    <None Remove="MartineLogo.png" />
+    <None Remove="pois.png" />
+    <None Remove="Windows\fondcantine.jpg" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="5.0.12" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Images\cantineLogo.png" />
+	  <Resource Include="Images\fondcantine.jpg" />
+	  <Resource Include="Images\Martine1.png" />
+	  <Resource Include="Images\Martine2.png" />
+	  <Resource Include="Images\MartineLogo.png" />
+	  <Resource Include="Images\pois.png" />
+	  <Resource Include="pois.png" />
+	  <Resource Include="Windows\fondcantine.jpg" />
+	</ItemGroup>
+
+</Project>
