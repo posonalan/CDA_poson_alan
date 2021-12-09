@@ -1,0 +1,16 @@
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.deps.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.runtimeconfig.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.runtimeconfig.dev.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\ref\C Sharp Applicatio Console.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\bin\Debug\net5.0\C Sharp Applicatio Console.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.csproj.AssemblyReference.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.AssemblyInfoInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.AssemblyInfo.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.csproj.CoreCompileInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\ref\C Sharp Applicatio Console.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\C Sharp Applicatio Console\C Sharp Applicatio Console\obj\Debug\net5.0\C Sharp Applicatio Console.genruntimeconfig.cache

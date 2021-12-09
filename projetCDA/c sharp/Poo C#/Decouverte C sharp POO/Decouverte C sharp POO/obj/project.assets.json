@@ -8,23 +8,31 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\59011-07-09\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lilyy\\.nuget\\packages\\": {},
+    "D:\\visual studio partage_outil_sdk\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD:projetCDA/c sharp/Decouverte C sharp POO/Decouverte C sharp POO/obj/project.assets.json
+      "projectUniqueName": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Decouverte C sharp POO\\Decouverte C sharp POO\\Decouverte C sharp POO.csproj",
+      "projectName": "Decouverte C sharp POO",
+      "projectPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Decouverte C sharp POO\\Decouverte C sharp POO\\Decouverte C sharp POO.csproj",
+      "packagesPath": "C:\\Users\\lilyy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Decouverte C sharp POO\\Decouverte C sharp POO\\obj\\",
+=======
       "projectUniqueName": "U:\\59011-07-09\\projetCDA\\c sharp\\Poo C#\\Decouverte C sharp POO\\Decouverte C sharp POO\\Decouverte C sharp POO.csproj",
       "projectName": "Decouverte C sharp POO",
       "projectPath": "U:\\59011-07-09\\projetCDA\\c sharp\\Poo C#\\Decouverte C sharp POO\\Decouverte C sharp POO\\Decouverte C sharp POO.csproj",
       "packagesPath": "C:\\Users\\59011-07-09\\.nuget\\packages\\",
       "outputPath": "U:\\59011-07-09\\projetCDA\\c sharp\\Poo C#\\Decouverte C sharp POO\\Decouverte C sharp POO\\obj\\",
+>>>>>>> 1ef8a395913c9ae1548b6e0058f9dec53d54d68c:projetCDA/c sharp/Poo C#/Decouverte C sharp POO/Decouverte C sharp POO/obj/project.assets.json
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\visual studio partage_outil_sdk\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\59011-07-09\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lilyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

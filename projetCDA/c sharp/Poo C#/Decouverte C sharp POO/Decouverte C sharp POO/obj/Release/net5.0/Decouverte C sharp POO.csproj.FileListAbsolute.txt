@@ -1,0 +1,16 @@
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.exe
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.deps.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.runtimeconfig.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.runtimeconfig.dev.json
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\ref\Decouverte C sharp POO.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\bin\Debug\net5.0\Decouverte C sharp POO.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.csproj.AssemblyReference.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.AssemblyInfoInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.AssemblyInfo.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.csproj.CoreCompileInputs.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\ref\Decouverte C sharp POO.dll
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.pdb
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Decouverte C sharp POO\Decouverte C sharp POO\obj\Debug\net5.0\Decouverte C sharp POO.genruntimeconfig.cache

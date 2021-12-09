@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace Compte
 {
+<<<<<<< HEAD
+    /* ********** Propriétaire ********** */
+    class Comptes
+    {
+   
+        public double Solde { get; set; }
+        public string Code { get; set; }
+        public Clients Proprietaire { get; set; }
+
+=======
 
 
 
@@ -19,11 +29,42 @@ namespace Compte
         public static  int Compteur { get; set; } = 0;
         public string Operation { get; set; }
 
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04
         /* ******** Constructeur ******** */
         public Comptes()
         {
         }
 
+<<<<<<< HEAD
+        public Comptes( double solde, string code, Clients proprietaire )
+        {  
+          
+            Code = code;
+            Solde = solde;
+            Proprietaire = proprietaire;
+
+        }
+       
+        public override string ToString()
+        {
+            return " \n Solde : " + this.Solde + " " + this.Code + "\n" + this.Proprietaire.ToString() ;
+        }
+
+       
+        public void Crediter(double montant)
+        {
+            Solde = Solde + montant;
+        }
+        public void Debiter(double montant)
+        {
+            Solde = Solde-montant ;
+        }
+        public string Decrire()
+        {
+            return " est de " + this.Solde +
+           " " + this.Code;
+        }
+=======
         public Comptes( Clients proprietaire)
         {
             Code = ++Compteur;
@@ -101,8 +142,12 @@ namespace Compte
         }
 
         //static string CompteurObjet(compteur)
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04
     }
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04

@@ -7,4 +7,8 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Compte
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\
+=======
 build_property.ProjectDir = U:\59011-07-09\projetCDA\c sharp\Compte\Compte\
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04
