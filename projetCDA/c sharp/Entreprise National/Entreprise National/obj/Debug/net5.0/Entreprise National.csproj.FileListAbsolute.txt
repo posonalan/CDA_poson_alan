@@ -1,0 +1,16 @@
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.exe
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.deps.json
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.dll
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\ref\Entreprise National.dll
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\bin\Debug\net5.0\Entreprise National.pdb
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.dll
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\ref\Entreprise National.dll
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.pdb
+U:\59011-07-09\projetCDA\c sharp\Entreprise National\Entreprise National\obj\Debug\net5.0\Entreprise National.genruntimeconfig.cache

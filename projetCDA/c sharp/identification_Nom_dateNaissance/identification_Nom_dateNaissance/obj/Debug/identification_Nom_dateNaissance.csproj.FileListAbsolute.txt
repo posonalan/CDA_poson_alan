@@ -1,0 +1,5 @@
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\identification_Nom_dateNaissance\identification_Nom_dateNaissance\obj\Debug\identification_Nom_dateNaissance.csproj.AssemblyReference.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\identification_Nom_dateNaissance\identification_Nom_dateNaissance\obj\Debug\MainWindow.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\identification_Nom_dateNaissance\identification_Nom_dateNaissance\obj\Debug\App.g.cs
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\identification_Nom_dateNaissance\identification_Nom_dateNaissance\obj\Debug\identification_Nom_dateNaissance_MarkupCompile.cache
+C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\identification_Nom_dateNaissance\identification_Nom_dateNaissance\obj\Debug\identification_Nom_dateNaissance_MarkupCompile.lref

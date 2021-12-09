@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Compte\\Compte\\Compte.csproj": {}
   },
   "projects": {
@@ -19,6 +20,25 @@
         "configFilePaths": [
           "C:\\Users\\lilyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+    "U:\\GRP-07\\59011-07-09\\projetCDA\\c sharp\\Compte\\Compte\\Compte.csproj": {}
+  },
+  "projects": {
+    "U:\\GRP-07\\59011-07-09\\projetCDA\\c sharp\\Compte\\Compte\\Compte.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "U:\\GRP-07\\59011-07-09\\projetCDA\\c sharp\\Compte\\Compte\\Compte.csproj",
+        "projectName": "Compte",
+        "projectPath": "U:\\GRP-07\\59011-07-09\\projetCDA\\c sharp\\Compte\\Compte\\Compte.csproj",
+        "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
+        "outputPath": "U:\\GRP-07\\59011-07-09\\projetCDA\\c sharp\\Compte\\Compte\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\1701871\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

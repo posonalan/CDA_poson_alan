@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.csproj.AssemblyReference.cache
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.AssemblyInfoInputs.cache
@@ -14,3 +15,21 @@ C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c shar
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\ref\Compte.dll
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.pdb
 C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.genruntimeconfig.cache
+=======
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.exe
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.deps.json
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.runtimeconfig.json
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.runtimeconfig.dev.json
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.dll
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\ref\Compte.dll
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\bin\Debug\net5.0\Compte.pdb
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.csproj.AssemblyReference.cache
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.AssemblyInfoInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.AssemblyInfo.cs
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.csproj.CoreCompileInputs.cache
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.dll
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\ref\Compte.dll
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.pdb
+U:\59011-07-09\projetCDA\c sharp\Compte\Compte\obj\Debug\net5.0\Compte.genruntimeconfig.cache
+>>>>>>> f14d4f4f0e75b88fd0976a95926c96019a758b04
