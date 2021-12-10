@@ -11,7 +11,7 @@ USE FilRougeBdd;
 CREATE TABLE Rubriques(
    IdRubrique INT AUTO_INCREMENT PRIMARY KEY,
    libelleRubrique VARCHAR(150)  NOT NULL,
-   IdRubriqueMere INT NOT NULL
+   IdRubriqueMere INT
 )ENGINE=InnoDB;
 
 
@@ -49,7 +49,7 @@ CREATE TABLE Reglements(
 --
 CREATE TABLE TVA(
    IdTVA INT AUTO_INCREMENT PRIMARY KEY,
-   tauxTVA INT
+   tauxTVA INT NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -58,7 +58,7 @@ CREATE TABLE TVA(
 --
 CREATE TABLE Roles(
    IdRole INT AUTO_INCREMENT PRIMARY KEY,
-   libelleRole VARCHAR(50)
+   libelleRole VARCHAR(50) NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -88,7 +88,7 @@ CREATE TABLE Produits(
    description TEXT NOT NULL,
    refProduit VARCHAR(5)  NOT NULL UNIQUE,
    prixHorsTaxe DECIMAL(19,4) NOT NULL,
-   photo VARCHAR(150) ,
+   photo VARCHAR(150) NOT NULL,
    stock INT NOT NULL,
    IdRubrique INT NOT NULL
 )ENGINE=InnoDB;
@@ -107,7 +107,7 @@ CREATE TABLE Clients(
 --
 -- Table structure for table `Utilisateurs`
 --
-CREATE TABLE User(
+CREATE TABLE Users(
    IdUser INT AUTO_INCREMENT PRIMARY KEY,
    nomUser VARCHAR(150)  NOT NULL,
    prenomUser VARCHAR(150)  NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE Adresses(
    emailAdresse VARCHAR(150)  NOT NULL,
    telMobile VARCHAR(12)  NOT NULL,
    telFixe VARCHAR(12) ,
-   adresse VARCHAR(50)  NOT NULL,
+   adressePostale VARCHAR(50)  NOT NULL,
    province VARCHAR(50) ,
    complementAdresse VARCHAR(50) ,
    IdVille INT NOT NULL
@@ -146,8 +146,8 @@ CREATE TABLE Adresses(
 --
 CREATE TABLE Commandes(
    IdCommande INT AUTO_INCREMENT PRIMARY KEY,
-   NumeroCommande VARCHAR(10) UNIQUE,
-   dateCommande DATE,
+   NumeroCommande VARCHAR(10) NOT NULL UNIQUE,
+   dateCommande DATE NOT NULL,
    IdUser INT NOT NULL,
    IdAdresse INT NOT NULL
 )ENGINE=InnoDB;
@@ -158,9 +158,9 @@ CREATE TABLE Commandes(
 --
 CREATE TABLE LignesCommande(
     IdLigneCommande INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdCommande INT,
-   quantiteProduit INT
+   IdProduit INT NOT NULL,
+   IdCommande INT NOT NULL,
+   quantiteProduit INT NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -169,10 +169,10 @@ CREATE TABLE LignesCommande(
 --
 CREATE TABLE Livraisons(
     IdLivraison INT AUTO_INCREMENT PRIMARY KEY,
-   IdCommande INT,
-   IdAdresse INT,
-   dateLivraison DATE,
-   quantiteLivraison INT
+   IdCommande INT NOT NULL,
+   IdAdresse INT NOT NULL,
+   dateLivraison DATE NOT NULL,
+   quantiteLivraison INT NOT NULL
 )ENGINE=InnoDB;
 
 --
@@ -180,8 +180,8 @@ CREATE TABLE Livraisons(
 --
 CREATE TABLE Approvisionnements(
     IdApprovisionnement INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdFournisseur INT,
+   IdProduit INT NOT NULL,
+   IdFournisseur INT NOT NULL,
    refFournisseur VARCHAR(5)  NOT NULL
 )ENGINE=InnoDB;
 
@@ -190,8 +190,8 @@ CREATE TABLE Approvisionnements(
 --
 CREATE TABLE Factures(
     IdFacture INT AUTO_INCREMENT PRIMARY KEY,
-   IdReglement INT,
-   IdCommande INT,
+   IdReglement INT NOT NULL,
+   IdCommande INT NOT NULL,
    datePaiement DATE NOT NULL,
    montantPaiement DECIMAL(19,4) NOT NULL
 )ENGINE=InnoDB;
@@ -201,8 +201,8 @@ CREATE TABLE Factures(
 --
 CREATE TABLE HistoriqueTVA(
     IdHistoriqueTVA INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdTVA INT,
+   IdProduit INT NOT NULL,
+   IdTVA INT NOT NULL,
    dateTVA DATE NOT NULL
 )ENGINE=InnoDB;
 
@@ -211,8 +211,8 @@ CREATE TABLE HistoriqueTVA(
 --
 CREATE TABLE ProgressionsCommande(
     IdProgressionsCommande INT AUTO_INCREMENT PRIMARY KEY,
-   IdCommande INT,
-   IdEtatCommande INT,
+   IdCommande INT NOT NULL,
+   IdEtatCommande INT NOT NULL,
    dateEtatCommande DATE NOT NULL
 )ENGINE=InnoDB;
 
@@ -231,8 +231,8 @@ ALTER TABLE Produits
 ALTER TABLE Clients
  ADD CONSTRAINT FK_Clients_CategoriesClient  FOREIGN KEY(IdCategorieClient) REFERENCES CategoriesClient(IdCategorieClient);
 
-ALTER TABLE User
- ADD CONSTRAINT FK_User_Roles FOREIGN KEY(IdRole) REFERENCES Roles(IdRole);
+ALTER TABLE Users
+ ADD CONSTRAINT FK_Users_Roles FOREIGN KEY(IdRole) REFERENCES Roles(IdRole);
 
 ALTER TABLE ProgressionsCommande
  ADD CONSTRAINT FK_ProgressionsCommande_commandes FOREIGN KEY(IdCommande) REFERENCES Commandes(IdCommande),

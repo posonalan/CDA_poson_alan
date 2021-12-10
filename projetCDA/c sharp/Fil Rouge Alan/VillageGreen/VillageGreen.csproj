@@ -17,4 +17,7 @@
 		<PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Data\Profiles\" />
+	</ItemGroup>
 </Project>
