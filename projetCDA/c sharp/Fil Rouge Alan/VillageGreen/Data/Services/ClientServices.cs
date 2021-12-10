@@ -7,46 +7,47 @@ using VillageGreen.Data.Models;
 
 namespace VillageGreen.Data.Services
 {
-    class ApprovisionnementServices
+    class ClientServices
     {
+
         private readonly VGContext _context;
 
-        public ApprovisionnementServices(VGContext context)
+        public ClientServices(VGContext context)
         {
             _context = context;
         }
 
-        public void AddApprovisionnement(Approvisionnement obj)
+        public void AddClient(Client obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Approvisionnements.Add(obj);
+            _context.Clients.Add(obj);
             _context.SaveChanges();
         }
 
-        public void DeleteApprovisionnement(Approvisionnement obj)
+        public void DeleteClient(Client obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Approvisionnements.Remove(obj);
+            _context.Clients.Remove(obj);
             _context.SaveChanges();
         }
 
-        public IEnumerable<Approvisionnement> GetAllApprovisionnement()
+        public IEnumerable<Client> GetAllCLient()
         {
-            return _context.Approvisionnements.ToList();
+            return _context.Clients.ToList();
         }
 
-        public Approvisionnement GetApprovisionnementById(int id)
+        public Client GetClientById(int id)
         {
-            return _context.Approvisionnements.FirstOrDefault(obj => obj.IdApprovisionnement == id);
+            return _context.Clients.FirstOrDefault(obj => obj.IdClient == id);
         }
 
-        public void UpdateApprovisionnement(Approvisionnement obj)
+        public void UpdateClient(Client obj)
         {
             _context.SaveChanges();
         }

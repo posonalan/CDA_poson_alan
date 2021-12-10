@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VillageGreen.Data.Dtos;
+using VillageGreen.Data.Models;
 using VillageGreen.Data.Services;
 
 namespace VillageGreen.Controllers
