@@ -10,22 +10,22 @@ using IWshRuntimeLibrary;
 namespace testEXE
 {
     [RunInstaller(true)]
-    public class ShortcutsInstaller : Installer
+    public class ShortcutsInstaller : Installer /* classe d'installation */ 
     {
-		private string _location = null;
-		private string _name = null;
-		private string _description = null;
+		private string _location = null; /* proprieter donnée de location initialiser vide */ 
+		private string _name = null; /* proprieter donnée nom initialiser vide */
+		private string _description = null; /* proprieter donnée de description initialiser vide */
 
-		private string QuickLaunchFolder
+		private string QuickLaunchFolder /* action rapide */ 
 		{
 			get
 			{
-				return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+				return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +   /* route */ 
 					"\\Microsoft\\Internet Explorer\\Quick Launch";
 			}
 		}
 
-		private string ShortcutTarget
+		private string ShortcutTarget /* localisation */ 
 		{
 			get
 			{
@@ -35,7 +35,7 @@ namespace testEXE
 			}
 		}
 
-		private string ShortcutName
+		private string ShortcutName /* nom */ 
 		{
 			get
 			{
@@ -46,7 +46,7 @@ namespace testEXE
 					try
 					{
 						object titleAttribute = myAssembly.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0];
-						_name = ((AssemblyTitleAttribute)titleAttribute).Title;
+						_name = ((AssemblyTitleAttribute)titleAttribute).Title; 
 					}
 					catch { }
 
@@ -57,7 +57,7 @@ namespace testEXE
 			}
 		}
 
-		private string ShortcutDescription
+		private string ShortcutDescription /* description */
 		{
 			get
 			{
@@ -72,14 +72,14 @@ namespace testEXE
 					}
 					catch { }
 
-					if ((_description == null) || (_description.Trim() == string.Empty))
+					if ((_description == null) || (_description.Trim() == string.Empty)) /* description est vide */
 						_description = "Launch " + ShortcutName;
 				}
 				return _description;
 			}
 		}
 
-		public override void Install(IDictionary savedState)
+		public override void Install(IDictionary savedState) /* fonction d'installation */
 		{
 			base.Install(savedState);
 
