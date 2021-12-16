@@ -1,0 +1,125 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+  background-image: url('fondFruit2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}   
+
+.text{
+    border: 1px solid rgb(123, 123, 207);
+   font-size: 1.2em; 
+   flex : 1 ; 
+   
+}
+header {
+
+  
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em; 
+    margin-right: 5em; 
+}
+.espaceH{
+    
+
+}
+.Article1{
+    display: flex;
+   flex: 1; 
+   margin: 5em;
+}
+.image {
+    flex: 0.3;
+   height: 15vh;
+   width: 10vw;
+  
+    
+}
+
+.espaceV{
+    flex: 0.1;
+}
+
+.contenuArticle{
+display: flex;
+flex-direction: column;
+
+}
+
+
+h1 
+    {
+      font-size: 40px;
+      /* text-shadow: -1px -1px rgb(238, 238, 238), 1px 1px rgb(241, 241, 228), -3px 0 4px rgba(236, 223, 223, 0);
+     */ font-family:Arial, Helvetica, sans-serif; 
+      color: rgb(197, 194, 33);
+       padding:16px;
+      font-weight:lighter ;
+      -moz-box-shadow: 2px 2px 6px #888;  
+      -webkit-box-shadow: 2px 2px 6px #888;  
+      box-shadow : 2px 2px 6px #888;  
+      text-align:center;
+      display:block;
+      margin: 16px;
+      /* background-image:url(fondFruit.jpg);   */
+    }
+
+  
+    
+
+/************ nav barre **********/
+
+
+
+.divUl {
+   
+    justify-content: center;
+    justify-content: space-around; /* repartir dans ma nav barre */
+    list-style-type: none;
+   
+    background-color: rgb(211, 200, 45);
+   margin-bottom:5vh; 
+}
+
+
+
+div a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* pour pas avoir de soulignement
+*/ 
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+div a:hover {
+    background-color: #111;
+}
+
