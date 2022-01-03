@@ -59,7 +59,7 @@ main {
     padding: 1em;
 }
 
-.ligne div {
+.ligne button {
     flex: 1;
     background-color: rgb(230, 204, 166);
 
