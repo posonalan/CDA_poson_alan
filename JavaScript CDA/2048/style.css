@@ -55,15 +55,14 @@ main {
 
 .ligne {
     display: flex;
-    flex-direction: column;
     padding: 1em;
 }
 
 .ligne div {
     flex: 1;
     background-color: rgb(230, 204, 166);
-
-    margin-bottom: 0.5em;
+    justify-content: center;
+    margin-right: 0.5em;
     border-radius: 1em;
     align-items: center;
 
