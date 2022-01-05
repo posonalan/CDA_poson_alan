@@ -1,9 +1,15 @@
 <?php
+
+
+/* action realiser sur la table categorie */ 
+/* initialisation de la variable erreur a faux */ 
 $erreur = false;
  //var_dump($_POST);
-$p = new Categories($_POST);
+ /* on crée un nouvelle objet categorie qu'on met dans une variable p , la methode post permet de faire une demande a la base de données */ 
+$p = new Categories($_POST); 
  // var_dump($p);
-switch ($_GET['mode']) {
+ /* la methode get permet de recevoir de la base de données */ 
+switch ($_GET['mode']) { /* suivant le mode reçu */ 
     case "Ajouter": {
             CategoriesManager::add($p);
             break;
@@ -13,6 +19,7 @@ switch ($_GET['mode']) {
             break;
         }
     case "Supprimer": {
+        /* on va chercher l'id de la categorie a supprimer dans la liste des produits */ 
             $listeProduit = ProduitsManager::getListByCategorie($p->getIdCategorie());
             /**** Technique informative */
             //    if (count($listeProduit)>0)
@@ -26,6 +33,7 @@ switch ($_GET['mode']) {
             //    }
 
             /**** Technique de suppression en cascade */
+            /* on recherche dans la liste des produits un produits et on le supprime */ 
             foreach ($listeProduit as $unProduit) {
                 ProduitsManager::delete($unProduit);
             }

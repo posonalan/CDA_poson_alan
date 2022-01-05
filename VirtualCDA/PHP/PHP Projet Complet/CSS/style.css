@@ -8,7 +8,7 @@ body, header,div, nav, main, section{
 	justify-content: center;
 }	
 body{
-    background-color: black;
+    background-image: url("../IMG/fond.jpg");
 }
 
 img {
@@ -21,8 +21,9 @@ img {
 	flex:0.5;
 }
 .texteColore{
-	
+	align-items: center;
 	color: coral;
+	font-size: 1.2em; 
 }
 .titre {
 	flex: 5;
@@ -69,6 +70,7 @@ img {
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
 	margin: 0.5vw;
 	padding: 0.5vw;
+	
 }
 
 .crudBtnOutil {

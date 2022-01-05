@@ -20,13 +20,16 @@ function ChargerClasse($classe)
  *                                      le titre à afficher sur la page
  */
 function AfficherPage($page)
-{
+{ /* on recupere partie par partie la route */
+      
     $chemin = $page[0];
     $nom = $page[1];
     $titre = $page[2];
     $roleRequis = $page[3];
     $api = $page[4];
+    /* on gere le role et si il n'y a pas de role on met par defaut role == 0; */ 
     $roleConnecte = isset($_SESSION["utilisateur"])?$_SESSION["utilisateur"]->getRole():0;
+    /* si le role est bon on affiche */ 
     if  ($roleConnecte>= $roleRequis) {
         include 'PHP/VIEW/GENERAL/Head.php';
         include 'PHP/VIEW/GENERAL/Header.php';
@@ -34,6 +37,7 @@ function AfficherPage($page)
         include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
         include 'PHP/VIEW/GENERAL/Footer.php';
     } else {
+        /* sinon on remet a l'espace connexion */ 
         $titre = "Authorisation insuffisante";
         include 'PHP/VIEW/GENERAL/Head.php';
         include 'PHP/VIEW/GENERAL/Header.php';

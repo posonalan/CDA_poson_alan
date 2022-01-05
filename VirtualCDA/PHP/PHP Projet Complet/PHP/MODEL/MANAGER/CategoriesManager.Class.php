@@ -15,6 +15,7 @@ class CategoriesManager
 	{
  		$db=DbConnect::getDb();
 		$q=$db->prepare("UPDATE Categories SET LibelleCategorie=:LibelleCategorie WHERE idCategorie=:idCategorie");
+		/* pdo:: forcer a un int */ 
 		$q->bindValue(":idCategorie", $obj->getIdCategorie(), PDO::PARAM_INT);
 		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie(),PDO::PARAM_STR);
 		$q->execute();
