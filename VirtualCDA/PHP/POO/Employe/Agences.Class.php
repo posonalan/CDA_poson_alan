@@ -7,6 +7,8 @@ class Agence {
     private $_Adresse; 
     private $_CodePostal;
     private $_Ville;
+    private $_Restauration;
+
 
     public function getNom()
     {
@@ -48,7 +50,15 @@ class Agence {
         $this->_Ville = $Ville;
     }
 
+    public function getRestauration()
+    {
+        return $this->_restauration;
+    }
 
+    public function setRestauration($restauration)
+    {
+        $this->_restauration = $restauration;
+    }
 
 
 
@@ -77,43 +87,10 @@ public function hydrate($data)
 
 
 
-    public function getNom()
-    {
-        return $this->_Nom;
-    }
+public function toString()
+{
+    return "Nom :" . $this->getNom() . "\nAdresse :" . $this->getAdresse()."\nCode postal : " . $this->getCodePostal()."\nVille : " . $this->getVille(). "\nRestauration :" . $this->getRestauration();
 
-    public function setNom($Nom)
-    {
-        $this->_Nom = $Nom;
-    }
-
-    public function getAdresse()
-    {
-        return $this->_Adresse;
-    }
-
-    public function setAdresse($Adresse)
-    {
-        $this->_Adresse = $Adresse;
-    }
-
-    public function getCodePostal()
-    {
-        return $this->_CodePostal;
-    }
-
-    public function setCodePostal($CodePostal)
-    {
-        $this->_CodePostal = $CodePostal;
-    }
-
-    public function getVille()
-    {
-        return $this->_Ville;
-    }
-
-    public function setVille($Ville)
-    {
-        $this->_Ville = $Ville;
-    }
+}
+    
 }

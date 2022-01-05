@@ -9,7 +9,9 @@ class Employe {
     private $_Fonction; /* Poste */ 
     private $_Salaire; /* en k euros brut annuel */
     private $_Service; /* exemple compta, commercial ... */ 
-
+    private $_agence;
+    private $_enfants = [];
+   
 
     /* accesseur */ 
 
@@ -73,7 +75,26 @@ class Employe {
         $this->_Service = $Service;
     }
 
+    public function getAgence()
+    {
+        return $this->_agence;
+    }
 
+    public function setAgence(Agence $agence)
+    {
+        $this->_agence = $agence;
+    }
+
+    public function getEnfants()
+    {
+        return $this->_enfants;
+    }
+
+    public function setEnfants(array $enfants)
+    {
+        $this->_enfants = $enfants;
+    }
+   
 /* Construct */ 
 
 
@@ -149,7 +170,12 @@ echo "Ordre de transfert de ".$this->PrimeGeneral()."pour la salarié ".$this->g
 public function toString(){
 
     $aff = "\n\n*** Les Salariés ***\n";
-        $aff .= "Nom :" . $this->getNom() . "\nPrenom :" . $this->getPrenom() . "\nDateEmbauche :" . $this->getDateEmboche()->format('Y-m-d') . "\nPosteEntreprise :" . $this->getFonction() . "\nSalaire annuel :" . $this->getSalaire() . "K€\nService :" . $this->getService() . "\n";
+        $aff .= "Nom :" . $this->getNom() . "\nPrenom :" . $this->getPrenom() . "\nDateEmbauche :" . $this->getDateEmboche()->format('Y-m-d') . "\nPosteEntreprise :" . $this->getFonction() . "\nSalaire annuel :" . $this->getSalaire() . "K€\nService :" . $this->getService() .
+         "*** Agences : ***". $this->getAgence()->toString()."*** Enfants : ***".foreach($e as $key => $value){
+
+            echo $value->toString(); 
+            echo 'prime : '.$value->primeGeneral(); 
+        } $this->getEnfants()->toString()."\n";
         return $aff;
 }
 
@@ -199,9 +225,32 @@ public static function comparaisonService($objA, $objB){
  
  public function salaireEmploye()
  {
- return $salaireTotal = $this->getSalaire() + $this->PrimeGeneral() ; 
 
-
+ return $this->getSalaire() * 1000 + $this->primeGeneral() ;;
  }
+
+ public function ChequeVacances()
+    {
+
+        return ($this->calculeAnciennete() >= 1); 
+    }
+
+
+    public function DroitAuxChequeNoel()
+    {
+        /* initialisation du tableau des cheque a 0 cheque */ 
+        $chequeNoel = ["0" => 0, "20" => 0, "30" => 0, "50" => 0];
+        /* on selectionne chaque enfant */ 
+        foreach ($this->getEnfants() as $enfant)
+        { /* des quils a le droit a un cheque on fait +1 */ 
+            $chequeNoel[$enfant->montantChequeNoel()] += 1; 
+        }
+        /* si un enfant en a pas le droit on met un 0 */ 
+        $chequeNoel["0"] = 0;    
+        /* on retourne le nombre de cheque noel */   
+                return $chequeNoel;
+    }
+
+
 
 }
