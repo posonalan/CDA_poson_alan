@@ -119,32 +119,4 @@ class Utilisateurs
 		return "IdUtilisateur : ".$this->getIdUtilisateur()."Nom : ".$this->getNom()."Prenom : ".$this->getPrenom()."MotDePasse : ".$this->getMotDePasse()."AdresseMail : ".$this->getAdresseMail()."Role : ".$this->getRole()."Pseudo : ".$this->getPseudo()."\n";
 	}
 
-
-	
-	/* Renvoit Vrai si lobjet en paramètre est égal 
-	* à l'objet appelant
-	*
-	* @param [type] $obj
-	* @return bool
-	*/
-	public function equalsTo($obj)
-	{
-		return;
-	}
-
-
-	/**
-	* Compare l'objet à un autre
-	* Renvoi 1 si le 1er est >
-	*        0 si ils sont égaux
-	*      - 1 si le 1er est <
-	*
-	* @param [type] $obj1
-	* @param [type] $obj2
-	* @return Integer
-	*/
-	public function compareTo($obj)
-	{
-		return;
-	}
 }

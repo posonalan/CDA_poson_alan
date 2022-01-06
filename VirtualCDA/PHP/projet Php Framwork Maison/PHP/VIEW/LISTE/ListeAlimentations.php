@@ -17,9 +17,9 @@ $liste = AlimentationsManager::getList();
 
             echo '<div class="crudColonne">' . $elt->getLibelleAliment() . '</div>
                 <div></div>
-                <a class=" crudBtn crudBtnEditer" href="index.php?page=form>Alimentations&mode=Editer&id=' . $elt->getIdAlimentations() . '">Afficher </a>
-                <a class=" crudBtn crudBtnModifier" href="index.php?page=formAlimentations&mode=Modifier&id=' . $elt->getIdAlimentations() . '">Modifier</a>
-                <a class=" crudBtn crudBtnSupprimer" href="index.php?page=formAlimentations&mode=Supprimer&id=' . $elt->getIdAlimentations() . '">Supprimer</a>
+                <a class=" crudBtn crudBtnEditer" href="index.php?page=form>Alimentations&mode=Editer&id=' . $elt->getIdAliment() . '">Afficher </a>
+                <a class=" crudBtn crudBtnModifier" href="index.php?page=formAlimentations&mode=Modifier&id=' . $elt->getIdAliment() . '">Modifier</a>
+                <a class=" crudBtn crudBtnSupprimer" href="index.php?page=formAlimentations&mode=Supprimer&id=' . $elt->getIdAliment() . '">Supprimer</a>
              ';
         } ?>
 

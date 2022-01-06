@@ -12,7 +12,6 @@ $liste = CategoriesManager::getList();
         <div></div>
         <div></div>
         <div></div>
-
         <?php foreach ($liste as $elt) {
 
             echo '<div class="crudColonne">' . $elt->getLibelleCategorie() . '</div>
