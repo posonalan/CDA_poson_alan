@@ -4,23 +4,25 @@ class AnimauxManager
     public static function add(Animaux $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO Animaux (libelleAnimal,prix,dateDeNaissance,idAlimentation) VALUES (:libelleAnimal,:prix,:dateDeNaissance,:idAliment)");
+        $q = $db->prepare("INSERT INTO Animaux (libelleAnimal,prix,dateDeNaissance,idAliment, idMilieuVie) VALUES (:libelleAnimal,:prix,:dateDeNaissance,:idAliment, :idMilieuVie)");
         $q->bindValue(":libelleAnimal", $obj->getLibelleAnimal());
         $q->bindValue(":prix", $obj->getPrix());
         $q->bindValue(":dateDeNaissance", $obj->getDateDeNaissance());
         $q->bindValue(":idAliment", $obj->getIdAliment());
+        $q->bindValue(":idMilieuVie", $obj->getIdMilieuVie());
         $q->execute();
     }
 
     public static function update(Animaux $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE Animaux SET libelleAnimal=:libelleAnimal, prix=:prix, dateDeNaissance=:dateDeNaissance, idAliment=:idAliment WHERE idAnimal=:idAnimal");
+        $q = $db->prepare("UPDATE Animaux SET libelleAnimal=:libelleAnimal, prix=:prix, dateDeNaissance=:dateDeNaissance, idAliment=:idAliment , idMilieuVie=:idMilieuVie WHERE idAnimal=:idAnimal");
         $q->bindValue(":libelleAnimal", $obj->getLibelleAnimal());
         $q->bindValue(":prix", $obj->getPrix());
         $q->bindValue(":dateDeNaissance", $obj->getDateDeNaissance());
         $q->bindValue(":idAliment", $obj->getIdAliment());
         $q->bindValue(":idAnimal", $obj->getIdAnimal());
+         $q->bindValue(":idMilieuVie", $obj->getIdMilieuVie());
         $q->execute();
     }
 
@@ -76,4 +78,26 @@ class AnimauxManager
         }
         return $liste;  // tableau contenant les objets Animaux
     }
+
+    public static function getListByMilieuVie($idMilieuVie)
+    {
+        $idMilieuVie=(int) $idMilieuVie;
+        $db = DbConnect::getDb();
+        $liste = [];
+        $q = $db->query("SELECT * FROM Animaux where idMilieuVie=$idMilieuVie");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+        {
+            if ($donnees != false)
+            {
+                $liste[] = new Animaux($donnees);
+            }
+        }
+        return $liste;  // tableau contenant les objets Animaux
+    }
+
+
+
+
+
+
 }

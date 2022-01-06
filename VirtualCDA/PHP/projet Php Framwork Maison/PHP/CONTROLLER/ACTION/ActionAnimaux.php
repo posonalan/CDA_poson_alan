@@ -8,7 +8,8 @@ var_dump($p);
 switch ($_GET['mode']) {
     case "Ajouter": {
             AnimauxManager::add($p);
-            break;
+           
+            break; 
         }
     case "Modifier": {
 

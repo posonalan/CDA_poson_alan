@@ -8,8 +8,11 @@ body, header,div, nav, main, section{
 	justify-content: center;
 }	
 body{
+
     background-image: url("../IMG/fond.jpg");
+	
 }
+
 
 img {
 	width: 100%;

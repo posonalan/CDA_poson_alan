@@ -1,3 +1,4 @@
+
 <div class="demiPage">
-<h2>Choisissez entre Animaux et Alimentations</h2>
+<h2>Choisissez </h2>
 </div>

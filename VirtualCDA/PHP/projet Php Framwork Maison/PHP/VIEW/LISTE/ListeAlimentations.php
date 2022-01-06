@@ -8,20 +8,22 @@ $liste = AlimentationsManager::getList();
     <div id="crudTableau">
 
         <div class="crudColonne">Libellé</div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
+       <div class="crudColonne">Identifiant aliment</div>
+       <div></div>
+       <div></div>
+       <div></div>
+      
+       
         <?php foreach ($liste as $elt) {
 
             echo '<div class="crudColonne">' . $elt->getLibelleAliment() . '</div>
-                <div></div>
-                <a class=" crudBtn crudBtnEditer" href="index.php?page=form>Alimentations&mode=Editer&id=' . $elt->getIdAliment() . '">Afficher </a>
-                <a class=" crudBtn crudBtnModifier" href="index.php?page=formAlimentations&mode=Modifier&id=' . $elt->getIdAliment() . '">Modifier</a>
-                <a class=" crudBtn crudBtnSupprimer" href="index.php?page=formAlimentations&mode=Supprimer&id=' . $elt->getIdAliment() . '">Supprimer</a>
-             ';
+            <div class="crudColonne">' . $elt->getIdAliment() . '</div>
+             <a class=" crudBtn crudBtnEditer" href="index.php?page=formAlimentations&mode=Editer&id=' . $elt->getIdAliment() . '">Afficher </a>
+    <a class=" crudBtn crudBtnModifier" href="index.php?page=formAlimentations&mode=Modifier&id=' . $elt->getIdAliment() . '">Modifier</a>
+    <a class=" crudBtn crudBtnSupprimer" href="index.php?page=formAlimentations&mode=Supprimer&id=' . $elt->getIdAliment() . '">Supprimer</a>
+  ';
         } ?>
+
 
     </div>
 

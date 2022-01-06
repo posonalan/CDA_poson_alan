@@ -15,21 +15,21 @@ switch ($mode) {
 }
 /* on va chercher l'aliment */ 
 echo '  <h5>'.$mode.' un aliment </h5></div>
-        <form id="formulaire" method="post" action="index.php?page=actionCategorie&mode='.$mode.'">';
+        <form id="formulaire" method="post" action="index.php?page=actionAlimentations&mode='.$mode.'">';
 /* on va chercher l'id dans l'http */ 
 if (isset($_GET['id'])) {
     /* recuperation de l'id */ 
-    $categ = CategoriesManager::findById($_GET['id']);
+    $aliment = AlimentationsManager::findById($_GET['id']);
 }
 else{
     /* sinon on crée un nouvel objet */ 
-    $categ = new Categories();
+    $aliment = new Alimentations();
 }
 /* on cache l'id quand meme , faut garder son jardin secret */ 
-echo '  <input type="hidden" name="idCategorie" value="' . $categ->getIdCategorie() . '">';
+echo '  <input type="hidden" name="idAliment" value="' . $aliment->getIdAliment() . '">';
 echo '  <label> Libelle :</label>
-        <input type="text" name="libelleCategorie" value="' . $categ->getLibelleCategorie() . '"' .$disabled.'>';
+        <input type="text" name="libelleAliment" value="' . $aliment->getLibelleAliment() . '"' .$disabled.'>';
 echo '<input type="submit" value="'.$mode.'" class=" crudBtn crudBtn'.$mode.'"/>';
 
-echo '<a href="index.php?page=listeCategorie" class=" crudBtn crudBtnRetour">Annuler</a>
+echo '<a href="index.php?page=listeAlimentations" class=" crudBtn crudBtnRetour">Annuler</a>
 </form>';
