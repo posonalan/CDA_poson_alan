@@ -8,7 +8,7 @@ body, header,div, nav, main, section{
 	justify-content: center;
 }	
 body{
-    background-image: url("../IMG/fondAni.jpg");
+     background-image: url("../IMG/fondAni.jpg"); 
 	background-size: cover;
 }
 
@@ -167,3 +167,33 @@ form{
 	border:1px solid green;
 }
 
+footer {
+	padding-top: 1em; 
+	text-align : center;
+	color: white; 
+	
+}
+
+
+/*  permet de faire une transition entre plusieurs couleur ou image ou son ou ... */ 
+
+ /* body {
+	-webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+	animation: background 5s cubic-bezier(1,0,0,1) infinite;  
+  }
+  
+  
+  @-webkit-keyframes background {
+	0% { background-color: rgb(108, 150, 106); }
+	50% { background-color: rgb(130, 168, 131); }  
+	75% { background-color: rgb(108, 150, 106); }
+	100% { background-color: rgb(130, 168, 131); } 
+
+  }
+  
+  @keyframes background {
+	0% { background-color: rgb(108, 150, 106); }
+	50% { background-color: rgb(130, 168, 131); }  
+	75% { background-color: rgb(108, 150, 106); }
+	100% { background-color: rgb(130, 168, 131); } 
+  }  */
