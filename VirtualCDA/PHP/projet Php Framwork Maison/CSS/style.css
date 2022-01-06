@@ -9,8 +9,8 @@ body, header,div, nav, main, section{
 }	
 body{
     background-image: url("../IMG/fond.jpg");
-}
 
+	/* test push */ 
 img {
 	width: 100%;
 }
