@@ -36,6 +36,8 @@ $routes=[
     "formAlimentations" => ["PHP/VIEW/FORM/", "FormAlimentations", "Gestion des Aliments", 0, false],
     "actionAlimentations" => ["PHP/CONTROLLER/ACTION/", "ActionAlimentations", "Mise à jour du Animaux", 0, false],
 
+
+	
 ];
 
 if(isset($_GET["page"]))
