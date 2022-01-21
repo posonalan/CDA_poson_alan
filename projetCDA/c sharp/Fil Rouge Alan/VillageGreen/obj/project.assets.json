@@ -2060,23 +2060,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lilyy\\.nuget\\packages\\": {},
-    "D:\\visual studio partage_outil_sdk\\NuGetPackages": {}
+    "C:\\Users\\afpa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\VillageGreen.csproj",
+      "projectUniqueName": "C:\\Users\\afpa\\Documents\\CDA-Alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\VillageGreen.csproj",
       "projectName": "VillageGreen",
-      "projectPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\VillageGreen.csproj",
-      "packagesPath": "C:\\Users\\lilyy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\obj\\",
+      "projectPath": "C:\\Users\\afpa\\Documents\\CDA-Alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\VillageGreen.csproj",
+      "packagesPath": "C:\\Users\\afpa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\afpa\\Documents\\CDA-Alan\\projetCDA\\c sharp\\Fil Rouge Alan\\VillageGreen\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\visual studio partage_outil_sdk\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lilyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\afpa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2152,7 +2152,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
