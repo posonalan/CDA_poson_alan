@@ -1,0 +1,143 @@
+﻿<Window x:Class="CantineMartine.Windows.CrudPlat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CantineMartine.Windows"
+        mc:Ignorable="d"
+        Title="CrudPlat" Height="450" Width="800" Icon="/Images/MartineLogo.png" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/fondcantine.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="LabelAction" Content="&lt;Element modifier> un plat" HorizontalAlignment="Center" VerticalAlignment="Center"
+               FontSize="25" Foreground="LightCoral"/>
+            <!--Fond blanc transparent car je n'arrive pas a mettre le fond de la grid du dessous en transparent sans rendre le contenu transparent également.-->
+            <Border Grid.Row="2" BorderBrush="Black" BorderThickness="1">
+                <Grid Background="White" Opacity="0.4"/>
+            </Border>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.07*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.03*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Content="Libelle du plat :" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <TextBox x:Name="TbLibPlat" Grid.Column="3" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.07*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.03*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Content="Catégorie du plat :" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Grid Grid.Column="3" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox x:Name="CbCategPlat"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="DgProduit" Grid.Column="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id produit" Binding="{Binding IdProduit}" Visibility="Hidden"/>
+                            <DataGridTextColumn Header="LibelleProduit" Binding="{Binding LibelleProduit}" Width="1*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Qte" Binding="{Binding QuantiteProduit}" Width="0.2*" IsReadOnly="True" Visibility="Hidden"/>
+                            <DataGridTextColumn Header="IdCategProduit" Binding="{Binding IdCategorieProduit}" Visibility="Hidden"/>
+                            <DataGridTextColumn Header="Libelle Categorie produit" Binding="{Binding LibelleCategorieProduit}" Width="1*" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="DgProduitAddPlat" Grid.Column="3" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id produit" Binding="{Binding IdProduit}" Visibility="Hidden"/>
+                            <DataGridTextColumn Header="LibelleProduit" Binding="{Binding LibelleProduit}" Width="1*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Qte" Binding="{Binding QuantiteProduit}" Width="0.2*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="IdCategProduit" Binding="{Binding IdCategorieProduit}" Visibility="Hidden"/>
+                            <DataGridTextColumn Header="Libelle Categorie produit" Binding="{Binding LibelleCategorieProduit}" Width="1*" Visibility="Hidden" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Column="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Button Style="{DynamicResource BoutonRond}" Grid.Row="1" Content="+" Click="AjouterQuantitéProduit"/>
+                        <Button Style="{DynamicResource BoutonRond}"  Grid.Row="3" Content="-" Click="RetirerQuantitéProduit"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" Content="Ajouter le produit au plat" Background="White" Click="AddProduitAuPlat"/>
+                    <Button Grid.Column="3" Content="Supprimer le produit du plat" Background="White" Click="RemoveProduitDuPlat"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnAction" Grid.Column="1" Style="{DynamicResource BoutonRond}" Content="&lt;Element modifier>" Click="ActionArticle"/>
+                <Button Grid.Column="3" Style="{DynamicResource BoutonRond}" Content="Retour" Click="CloseWindow"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

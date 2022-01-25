@@ -1,0 +1,107 @@
+﻿<Window x:Class="CantineMartine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CantineMartine"
+        mc:Ignorable="d"
+        
+        Title="Cantine Martine Poix" Height="500" Width="850" Icon="/Images/pois.png" >
+   
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/fondcantine.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Images/Martine1.png" Grid.Row="0" Grid.Column="0"/>
+
+
+
+            <Image Source="/Images/Martine2.png" Grid.Row="0" Grid.Column="2"/>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/cantineLogo.png" Grid.Row="1" Grid.Column="2" />
+                <TextBlock Text=" Martine Poix" Grid.Row="2" Grid.Column="1" 
+                        HorizontalAlignment="Center" FontSize="25" Foreground="LightCoral" />
+
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="GestionDesProduits" Content="Gestion des Produits" Grid.Column="1" Style="{DynamicResource BoutonRond}" Click="GestionDesProduits_Click"/>
+            <Button x:Name="GestionDesPlats" Content="Gestion des Plats" Grid.Column="3" Style="{DynamicResource BoutonRond}" Click="AffGestionDesPlats"/>
+            <Button x:Name="GestionDesMenus" Content="Gestion des Menus" Grid.Column="5" Style="{DynamicResource BoutonRond}" Click="AffGestionDesMenus" />
+            <Label x:Name="labelRetour" />
+        </Grid>
+
+
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="GestionDesCategoriesDeProduit" Content="Gestion des categories produits" Grid.Column="1" Style="{DynamicResource BoutonRond}" Click="GestionDesCategoriesDeProduit_Click" />
+            <Button x:Name="GestionDesCategoriesDePlat" Content="Gestion des categories de Plat" Grid.Column="3" Style="{DynamicResource BoutonRond}" Click="GestionDesCategoriesDePlat_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
+
