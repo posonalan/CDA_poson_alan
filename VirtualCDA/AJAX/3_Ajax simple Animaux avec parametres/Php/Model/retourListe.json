@@ -1,0 +1,27 @@
+[
+    {
+        "idAnimal": "1",
+        "libelleAnimal": "lion",
+        "dateNaissance": "2000-12-05"
+    },
+    {
+        "idAnimal": "2",
+        "libelleAnimal": "vache",
+        "dateNaissance": "2000-12-05"
+    },
+    {
+        "idAnimal": "3",
+        "libelleAnimal": "cochon",
+        "dateNaissance": "2000-12-05"
+    },
+    {
+        "idAnimal": "4",
+        "libelleAnimal": "biche",
+        "dateNaissance": "2000-12-05"
+    },
+    {
+        "idAnimal": "5",
+        "libelleAnimal": "autruche",
+        "dateNaissance": "2000-12-05"
+    }
+]
