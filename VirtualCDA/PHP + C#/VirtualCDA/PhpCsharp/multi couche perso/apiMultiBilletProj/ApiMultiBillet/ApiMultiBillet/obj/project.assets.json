@@ -1920,11 +1920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\03 - Multicouche\\1 - VillesMulticouche\\VillesMultiCouche\\VillesMultiCouche.csproj",
-      "projectName": "VillesMultiCouche",
-      "projectPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\03 - Multicouche\\1 - VillesMulticouche\\VillesMultiCouche\\VillesMultiCouche.csproj",
+      "projectUniqueName": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
+      "projectName": "ApiMultiBillet",
+      "projectPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
       "packagesPath": "C:\\Users\\afpa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\03 - Multicouche\\1 - VillesMulticouche\\VillesMultiCouche\\obj\\",
+      "outputPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
