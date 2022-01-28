@@ -44,11 +44,17 @@ namespace ApiMultiBillet
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "toto",
+                options.AddPolicy(name: "ADMIN",
                                     builder =>
                                     {
                                         builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
                                     });
+                options.AddPolicy(name: "EXT",
+                                   builder =>
+                                   {
+                                       builder.AllowAnyOrigin();
+                                   });
+
             });
         }
 
@@ -66,7 +72,9 @@ namespace ApiMultiBillet
 
             app.UseRouting();
 
-            app.UseCors("toto");
+            app.UseCors("ADMIN");
+
+            app.UseCors("EXT");
 
             app.UseAuthorization();
 

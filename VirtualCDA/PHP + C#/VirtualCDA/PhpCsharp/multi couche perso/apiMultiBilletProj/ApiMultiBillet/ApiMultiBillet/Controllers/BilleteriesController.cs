@@ -28,7 +28,8 @@ namespace ApiMultiBillet.Controllers
         }
 
         //GET api/Billeteries
-        [EnableCors("toto")]
+
+
         [HttpGet]
         public ActionResult<IEnumerable<BilleterieDTO>> GetAllBilleterie()
         {
@@ -37,7 +38,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //GET api/Billeteries/{i}
-        [EnableCors("toto")]
+
         [HttpGet("{id}", Name = "GetBilleteriesById")]
         public ActionResult<BilleterieDTO> GetBilleterieById(int id)
         {
@@ -59,7 +60,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //POST api/Billeteries/{id}
-        [EnableCors("toto")]
+
         [HttpPut("{id}")]
         public ActionResult UpdateBilleterie(int id, BilleterieDTO obj)
         {
@@ -74,7 +75,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //DELETE api/Billeteries/{id}
-        [EnableCors("toto")]
+
         [HttpDelete("{id}")]
         public ActionResult DeleteBilleterie(int id)
         {

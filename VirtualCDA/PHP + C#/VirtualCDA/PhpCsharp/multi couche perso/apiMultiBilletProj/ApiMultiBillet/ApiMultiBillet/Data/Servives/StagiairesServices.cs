@@ -38,7 +38,7 @@ namespace ApiMultiBillet.Data.Servives
 
         public IEnumerable<Stagiaire> GetAllStagiaires()
         {
-            return _context.Stagiaires.Include("ListeStagiaire").ToList();
+            return _context.Stagiaires.Include("ListeBillet").ToList();
         }
 
         public Stagiaire GetStagiaireById(int id)

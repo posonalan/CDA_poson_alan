@@ -12,6 +12,6 @@ namespace ApiMultiBillet.Data.Models
         public string Prenom { get; set; }
         public int IdBillet { get; set; }
 
-        public virtual Billeterie ListeStagiaire { get; set; }
+        public virtual Billeterie ListeBillet { get; set; }
     }
 }

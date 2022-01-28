@@ -64,7 +64,7 @@ namespace ApiMultiBillet.Data
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.HasOne(d => d.ListeStagiaire)
+                entity.HasOne(d => d.ListeBillet)
                     .WithOne(p => p.Stagiaire)
                     .HasForeignKey<Stagiaire>(d => d.IdStagiaire)
                     .OnDelete(DeleteBehavior.ClientSetNull)

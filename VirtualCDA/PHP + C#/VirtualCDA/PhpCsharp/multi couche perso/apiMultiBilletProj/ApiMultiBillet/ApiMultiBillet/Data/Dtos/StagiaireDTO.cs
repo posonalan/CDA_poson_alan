@@ -12,6 +12,6 @@ namespace ApiMultiBillet.Data.Dtos
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public int IdBillet { get; set; }
-        public virtual Billeterie ListeStagiaire { get; set; }
+        public virtual BilleterieDTO ListeBillet { get; set; }
     }
 }

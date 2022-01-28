@@ -25,7 +25,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //GET api/Stagiaires
-        [EnableCors("toto")]
+
         [HttpGet]
         public ActionResult<IEnumerable<StagiaireDTO>> GetAllStagiaires()
         {
@@ -34,7 +34,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //GET api/Stagiaires/{i}
-        [EnableCors("toto")]
+
         [HttpGet("{id}", Name = "GetStagiaireById")]
         public ActionResult<StagiaireDTO> GetStagiaireById(int id)
         {
@@ -47,7 +47,7 @@ namespace ApiMultiBillet.Controllers
         }
 
         //POST api/Stagiaires
-        [EnableCors("toto")]
+
         [HttpPost]
         public ActionResult<StagiaireDTO> CreateStagiaire(StagiaireDTO obj)
         {
@@ -57,7 +57,7 @@ namespace ApiMultiBillet.Controllers
             return CreatedAtRoute(nameof(GetStagiaireById), new { Id = obj.IdStagiaire }, obj);
         }
 
-        [EnableCors("toto")]
+
         //POST api/Stagiaires/{id}
         [HttpPut("{id}")]
         public ActionResult UpdateStagiaire(int id, StagiaireDTO obj)
@@ -75,7 +75,7 @@ namespace ApiMultiBillet.Controllers
 
 
         //DELETE api/Stagiaires/{id}
-        [EnableCors("toto")]
+
         [HttpDelete("{id}")]
         public ActionResult DeleteStagiaire(int id)
         {
