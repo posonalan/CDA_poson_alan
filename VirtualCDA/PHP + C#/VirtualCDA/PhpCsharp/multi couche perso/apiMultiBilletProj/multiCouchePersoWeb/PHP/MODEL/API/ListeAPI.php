@@ -1,7 +1,7 @@
 <?php
 
-$id = $_POST['idMilieuVie'];
-echo json_encode( AnimauxManager::getListByMilieuVie($id,true));
+$id = $_POST['idBillet'];
+echo json_encode( StagiaireManager::getListByBillet($id,true));
 
 
 ?>

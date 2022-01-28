@@ -33,6 +33,13 @@ namespace ApiMultiBillet.Controllers
             return Ok(_mapper.Map<IEnumerable<StagiaireDTO>>(listeStagiaires));
         }
 
+        [HttpGet("billet/{id}")]
+        public ActionResult<IEnumerable<StagiaireDTO>> GetAllStagiairesByIdBillet(int id)
+        {
+            IEnumerable<Stagiaire> listeStagiaires = _service.GetAllStagiairesByIdBillet(id);
+            return Ok(_mapper.Map<IEnumerable<StagiaireDTO>>(listeStagiaires));
+        }
+
         //GET api/Stagiaires/{i}
 
         [HttpGet("{id}", Name = "GetStagiaireById")]

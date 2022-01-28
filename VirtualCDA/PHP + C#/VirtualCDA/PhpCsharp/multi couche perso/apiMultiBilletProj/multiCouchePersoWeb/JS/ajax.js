@@ -1,6 +1,6 @@
 
 const requ = new XMLHttpRequest();
-var listeStagiaire = document.getElementsByClassName("listeStagiaire")[0];
+var listeStage = document.getElementsByClassName("listeStage")[0];
 var select = document.getElementsByTagName("select")[0];
 
 select.addEventListener("change", changeBillet);
@@ -42,9 +42,9 @@ select.addEventListener("change", changeBillet);
 
 /***************************************************************************** */
 
-/**** GET */
-requ.open('GET', 'https://localhost:44334/api/Stagiaires', true);
-requ.send();
+// /**** GET */
+// requ.open('GET', 'https://localhost:44334/api/Stagiaires', true);
+// requ.send();
 
 
 /**** GET by ID  */
@@ -110,12 +110,14 @@ function changeBillet(e) {
     if (select.value != "defaut") // si c'est pas le choix par defaut
     {
         // je lance une requete Ajax
-        requ.open('POST', 'index.php?page=listeAPI', true);
-        requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
+        // requ.open('POST', 'index.php?page=listeAPI', true);
+        // requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         var id = select.value; // id de la région choisie
-        var args = "idBillet=" + id;
-        requ.send(args);
+        /* cree une fonction pour faire appel ici */ 
+        requ.open('GET', 'https://localhost:44334/api/Stagiaires/billet/'+id, true);
+      
+       
+        requ.send();
     }
 
 }

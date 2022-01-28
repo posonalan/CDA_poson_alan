@@ -41,6 +41,11 @@ namespace ApiMultiBillet.Data.Servives
             return _context.Stagiaires.Include("ListeBillet").ToList();
         }
 
+        public IEnumerable<Stagiaire> GetAllStagiairesByIdBillet(int id)
+        {
+            return _context.Stagiaires.Include("ListeBillet").ToList().Where(obj => obj.IdBillet == id);
+        }
+
         public Stagiaire GetStagiaireById(int id)
         {
             return _context.Stagiaires.FirstOrDefault(obj => obj.IdStagiaire == id);

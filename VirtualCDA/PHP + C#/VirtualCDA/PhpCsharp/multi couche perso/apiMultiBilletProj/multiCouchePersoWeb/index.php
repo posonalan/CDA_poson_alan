@@ -33,7 +33,8 @@ $routes=[
 	"ActionDeconnexion"=>["PHP/CONTROLLER/ACTION/","ActionDeconnexion","Action de deconnexion",0,false],
 
 	"ListeMailAPI"=>["PHP/MODEL/API/","ListeMailAPI", "ListeMailAPI",0,true],
-
+	"listeAPI"=>["PHP/MODEL/API/","ListeAPI", "ListeAPI",0,true],
+	
 	"ListeBilleterie"=>["PHP/VIEW/LISTE/","ListeBilleterie","Liste Billeterie",0,false],
 	"FormBilleterie"=>["PHP/VIEW/FORM/","FormBilleterie","Formulaire Billeterie",0,false],
 	"ActionBilleterie"=>["PHP/CONTROLLER/ACTION/","ActionBilleterie","Action Billeterie",0,false],
