@@ -27,9 +27,9 @@ else{
 }
 /* on cache l'id quand meme , faut garder son jardin secret */ 
 echo '  <input type="hidden" name="idMilieuVie" value="' . $milieu->getIdMilieuVie() . '">';
-echo '  <label> Libelle :</label>
+echo '  <label> Type de milieu :</label>
         <input type="text" name="libelleMilieuVie" value="' . $milieu->getLibelleMilieuVie() . '"' .$disabled.'>';
-echo '  <label> situation geographique  :</label>
+echo '  <label> Situation geographique  :</label>
         <input type="text" name="situationGeographique" value="' . $milieu->getSituationGeographique() . '"' .$disabled.'>';
         echo '  <label> Climat :</label>
         <input type="text" name="climat" value="' . $milieu->getClimat() . '"' .$disabled.'>';

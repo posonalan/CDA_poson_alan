@@ -221,6 +221,7 @@ class DAO
 			{
 				var_dump($cols . $t . $condi . $ordrBy . $limit);
 			}
+			$liste=[];
 			while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) { // on récupère les enregistrements de la BDD
 				if ($donnees != false) {
 					if ($api) { // On vérifie si api est a true, on renvoie un string sinon des objets liés a à la table donnée en paramètres.
