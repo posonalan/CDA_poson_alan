@@ -1,0 +1,107 @@
+/****  GENERAL ****/
+
+html,
+body {
+    margin: 1;
+    padding: 0;
+
+
+}
+
+div,
+a,
+header,
+footer,
+nav,
+article,
+section,
+main,
+body {
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+img,
+video {
+    width: 100%;
+}
+
+main {
+    background-color: blue;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.espaceH {
+   
+    height: 2vh;
+}
+
+.orangeGris {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.orange {
+    height: 10vh;
+    background-color: rgb(233, 104, 19);
+    flex: 1;
+}
+
+.gris {
+    height: 10vh;
+    background-color: grey;
+    flex: 1;
+}
+
+.Jaune {
+
+    height: 10vh;
+    background-color: rgb(248, 248, 15);
+    margin-left: 1em;
+    margin-right: 1em;
+    
+}
+
+.fullOrange{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.JauneJaune {
+    display: flex;
+    flex-direction: row;
+ margin-left: 1em;
+    margin-right: 1em;
+}
+
+.Jaune2{
+    height: 10vh;
+    background-color: yellow;
+    flex: 1;
+}
+
+.espaceV {
+    flex: 0.1;
+}
+
+.vert {
+    margin: 1em;
+    height: 20vh;
+    background-color: green;
+}

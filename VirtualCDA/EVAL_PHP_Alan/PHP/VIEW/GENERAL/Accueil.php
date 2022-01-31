@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <a href="index.php?page=Accueil"><button><i class="fas fa-sign-out-alt fa-rotate-180"></i></button></a>
+            <a href="index.php?page=ListeLignesPaniers"><button><i class="fas fa-sign-out-alt fa-rotate-180"></i></button></a>
         </div>
     </div>
 

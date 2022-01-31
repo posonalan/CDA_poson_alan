@@ -1,0 +1,15 @@
+.listeJeuxFormat{
+    display: flex;
+    flex-direction: row;
+}
+
+.listeJeux {
+    display: flex;
+    flex : 1 ; 
+    flex-direction: column;
+}
+
+.blockUJ{
+    display: flex;
+    flex-direction: column;
+}
