@@ -1,12 +1,10 @@
 <?php
 function ChargerClasse($classe)
 {
-	if (file_exists("PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php"))
-	{
+	if (file_exists("PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php")) {
 		require "PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php";
 	}
-	if (file_exists("PHP/MODEL/MANAGER/" . $classe . ".Class.php"))
-	{
+	if (file_exists("PHP/MODEL/MANAGER/" . $classe . ".Class.php")) {
 		require "PHP/MODEL/MANAGER/" . $classe . ".Class.php";
 	}
 }
@@ -18,13 +16,10 @@ function uri()
 	if (substr($uri, strlen($uri) - 1) == "/") // se termine par /
 	{
 		$uri .= "index.php?";
-	}
-	else if (in_array("?", str_split($uri))) // si l'uri contient deja un ?
+	} else if (in_array("?", str_split($uri))) // si l'uri contient deja un ?
 	{
 		$uri .= "&";
-	}
-	else
-	{
+	} else {
 		$uri .= "?";
 	}
 	return $uri;
@@ -32,7 +27,7 @@ function uri()
 
 function crypte($mot)
 {
-	return md5(md5($mot));
+	return md5(md5($mot) . strlen($mot));
 }
 
 function texte($codeTexte)
@@ -42,16 +37,20 @@ function texte($codeTexte)
 
 function afficherPage($page)
 {
-	$chemin=$page[0];
-	$nom=$page[1];
-	$titre=$page[2];
+	$chemin = $page[0];
+	$nom = $page[1];
+	$titre = $page[2];
 	$roleRequis = $page[3];;
 	$api = $page[4];
-	$roleConnecte = isset($_SESSION["utilisateur"])?$_SESSION["utilisateur"]->getRole():0;
-	if  ($roleConnecte>= $roleRequis) {
+	$roleConnecte = isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"]->getRole() : 0;
+	if ($roleConnecte >= $roleRequis) {
 		include 'PHP/VIEW/GENERAL/Head.php';
 		include 'PHP/VIEW/GENERAL/Header.php';
-		include 'PHP/VIEW/GENERAL/Nav.php';
+/* si nous sommes connecter et que la page n'est pas action deconnection */ 
+if (isset($_SESSION["utilisateur"]) && stripos($chemin,"PHP/CONTROLLER/ACTION/") !== 0)
+{
+	include 'PHP/VIEW/GENERAL/Nav.php';
+}
 		include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
 		include 'PHP/VIEW/GENERAL/Footer.php';
 	} else {
@@ -59,7 +58,6 @@ function afficherPage($page)
 		include 'PHP/VIEW/GENERAL/Head.php';
 		include 'PHP/VIEW/GENERAL/Header.php';
 		include 'PHP/VIEW/FORM/FormConnection.php';
-		include 'PHP/VIEW/GENERAL/Nav.php';
 	}
 }
 
