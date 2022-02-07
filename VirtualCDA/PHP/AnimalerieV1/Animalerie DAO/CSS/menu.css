@@ -1,3 +1,68 @@
+/* 
+
+ ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    background-color: rgb(107, 23, 23);
+}
+
+li {
+    float: left; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: black;
+    position: absolute;
+    width: 12%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: black;
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+li a:hover {
+    background-color: #111;
+} 
+
+li a:hover {
+    background-color: #111;
+}   */
 
 /**************** Nav *****************/
 .menuHamburger {
