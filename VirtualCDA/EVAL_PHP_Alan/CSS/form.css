@@ -62,6 +62,9 @@ form {
 .col-span-form {
     grid-column: 1/5 ;
 }
+.grid2{
+ grid-column: 2 ;   
+}
 
 .gridAideMDP {
     display: grid;

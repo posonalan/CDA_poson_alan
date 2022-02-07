@@ -27,6 +27,7 @@ setcookie("lang", $_SESSION['lang'], time()+36000, '/');
 $routes=[
 	"Default"=>["PHP/VIEW/FORM/","FormConnexion","Connexion",0,false],
 	"Accueil"=>["PHP/VIEW/GENERAL/","Accueil","Accueil",0,false],
+	"AccueilVAdmin"=>["PHP/VIEW/GENERAL/","AccueilVAdmin","Accueil",0,false],
 
 	"FormInscription"=>["PHP/VIEW/FORM/","FormInscription","Inscription",0,false],
 
@@ -55,6 +56,10 @@ $routes=[
 	"ListeUtilisateurs"=>["PHP/VIEW/LISTE/","ListeUtilisateurs","Liste Utilisateurs",2,false],
 	"FormUtilisateurs"=>["PHP/VIEW/FORM/","FormUtilisateurs","Formulaire Utilisateurs",2,false],
 	"ActionUtilisateurs"=>["PHP/CONTROLLER/ACTION/","ActionUtilisateurs","Action Utilisateurs",2,false],
+
+	"ListeClients"=>["PHP/VIEW/LISTE/","ListeClients","Liste Clients",2,false],
+	"FormClients"=>["PHP/VIEW/FORM/","FormClients","Formulaire Clients",2,false],
+	"ActionClients"=>["PHP/CONTROLLER/ACTION/","ActionClients","Action Clients",2,false],
 
 ];
 

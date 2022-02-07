@@ -16,19 +16,27 @@
 
                         <div class="caddie">
                             <p>bouteille</p>
-                            <div class="espaceCaddie"></div>
-                            <img src="./IMG/caddie.png" alt="caddie">
+                          
                         </div>
                         <p>eau 1l</p>
                     </div>
                     <div class="accueilFiche">
-                        <img src="./IMG/coca.jpg" alt="bouteille d'eau">
+                        <img src="./IMG/coca.jpg" alt="bouteille de coca">
                         <p><b>coca</b></p>
 
-                        <div class="caddie">
+                      
                             <p>Coca</p>
-                            <div class="espaceCaddie"></div>
-                            <img src="./IMG/caddie.png" alt="caddie">
+                      
+                      
+                        <p>50Cl</p>
+                    </div>
+                    <div class="accueilFiche">
+                        <img src="./IMG/croissant.png" alt="super croissant">
+                        <p><b>Croissant</b></p>
+
+                        <div class="caddie">
+                            <p>Super croissant</p>
+                      
                         </div>
                         <p>50Cl</p>
                     </div>
@@ -43,8 +51,7 @@
 
                             <div class="caddie">
                                 <p>gomme</p>
-                                <div class="espaceCaddie"></div>
-                                <img src="./IMG/caddie.png" alt="caddie">
+                         
                             </div>
 
                         </div>
@@ -54,8 +61,7 @@
 
                             <div class="caddie">
                                 <p>papier</p>
-                                <div class="espaceCaddie"></div>
-                                <img src="./IMG/caddie.png" alt="caddie">
+                         
                             </div>
                             <p>imprimante</p>
                         </div>
