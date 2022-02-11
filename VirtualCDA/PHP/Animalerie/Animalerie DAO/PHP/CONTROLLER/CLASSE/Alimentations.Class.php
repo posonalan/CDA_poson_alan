@@ -21,7 +21,7 @@ public function getIdAliment()
 return $this->_idAliment;
 }
 
-public function setIdAliment(int $idAliment)
+public function setIdAliment(?int $idAliment)
 {
 $this->_idAliment = $idAliment;
 }
@@ -36,11 +36,15 @@ public function setLibelleAliment(string $libelleAliment)
 $this->_libelleAliment = $libelleAliment;
 }
 
-public static function getAttributes()
+static public function getAttributes()
 {
-    return self::$_attributes;
+return self::$_attributes;
 }
 
+static public function setAttributes($attributes)
+{
+self::$_attributes = $attributes;
+}
 	/*****************Constructeur***************** */
 
 	public function __construct(array $options = [])
