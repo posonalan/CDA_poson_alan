@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Intent_Alan</string>
+    <string name="button_main">Envoyer</string>
+    <string name="activity2_name">Seconde Activité</string>
+    <string name="message_recu">Message reçu</string>
+    <string name="entrez_votre_message">Entrez votre message</string>
+    <string name="Entrez_votre_reponse">Entrez_votre_reponse</string>
+    <string name="repondre">Répondre</string>
+    <string name="Entrez_un_message">Entrez_un_message</string>
+    <string name="Envoyez">Envoyez</string>
+    <string name="Repondre">Repondre</string>
+    <string name="reponse_de_la_2eme_vue">reponse_de_la_2eme_vue</string>
+    <string name="reponse_vue2">reponse_vue2</string>
+</resources>
