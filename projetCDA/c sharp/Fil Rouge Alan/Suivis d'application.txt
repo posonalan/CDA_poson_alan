@@ -1,0 +1,11 @@
+
+- shema entite association mcd fait 
+- crée une base de donnée + contrainte : fait 
+			    index : non
+			    profile : non 
+- script d'insertion des données : fait 
+- sauvegarde restauration : non 
+- requete sql : non 
+- exporter les table vers un tableur : non 
+- procedure stocker : non 
+- faire des vues : non 

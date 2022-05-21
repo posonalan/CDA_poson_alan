@@ -1,0 +1,248 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+  background-image: url('fondFruit2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}   
+
+.text{
+ 
+   font-size: 1.2em; 
+   flex : 1 ; 
+   background-color: rgba(255, 255, 255, 0.61);
+   
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contenuArticle{
+display: flex;
+flex-direction: row;
+
+}
+.contenuArticleH{
+    display: flex;
+    flex-direction: column;
+  
+    }
+
+
+.margeLeft{
+    flex: 0.2;
+     /* background-color : blue;   */
+}
+
+.margeRight{
+    flex: 0.2; 
+    /* background-color : red;  */
+}
+
+
+.Article1{ 
+    flex: 1; 
+   
+    display: flex;
+  
+  
+}
+.image {
+    flex: 1;
+   height: 20vh;
+   width: 40vw;
+   min-width: 40vw;
+  min-height: 40vh;
+    
+}
+
+.espaceV{
+    flex: 0.1;
+}
+.espaceH{
+    flex: 1;
+ 
+
+  
+    
+}
+
+
+
+h1 
+    {
+      font-size: 40px;
+      /* text-shadow: -1px -1px rgb(238, 238, 238), 1px 1px rgb(241, 241, 228), -3px 0 4px rgba(236, 223, 223, 0);
+     */ font-family:Arial, Helvetica, sans-serif; 
+      color: rgb(197, 194, 33);
+       padding:16px;
+      font-weight:lighter ;
+      -moz-box-shadow: 2px 2px 6px #888;  
+      -webkit-box-shadow: 2px 2px 6px #888;  
+      box-shadow : 2px 2px 6px #888;  
+      text-align:center;
+      display:block;
+     
+      /* background-image:url(fondFruit.jpg);   */
+    }
+
+  
+    
+
+/************ nav barre **********/
+
+
+
+.divUl {
+   
+    justify-content: center;
+    justify-content: space-around; /* repartir dans ma nav barre */
+    list-style-type: none;
+   
+    background-color: rgb(211, 200, 45);
+
+}
+
+
+
+div a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* pour pas avoir de soulignement
+*/ 
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+div a:hover {
+    background-color: #111;
+}
+
+
+
+/***** partie produits *****/ 
+
+.intro {
+    text-align: center;
+    font-size:20px; 
+    font-family:Helvetica,Arial; 
+}
+.imageMartine{
+    height:1.2em;
+}
+
+/***** plat *****/ 
+
+.contenuPlat{
+    display: flex;
+   
+    flex-wrap: wrap; /* pour prendre la place dont il a besoin */
+    justify-content: space-around; 
+    }
+
+    .plat { 
+        flex: 1;
+        height:30vh; 
+        margin: 1em; 
+        
+    }
+
+ 
+      .plat .textHover {
+        visibility: hidden;
+        width: 150px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+      
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+      
+      .plat:hover .textHover {
+        visibility: visible;
+      }
+
+.plat img {
+    width:10em;
+}
+
+
+/**** formulaire contact *****/
+form { 
+border : 1px solid blue ;
+    border-radius: 5%;
+    color: white;
+    background: linear-gradient(to right, rgb(164, 235, 49), rgb(41, 5, 5));
+ opacity: 80%;
+}
+
+
+.cssform p {
+  text-align: center;
+    clear: left;
+    margin: 0;
+    padding: 5px 0 8px 0;
+    padding-left: 155px;
+    border-top: 1px dashed gray;
+    height: 1%;
+}
+
+#contact {
+    padding: 1em;
+}
+.boutonCo {
+    display: flex; 
+    text-align: center;
+}
+
+/***** Media query *****/ 
+
+@media screen and (max-width: 1100px)
+{
+  
+
+        .Article1{ 
+            flex: 1; 
+            align-items: center;
+           text-align: center;
+            display: flex;
+          
+          flex-direction: column;
+        }
+        .image {
+            flex: 1;
+           height: 20vh;
+           width: 40vw;
+           min-width: 40vw;
+          min-height: 40vh;
+            
+        }
+}

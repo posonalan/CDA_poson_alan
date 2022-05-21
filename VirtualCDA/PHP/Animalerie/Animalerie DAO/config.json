@@ -1,0 +1,7 @@
+{
+	"Host":"localhost",
+	"Port":"3308",
+	"DbName":"animaleriedao",
+	"Login":"root",
+	"Pwd":""
+}

@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+=======
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+>>>>>>> 0daa11795ad7fa5bc41bd11d9a31ee3c72f23b30
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+<<<<<<< HEAD
   </PropertyGroup>
 
+=======
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\lilyy\Documents\CDA 2021-2022\posonalan\CDA_poson_alan\projetCDA\c sharp\CantinePoix-main\CantineMartine\Backup1\CantineMartine\</UpgradeBackupLocation>
+    <OldToolsVersion>Current</OldToolsVersion>
+  </PropertyGroup>
+>>>>>>> 0daa11795ad7fa5bc41bd11d9a31ee3c72f23b30
   <ItemGroup>
     <None Remove="cantineLogo.png" />
     <None Remove="fondcantine.jpg" />
@@ -20,6 +31,7 @@
     <None Remove="pois.png" />
     <None Remove="Windows\fondcantine.jpg" />
   </ItemGroup>
+<<<<<<< HEAD
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
@@ -46,3 +58,28 @@
 	</ItemGroup>
 
 </Project>
+=======
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cantineLogo.png" />
+    <Resource Include="Images\fondcantine.jpg" />
+    <Resource Include="Images\Martine1.png" />
+    <Resource Include="Images\Martine2.png" />
+    <Resource Include="Images\MartineLogo.png" />
+    <Resource Include="Images\pois.png" />
+    <Resource Include="pois.png" />
+    <Resource Include="Windows\fondcantine.jpg" />
+  </ItemGroup>
+</Project>
+>>>>>>> 0daa11795ad7fa5bc41bd11d9a31ee3c72f23b30

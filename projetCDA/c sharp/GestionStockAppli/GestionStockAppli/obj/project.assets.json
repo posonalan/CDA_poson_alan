@@ -2060,23 +2060,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\59011-07-09\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lilyy\\.nuget\\packages\\": {},
+    "D:\\visual studio partage_outil_sdk\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\59011-07-09\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\GestionStockAppli.csproj",
+      "projectUniqueName": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\GestionStockAppli.csproj",
       "projectName": "GestionStockAppli",
-      "projectPath": "U:\\59011-07-09\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\GestionStockAppli.csproj",
-      "packagesPath": "C:\\Users\\59011-07-09\\.nuget\\packages\\",
-      "outputPath": "U:\\59011-07-09\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\obj\\",
+      "projectPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\GestionStockAppli.csproj",
+      "packagesPath": "C:\\Users\\lilyy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lilyy\\Documents\\CDA 2021-2022\\posonalan\\CDA_poson_alan\\projetCDA\\c sharp\\GestionStockAppli\\GestionStockAppli\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\visual studio partage_outil_sdk\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\59011-07-09\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lilyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2152,7 +2152,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

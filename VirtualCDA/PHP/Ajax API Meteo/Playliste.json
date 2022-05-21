@@ -1,0 +1,93 @@
+swagger: "2.0"
+info:
+  description: "Cette API permet de rechercher dans le fonds numÃ©rique Gallica et de fournir Ã©galement un ensemble d'Ã©lÃ©ments d'affinage des requÃªtes (facettes). Elle se dÃ©cline en deux services."
+  version: "1.2"
+  title: "API de recherche Gallica"
+  termsOfService: "http://api.bnf.fr/conditions-generales-dutilisation-du-site-bnf-api-et-jeux-de-donnees"
+  contact:
+    email: "gallica@bnf.fr"
+  license:
+    name: "Licence ouverte de l'Etat pour les mÃ©tadonnÃ©es"
+    url: "https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf"
+host: "gallica.bnf.fr"
+basePath: "/"
+schemes:
+- "https"
+paths:
+  /SRU:
+    get:
+      tags:
+      - "recherche"
+      summary: "Service de recherche Gallica (SRU)"
+      description: "Cette API constitue une interface avec le moteur de recherche de Gallica. Il s'agit d'un web service fournissant au format XML les documents liÃ©s Ã  une requÃªte exprimÃ© selon le protocole SRU (Search/Retrieve via URL)."
+      operationId: "findInCatalogue"
+      produces:
+      - "application/xml"
+      consumes:
+      - "application/xml"
+      parameters:
+      - name: "version"
+        in: "query"
+        description: "la version de la norme SRU implÃ©mentÃ©e (ici 1.2)"
+        required: true
+        type: "string"
+        default: "1.2"
+        enum: ["1.2"]
+      - name: "operation"
+        in: "query"
+        description: "l'opÃ©ration Ã   effectuer (ici, searchRetrieve)"
+        required: true
+        type: "string"
+        default: "searchRetrieve"
+        enum: ["searchRetrieve"]
+      - name: "query"
+        in: "query"
+        description: "la requÃªte Ã  effectuer pour obtenir les rÃ©sultats souhaitÃ©s, Ã©crite en langage CQL (\"Contextual Query Language\", https://www.loc.gov/standards/sru/cql)"
+        required: true
+        type: "string"
+        default: "gallica all \"lecture\""
+      - name: "startRecord"
+        in: "query"
+        description: "l'index du systÃ¨me de pagination, compris entre 1 et le nombre maximal de rÃ©sultats renvoyÃ©s par la requÃªte (information fournie dans le flux XML : balise <srw:numberOfRecords>)."
+        type: "integer"
+        format: "int64"
+        default: "1"
+      - name: "maximumRecords"
+        in: "query"
+        description: "le nombre de rÃ©sultats retournÃ©s par le service (compris entre 0 et au maximum 50). Par dÃ©faut, si ce paramÃ¨tre est absent, la valeur est de 15."
+        type: "integer"
+        format: "int64"
+        default: "15"
+      - name: "collapsing"
+        in: "query"
+        type: "boolean"
+        description: "ce paramÃ¨tre permet d'agrÃ©ger (valeur \"true\") les rÃ©sultats dans le cas d'un document multivolume ou d'un pÃ©riodique. La valeur \"disabled\" permet d'obtenir tous les documents."
+      responses:
+        "200":
+          description: "OpÃ©ration rÃ©ussie"
+        "500":
+          description: "Le serveur est indisponible ou ne peut pas rÃ©pondre Ã  la transaction telle quelle est formulÃ©e"
+  /services/Categories:
+    get:
+      tags:
+      - "categories"
+      summary: "Service d'affinage des rÃ©sulats de la recherche"
+      description: "Ce service permet d'agrÃ©ger les rÃ©sultats fournis par une recherche en fonction de critÃ¨res prÃ©dÃ©finis. Il renvoie un flux JSON."
+      operationId: "findWithCategories"
+      produces:
+      - "text/HTML"
+      parameters:
+      - name: "SRU"
+        in: "query"
+        description: "le paramÃ¨tre SRU est la requÃªte Ã©crite en CQL (voir service searchRetrieve)"
+        required: true
+        type: "string"
+        default: "gallica all \"lecture\""
+      responses:
+        "200":
+          description: "OpÃ©ration rÃ©ussie"
+        "500":
+          description: "Le serveur est indisponible ou ne peut pas rÃ©pondre Ã  la transaction telle quelle est formulÃ©e"
+externalDocs:
+  description: "En savoir plus sur nos API"
+  url: "https://api.bnf.fr/"
