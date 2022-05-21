@@ -1,0 +1,1 @@
+scaffold-dbcontext "server=localhost;user=root;database=ecf2;ssl mode=none" Mysql.EntityFrameworkCore -outputDir ./Data/Models -contextDir ./Data –context MyDbContext

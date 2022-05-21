@@ -1,0 +1,84 @@
+/* Appel d'une variable s'effectue en faisant "Var(--ColorTitle)" par exemple. */
+:root {
+    --color: #ecc4ff;
+    --inputCorrect: #39ca00;
+    --inputIncorrect: #ff3806e0;
+    --inputVide: #ffffff4d;
+    --blue:#00aaff;
+    --purple:#890092;
+    --blueClair:#9ee0e0;
+    --white: white; 
+    --linkColor : black;
+    --bouton : rgba(196, 183, 183, 0.918);
+}
+
+html, body, div, a, header, footer, nav, article, section, aside, fieldset, label, input, select {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+}
+
+.formAct{
+    width: 80vw;
+}
+
+img, video, button {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Différent taille de flex. */
+.vMini { flex: 0.05; }
+
+.mini { flex: 0.2; }
+
+.demi { flex: 0.5; }
+
+.double { flex: 2; }
+
+.triple { flex: 3; }
+
+.espace {
+    flex: none;
+    height: 2vh;
+}
+
+.bigEspace {
+    flex: none;
+    height: 5vh;
+}
+
+.miniEspace {
+    flex: none;
+    height: 0.2vh;
+}
+.noDisplay{
+    display: none;
+}
+
+
+.absolu {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+}
+
+.relative {
+    position: relative;
+}
+
+a {
+    text-decoration : none;
+    color : var(--linkColor);
+}

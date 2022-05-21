@@ -1,0 +1,109 @@
+
+  
+  .mobile-menu {
+
+    padding: 1vh;
+    position: fixed;
+   
+  }
+  
+  .mobile-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+    
+  }
+
+  .zindex {
+
+   z-index: 1000;
+  }
+  
+  .toggle {
+    display: inline-block;
+    float: left;
+    margin-left: -41px;
+  }
+  
+  /* bascule des lien */ 
+  .toggle a {
+    background: white;
+    height: 4vh;
+    width: 3vw;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    line-height: 40px;
+    color: var(--purple);
+    border-radius: 3px;
+    vertical-align: top;
+  }
+  
+  .toggle .fa:before {
+    content: '\f0c9';
+    transition: .3s;
+  }
+  
+  .menu {
+   
+    width: 15vw;
+    height: 60vh;
+    background: white;
+    position: absolute;
+    top: 18.55vh;
+ 
+    /*height of mobile menu container*/
+    left: -20vw;
+    /*must be same as width*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: .3s;
+   
+  }
+  
+  .menu li a {
+    color: var(--purple);
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #2c3e50;
+  }
+  
+  .menu li a:hover {
+    background: var(--blue);
+    color: white; 
+  }
+  
+  
+  /*start the trick*/
+  
+  
+  /*position the checkbox directly beneath the toggle*/
+  
+  .hidden-toggle {
+    height: 41px;
+    width: 41px;
+    vertical-align: top;
+    float: left;
+    margin-left: 0px;
+    cursor: pointer;
+    opacity: 0;
+    /*make it invisible*/
+    transition: .3s;
+  }
+  
+  
+  /*show the menu when checkbox is active*/
+  
+  .hidden-toggle:checked ~ .menu {
+    left: 0;
+  }
+  
+  
+  /*change icon when menu is active*/
+  
+  .hidden-toggle:checked ~ .toggle .fa:before {
+    content: '\f00d';
+  }

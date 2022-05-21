@@ -1,0 +1,43 @@
+
+
+
+
+Déploiement application sur le serveur
+
+
+
+
+01. Connection au serveur ovh
+
+
+02. Télécharger filezilla
+
+
+03. Desactivé les par feu relatif a filezilla
+
+
+04. Connexion a filezilla ( Hote:ftp.cluster029.hosting.ovh.net, Nom utilisateur:afpadunkzc-dosimetri , Mdp: ****, Port: )
+
+
+05. Changer le fichier json avec les données serveur
+
+
+06. Vérifie la nomenclature des tables.
+
+
+07. Prendre les données structures sur la bdd mySql
+
+
+08. Dans le script sql , retirer la gestion des droits entre create et view dans les view.
+
+
+09. Passer les script dans un ordre structure, après données, puis contrainte pour ne pas avoir d'anomalies dans la base.
+
+
+10. Vérifier les majuscules (noms des tables)
+
+
+11. Essayer l'application en production et être prêt a charger un back up au cas où
+
+
+12. Fin du plan de déploiement 

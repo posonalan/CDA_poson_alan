@@ -5,7 +5,7 @@ class TexteManager
 
 	public static function findByCodes($codeLangue, $codeTexte)
 	{
-		return DAO::select([$codeLangue], "texte", ["codeTexte" => $codeTexte]);
+		return DAO::select([$codeLangue], "texte", ["codeTexte" => $codeTexte],null,null,true)[0][$codeLangue];
 	}
 
 	public static function checkIfLangExist($codeLangue)
