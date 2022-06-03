@@ -6,7 +6,8 @@ echo "daccord";
 $erreur = false;
  //var_dump($_POST);
  $_POST["idAliment"]=($_POST["idAliment"]=="")?null:$_POST["idAliment"];
-//var_dump($_POST); /* on crée un nouvelle objet categorie qu'on met dans une variable p , la methode post permet de faire une demande a la base de données */ 
+//var_dump($_POST); /* on crée un nouvelle objet categorie qu'on met dans une variable p ,
+/* la methode post permet de faire une demande a la base de données */ 
 $p = new Alimentations($_POST); 
  
  /* la methode get permet de recevoir de la base de données */ 
@@ -24,15 +25,15 @@ switch ($_GET['mode']) { /* suivant le mode reçu */
         /* on va chercher l'id de la categorie a supprimer dans la liste des Animaux */ 
         $listeAnimaux = AnimauxManager::getList($p->getIdAliment());
         /**** Technique informative */
-        //    if (count($listeProduit)>0)
-        //    {
-        //        echo 'Il reste des Animaux';
-        //        $erreur=true;
+           if (count($listeProduit)>0)
+           {
+               echo 'Il reste des produits';
+               $erreur=true;
 
-        //    }
-        //    else{
-        //     MilieuVieManager::delete($p);
-        //    }
+           }
+           else{
+            MilieuVieManager::delete($p);
+           }
 
         /**** Technique de suppression en cascade */
         /* on recherche dans la liste des Animaux un Animaux et on le supprime */ 

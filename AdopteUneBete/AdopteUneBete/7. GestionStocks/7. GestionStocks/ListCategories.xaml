@@ -1,0 +1,45 @@
+﻿<Window x:Class="_7._GestionStocks.ListCategories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_7._GestionStocks"
+        mc:Ignorable="d"
+        Title="ListCategories" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" x:Name="Add" Content="Ajouter" Click="GetCrudCategories"/>
+            <Button Grid.Column="3" x:Name="Update" Content="Modifier" Click="GetCrudCategories"/>
+            <Button Grid.Column="5" x:Name="Delete" Content="Supprimer"/>
+            <Button Grid.Column="7" x:Name="Exit" Content="Retour" Click="CloseWindow"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <DataGrid Grid.Row="1" x:Name="Datagrid" Grid.RowSpan="2" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="IdCategorie" Binding="{Binding Path=IdCategorie}"/>
+                    <DataGridTextColumn Header="Libelle de la categorie" Binding="{Binding Path=LibelleCategorie}" Width="1*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="IdTypeProduit" Binding="{Binding Path=IdTypeProduit}"/>
+                    <DataGridTextColumn Header="Libelle du type de produit" Binding="{Binding Path=TypesProduits.LibelleTypeProduit}" Width="1*" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1914,23 +1914,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\afpa\\.nuget\\packages\\": {},
+    "C:\\Users\\59011-07-09\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
+      "projectUniqueName": "U:\\59011-07-09\\VirtualCDA\\PHP + C#\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
       "projectName": "ApiMultiBillet",
-      "projectPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
-      "packagesPath": "C:\\Users\\afpa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\afpa\\Documents\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\obj\\",
+      "projectPath": "U:\\59011-07-09\\VirtualCDA\\PHP + C#\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\ApiMultiBillet.csproj",
+      "packagesPath": "C:\\Users\\59011-07-09\\.nuget\\packages\\",
+      "outputPath": "U:\\59011-07-09\\VirtualCDA\\PHP + C#\\VirtualCDA\\PhpCsharp\\multi couche perso\\apiMultiBilletProj\\ApiMultiBillet\\ApiMultiBillet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\afpa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\59011-07-09\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2006,7 +2006,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
